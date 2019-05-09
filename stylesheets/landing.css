@@ -1,0 +1,86 @@
+#name {
+  cursor: pointer;
+  width: 200px;
+}
+
+.landing {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  height: 100vh;
+  padding: 0 5%;
+  overflow-x: hidden;
+}
+
+#snippet {
+  position: relative;
+  width: 100%;
+}
+
+#scroll-down {
+  position: absolute;
+  bottom: 5vh;
+  left: 5%;
+  opacity: .5;
+}
+
+#scroll-down:hover {
+  opacity: 1 !important; /* Needed to override JS */
+}
+
+
+/* --- Hidden Buttons --- */
+
+#social-button {
+  display: flex;
+  position: absolute;
+  left: 0;
+  padding-top: 20px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.social-links {
+  opacity: 0;
+  visibility: hidden;
+  padding-bottom: 1px;
+  transform: translateY(20px);
+  transition: all .5s;
+  line-height: 15px;
+}
+
+.social-links-observed {
+  visibility: visible;
+  transform: translateY(0px);
+  opacity: 0.5;
+  transition: all .5s;
+}
+
+.social-links-observed:nth-child(2) {
+  transition-delay: .1s;
+}
+
+.social-links-observed:nth-child(3) {
+  transition-delay: .15s;
+}
+
+.social-links-margin {
+  margin-right: 40px;
+}
+
+.social-links:hover {
+   opacity: 1;
+}
+
+
+@media (max-width: 768px) {
+  .landing {
+    margin: 0;
+    height: 60vh;
+  }
+
+  #scroll-down {
+    display: none;
+  }
+}

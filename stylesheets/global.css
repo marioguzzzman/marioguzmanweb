@@ -1,0 +1,172 @@
+/* --- Boiler Shit --- */
+
+* {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+  font-variant-ligatures: none;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+hr {
+  border-color: gray;
+}
+
+img {
+  width: 100%;
+}
+
+p {
+  margin: 0;
+}
+
+::selection {
+  background: black; /* WebKit/Blink Browsers */
+  color: white;
+}
+::-moz-selection {
+  background: black; /* Gecko Browsers */
+  color: white;
+}
+
+/* Animations */
+
+.observable {
+  opacity: 0;
+  /* transform: translateY(100px);
+  transition: opacity 1s ease, transform 1s ease; */
+}
+
+.observed {
+  animation: move 1s forwards;
+  /* opacity: 1; */
+  /* transform: translateY(0px); */
+}
+
+@keyframes move {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+
+/* --- Font Stuff --- */
+
+body, .body {
+  font-family: "raleway", sans-serif;
+  font-size: 14px;
+  font-size: calc(12px + (15 - 12) * ((100vw - 320px) / (2560 - 320)));
+  letter-spacing: 1.5px;
+  line-height: 30px;
+}
+
+h1, .h1 {
+  font-size: 20px;
+  font-size: calc(18px + (23 - 18) * ((100vw - 320px) / (2560 - 320)));
+  letter-spacing: 1.25px;
+  line-height: calc(35px + (45 - 35) * ((100vw - 320px) / (2560 - 320)));
+}
+
+h2, .h2 {
+  font-size: 18px;
+  font-size: calc(16px + (19 - 16) * ((100vw - 320px) / (2560 - 320)));
+  letter-spacing: 1.25px;
+  line-height: 20px;
+}
+
+h3, .h3 {
+  font-size: 16px;
+  font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (2560 - 320)));
+  letter-spacing: 1.25px;
+  line-height: 18px;
+}
+
+h4, .h4 {
+  font-size: 12px;
+  letter-spacing: 1.25px;
+  line-height: 16px;
+}
+
+
+/* --- Underlines --- */
+
+.selected {
+	position: relative;
+}
+
+.selected:before {
+  content: '';
+	width: 100%;
+	position: absolute;
+	left: 0;
+	bottom: -3px;
+	height: 1px;
+	background-color: #181818;
+}
+
+.underlined {
+  position: relative;
+  z-index: 20;
+}
+
+.underlined:before {
+  content: '';
+	width: 100%;
+	position: absolute;
+	left: 0;
+	bottom: -3px;
+	height: 1px;
+	background-color: #e1e1e1;
+}
+
+.underlined:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: -3px;
+  left: 0;
+  background-color: #181818;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+  transform-origin: 0% 0%
+}
+
+.underlined:hover:after {
+	visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+  transform-origin: 0% 0%
+}
