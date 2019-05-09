@@ -1,11 +1,11 @@
-if(window.innerWidth >= 768) {
+if (window.innerWidth >= 768) {
 
-  (function($) {
+  (function ($) {
     //******** GLITCH IMAGE HOVER ***********
 
     var data
 
-    $('.project-hover').mouseenter(function() {
+    $('.project-hover').mouseenter(function () {
       var img, maxGlitch, offset;
 
       img = $(this).find('.glitch-hover');
@@ -22,7 +22,7 @@ if(window.innerWidth >= 768) {
       protectedData = data.substring(0, protectedOffset);
       noGlitchChanceStart = noGlitchChance * 1;
 
-      window.glitchInterval = setInterval((function() {
+      window.glitchInterval = setInterval((function () {
         var corrupted, glitch, i, j, p, ref;
         corrupted = data;
         icount = icount + 1;
@@ -49,8 +49,8 @@ if(window.innerWidth >= 768) {
     //******** START MOUSELEAVE  ***********
 
 
-    $('.project-hover').mouseleave(function() {
-      if(window.glitchInterval){
+    $('.project-hover').mouseleave(function () {
+      if (window.glitchInterval) {
         clearInterval(window.glitchInterval)
       }
       $(this).find('.glitch-hover').attr('src', data)
