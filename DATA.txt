@@ -1,0 +1,93 @@
+
+<!-- TODO
+
+GENERAL
+back pages
+mejorar fotos
+cambio bio en todas las paginas. hacer in include
+javascript for inc;ude 
+/media/storage/Desktop Shared/WINDOWS DESKTOP/marioguzmanweb/javascript/global.js
+
+ordenar por fecha
+
+
+DONE
+cambiar bio, DONE
+
+agregar lo de la bienal de venecia
+agregar lo del malba
+
+
+//PAGINAS HECHAS INDEX
+
+learningtowrite (2019) DONE
+Add poems
+
+bitcelule (2018) DONE
+
+quetzabot (2015) DONE
+
+temazcalli (2015 - 2016) DONE
+
+ped (2016) DONE
+    add new video
+
+oraculo (2014) DONE
+
+lastagreement (2016) DONE
+
+visionoros (2013 - present) DONE
+look for nice photos
+
+hiperstories (2015) DONE
+    links rotos
+
+Hipertext Retorics. Diario Perfil 
+
+ocean TODO
+
+prepixel (2014) DONE
+
+ARENA TODO
+
+
+
+//ARCHIVE
+
+vivir nuevamente
+    REALLY LIVING (2014)
+— Hyperreality / Ricardo FORT - FOREVER. XIX International Biennial of Visual Arts. Santa Cruz de la Sierra, Bolivia,
+2014.
+
+BE WATER MY FRIEND (2013)
+● Adventures Across The Seven Seas. P
+hotoville, Brooklyn Bridge Park, New York, 2013.
+NEST SIMULATION FOR THE LYREBIRD (2013)
+
+● Festival Mudanza Ed. Land Art. ​ Ladran Sancho Gallery, Buenos Aires, Argentina, 2013.
+
+MICTLANTECUHTLI. SACRIFICE AND LEDS. (2012)
+● Memento Mori ​ . Gallery 4, Buenos Aires, Argentina, 2012.
+
+PHOTOGRAPHY RETROSPECTIVE 2008-2011
+CEDART - National Institute of Fine Arts, Monterrey, N. L., Mexico, 2011.
+
+
+WE KNOW NOTHING ABOUT THE OTHERS (2010 - 2011)
+● Festival Punc i Línia , ​ Monterrey, N. L., Mexico, 2011.
+● Archipelago Festival. ​ Contadora Island, Panama, 2011.
+
+
+OTHER PHOTOGRAPHY EXHIBITS
+●
+Nano Photography Festival . ​ B
+
+
+//EXPERIMENTS
+
+- LSTM
+- GENERATIVE HAIKU
+- LSTM FULL
+   
+
+
