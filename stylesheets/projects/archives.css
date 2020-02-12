@@ -110,10 +110,44 @@ svg:hover .arrow-tail {
     opacity: .5;
 }
 
+/* ------------------ */
+
+.image-position {
+    width: 100%;
+    height: 100%;
+}
+
+.parallax-section {
+    display: flex;
+    align-items: center;
+}
+
+.parallax-1 img {
+    top: 0;
+    left: 0;
+    width: 43vw;
+}
+
+.parallax-2 img {
+    top: -50px;
+    left: -30px;
+    width: 39vw;
+}
+
+.bump {
+    margin-top: -10vh;
+    padding-top: 10vh;
+    background-color: #212121;
+    width: 100%;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
 
 /* -- Layout Break Points -- */
 
-@media (max-width: 768px) {
+@media (max-width: 762px) {
     .projects {
         margin-bottom: 0;
     }
@@ -126,4 +160,39 @@ svg:hover .arrow-tail {
     .project:nth-child(even) {
         padding-left: 0px;
     }
+    
+    .parallax-1 img {
+        top: 0;
+        left: 7vw;
+        width: 46vw;
+    }
+    .parallax-2 img {
+        top: -20px;
+        left: -20px;
+        width: 46vw;
+    }
+    
 }
+
+
+/* @media (max-width: 762px) {
+    .parallax-1 img {
+        top: 0;
+        left: 7vw;
+        width: 46vw;
+    }
+    .parallax-2 img {
+        top: -20px;
+        left: -20px;
+        width: 46vw;
+    }
+    .xbox-site-video {
+        padding: 7vh 0;
+    }
+    .team .col {
+        padding: 5vh 7vw;
+        padding-left: 0;
+        width: 100%;
+    }
+} */
+
