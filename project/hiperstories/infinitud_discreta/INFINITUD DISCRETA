@@ -1,0 +1,713 @@
+﻿:: StoryAuthor
+Mario Guzman
+
+
+
+:: StoryTitle
+Infinitud Discreta
+
+
+:: Start
+<center><samp><h1>[[Infinitud Discreta|Inicio]]</h1></center> Texto Mario Guzmán 
+Ilustración Maximiliano Aquino</samp>
+
+<<setback https://dl.dropboxusercontent.com/u/96052803/MULTITUD%20INFINITA/multitud.jpg>> 
+
+<<set $fin = "false">>
+<<set $detenerse = "false">>
+<<set $caminando = "false">>
+
+<<silently>> <!-- This is a comment --> <<endsilently>>
+
+
+
+
+:: link
+
+
+
+:: variables
+
+<<set $objeto = "true">>
+
+<<set $mudo = "true">>
+
+
+//caminando
+<<set $caminando = "true">>
+
+sensación de 
+<<textinput $palabracielo [[palabra de boton|link]]>>
+<<print $palabracielo>>
+
+forma de
+<<textinput $rostro1 [[siguiente|link]]>>
+<<print $rostro1>>
+
+todo se vuelve mucho más
+<<textinput $ritmo1 [[siguiente|link]]>>
+<<print $ritmo1>>
+
+como si fuera un
+<<textinput $eresun1 [[siguiente|link]]>> 
+
+<<textinput $olor [[siguiente|link]]>>
+
+//detenerse
+<<set $detenerse = "true">>
+
+<<textinput $sonido [[siguiente|link]]>>
+
+<<textinput $eresun2 [[siguiente|link]]>> 
+un objeto
+<<textinput $objetoencontrado [[siguiente|link]]>>
+<<print $objetoencontrado>>
+
+<<textinput $parte[[siguiente|link]]>>
+
+
+
+
+:: Inicio [if in provincia]
+<<if ($fin is "true")>> <center>Advertencia:
+
+Una infinita cantidad de universos se superponen unos a otros. Las diferencias se observan en los diferentes tonos en el que pronunciamos la palabra "inescrutable". 
+
+<<silently>> (me faltara lo del botoncito para apretar?) <<endsilently>>
+
+www.textosinteractivos.wordpress.com
+Gracias por participar.<html>
+<div class="ss-form"><form action="https://docs.google.com/forms/d/1ceKFusoCmt0pV0QB4_ET2lOAt3tSlIFrty4h6pGV7Z4/formResponse" method="POST" id="ss-form" target="_self" onsubmit=""><ol role="list" class="ss-question-list" style="padding-left: 0">
+<div class="ss-form-question errorbox-good" role="listitem">
+<div dir="ltr" class="ss-item  ss-text"><div class="ss-form-entry">
+<label class="ss-q-item-label" for="entry_804953336"><div class="ss-q-title">
+</div>
+<div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
+<input type="hidden" name="entry.804953336" value="" class="ss-q-short" id="entry_804953336" dir="auto" aria-label="provincia  " title="">
+<div class="error-message" id="883254532_errorMessage"></div>
+<div class="required-message"></div>
+</div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
+<div dir="ltr" class="ss-item  ss-text"><div class="ss-form-entry">
+<label class="ss-q-item-label" for="entry_1288993881"><div class="ss-q-title">
+</div>
+<div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
+<input type="hidden" name="entry.1288993881" value="" class="ss-q-short" id="entry_1288993881" dir="auto" aria-label="palabracielo  " title="">
+<div class="error-message" id="755026889_errorMessage"></div>
+<div class="required-message"></div>
+</div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
+<div dir="ltr" class="ss-item  ss-text"><div class="ss-form-entry">
+<label class="ss-q-item-label" for="entry_1736901835"><div class="ss-q-title">
+</div>
+<div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
+<input type="hidden" name="entry.1736901835" value="" class="ss-q-short" id="entry_1736901835" dir="auto" aria-label="rostro1  " title="">
+<div class="error-message" id="1238897174_errorMessage"></div>
+<div class="required-message"></div>
+</div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
+<div dir="ltr" class="ss-item  ss-text"><div class="ss-form-entry">
+<label class="ss-q-item-label" for="entry_1071282737"><div class="ss-q-title">
+</div>
+<div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
+<input type="hidden" name="entry.1071282737" value="" class="ss-q-short" id="entry_1071282737" dir="auto" aria-label="olor  " title="">
+<div class="error-message" id="1559331386_errorMessage"></div>
+<div class="required-message"></div>
+</div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
+<div dir="ltr" class="ss-item  ss-text"><div class="ss-form-entry">
+<label class="ss-q-item-label" for="entry_1028607552"><div class="ss-q-title">
+</div>
+<div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
+<input type="hidden" name="entry.1028607552" value="" class="ss-q-short" id="entry_1028607552" dir="auto" aria-label="ritmo1  " title="">
+<div class="error-message" id="375980033_errorMessage"></div>
+<div class="required-message"></div>
+</div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
+<div dir="ltr" class="ss-item  ss-text"><div class="ss-form-entry">
+<label class="ss-q-item-label" for="entry_1095113966"><div class="ss-q-title"> 
+</div>
+<div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
+<input type="hidden" name="entry.1095113966" value="" class="ss-q-short" id="entry_1095113966" dir="auto" aria-label="eresun1   " title="">
+<div class="error-message" id="1367565468_errorMessage"></div>
+<div class="required-message"></div>
+</div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
+<div dir="ltr" class="ss-item  ss-text"><div class="ss-form-entry">
+<label class="ss-q-item-label" for="entry_976659511"><div class="ss-q-title">
+</div>
+<div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
+<input type="hidden" name="entry.976659511" value="" class="ss-q-short" id="entry_976659511" dir="auto" aria-label="objeto1  " title="">
+<div class="error-message" id="951418261_errorMessage"></div>
+<div class="required-message"></div>
+</div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
+<div dir="ltr" class="ss-item  ss-text"><div class="ss-form-entry">
+<label class="ss-q-item-label" for="entry_1699142100"><div class="ss-q-title">
+</div>
+<div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
+<input type="hidden" name="entry.1699142100" value="" class="ss-q-short" id="entry_1699142100" dir="auto" aria-label="sonido  " title="">
+<div class="error-message" id="1489586468_errorMessage"></div>
+<div class="required-message"></div>
+</div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
+<div dir="ltr" class="ss-item  ss-text"><div class="ss-form-entry">
+<label class="ss-q-item-label" for="entry_1999003202"><div class="ss-q-title">
+</div>
+<div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
+<input type="hidden" name="entry.1999003202" value="" class="ss-q-short" id="entry_1999003202" dir="auto" aria-label="eresun2  " title="">
+<div class="error-message" id="340571125_errorMessage"></div>
+<div class="required-message"></div>
+</div></div></div>
+<input type="hidden" name="draftResponse" value="[,,&quot;-6416339479921750935&quot;]
+">
+<input type="hidden" name="pageHistory" value="0">
+<input type="hidden" name="fbzx" value="-6416339479921750935">
+<div class="ss-item ss-navigate"><table id="navigation-table"><tbody><tr><td class="ss-form-entry goog-inline-block" id="navigation-buttons" dir="ltr">
+<input type="submit" name="submit" value="Salir" id="ss-submit">
+<div class="ss-password-warning ss-secondary-text"></div></td>
+</tr></tbody></table></div></ol></form></div></html> <<googleForms 
+$provincia 
+$palabracielo 
+$rostro1 
+$olor 
+$ritmo1 
+$eresun1 
+$objeto1 
+$sonido 
+$eresun2>> </center><<else>><center>Advertencia:
+
+A partir de este momento, tu eliges el mundo que te rodea.
+Ten cuidado con lo que haces y lo que dices.
+<<textinput $provincia [[Provincia|ciudad]]>>
+</center>
+<<endif>>
+
+<<setback>>
+
+<<set $detenerse = "false">>
+<<set $caminando = "false">>
+
+[img[NAME OF PICTURE]]
+
+
+
+
+:: Untitled Passage 3
+<center>Advertencia:
+
+La ciudad tiene muchas caras y tu has visto sólo una.
+Puedes explorar nuevos [[recorridos|ciudad]], volver a [[casa.|Start]] o guardar tu historia.<html>
+
+
+:: Style [stylesheet]
+
+
+body {
+  margin: 2%;
+background-color: #111F42
+
+background-repeat:
+no-repeat; background-size:100%;
+
+}
+#passages{
+  margin: 0;
+ padding: 3;
+  border: 0;
+  width:96%;
+  margin: auto;
+}
+
+.passage {
+  font-size:4em; 
+  color: white;
+  text-shadow: white.05em;
+}
+@media screen and (max-width: 960px) {
+  .passage {
+    font-size: 4em;
+  }
+}
+@media screen and (max-width: 640px) {
+  .passage {
+    font-size: 3em;
+  }
+}
+a.internalLink, a.externalLink {
+  color: gray;
+  text-shadow: white 07em;
+}
+a.internalLink:hover, a.externalLink:hover {
+  color: red;
+  text-decoration: none;
+  text-shadow: red 0 0 0.09em;
+}
+#sidebar {
+	display:none;
+}
+
+
+:: ciudad [either, puro1]
+<<print $provincia>> es <<print either("un circuito.", "una idea")>>  
+Un perímetro trazado sobre un <<print either("enjambre.", "laberinto.", "panal de cuerpos.", "oasis de voces.") >>
+
+Y tú, estás en el centro.
+
+[[Miras a tu alrededor|alrededor]]
+
+<<setback https://dl.dropboxusercontent.com/u/96052803/MULTITUD%20INFINITA/MIVector/Mipuro1.jpg>>
+
+
+:: time [script]
+version.extensions.timedgotoMacro={major:1,minor:2,revision:0};
+macros["goto"]=macros.timedgoto={timer:null,handler:function(a,b,c,d){function cssTimeUnit(s){if(typeof s=="string"){if(s.slice(-2).toLowerCase()=="ms"){return +(s.slice(0,-2))||0
+}else{if(s.slice(-1).toLowerCase()=="s"){return +(s.slice(0,-1))*1000||0
+}}}throwError(a,s+" isn't a CSS time unit");return 0}var t,d,m,s;
+t=c[c.length-1];d=d.fullArgs();m=0;if(b!="goto"){d=d.slice(0,d.lastIndexOf(t));
+m=cssTimeUnit(t)}d=eval(Wikifier.parse(d));if(d+""&&state&&state.init){if(macros["goto"].timer){clearTimeout(macros["goto"].timer)
+}s=state.history[0].passage.title;macros["goto"].timer=setTimeout(function(){if(state.history[0].passage.title==s){state.display(d,a)
+}},m)}}};
+
+
+:: googleForms [script]
+/*Places the variables (given as parameters) into the Google Forms
+text input field.*/
+macros['googleForms'] =
+{
+handler: function (place, macroName, params, parser)
+{
+/*Provincia Enter the ID of the first Google Forms text input field here.*/
+a = place.querySelector("#entry_804953336");
+a.value = eval(Wikifier.parse(params[0]));
+/*Palabracielo Enter the ID of the second Google Forms text input field here.*/
+b = place.querySelector("#entry_1288993881");
+b.value = eval(Wikifier.parse(params[1]));
+/*rostro1 Enter the ID of the second Google Forms text input field here.*/
+c = place.querySelector("#entry_1736901835");
+c.value = eval(Wikifier.parse(params[2]));
+/*olor the ID of the second Google Forms text input field here.*/
+d = place.querySelector("#entry_1071282737");
+d.value = eval(Wikifier.parse(params[3]));
+/*ritmo1 the ID of the second Google Forms text input field here.*/
+e = place.querySelector("#entry_1028607552");
+e.value = eval(Wikifier.parse(params[4]));
+/*eresun1 the ID of the second Google Forms text input field here.*/
+f = place.querySelector("#entry_1095113966");
+f.value = eval(Wikifier.parse(params[5]));
+/*objeto1 the ID of the second Google Forms text input field here.*/
+g = place.querySelector("#entry_976659511");
+g.value = eval(Wikifier.parse(params[6]));
+/*sonido the ID of the second Google Forms text input field here.*/
+h = place.querySelector("#entry_1699142100");
+h.value = eval(Wikifier.parse(params[7]));
+/*eresun2 the ID of the second Google Forms text input field here.*/
+i = place.querySelector("#entry_1999003202");
+i.value = eval(Wikifier.parse(params[8]));
+}
+};
+
+
+:: Script 1 [script]
+
+//changes the background image
+macros['setback'] =
+{
+handler: function (place, macroName, params, parser)
+{
+document.body.style.backgroundImage = "url("+params[0]+")";
+}
+};
+
+
+
+
+:: shake [script]
+function screenShake(time) {
+  console.log(document);
+  var el = document.getElementsByClassName('content');
+  baz = el;
+  console.log(baz[0]);
+  el[0].className = el[0].className + ' shake';
+  if (time > 0) {
+    setTimeout(function () {
+      el[0].className = 'content';
+    }, time);
+  }
+};
+ 
+// the screenShake macro. Adapted from Emmanuel Turner's article on creating Twine macros. http://eturnerx.blogspot.com/2012/12/how-to-create-custom-macros-in-twine.html
+try {
+  version.extensions['screenShakeMacro'] = {
+    major: 1,
+    minor: 0,
+    revision: 0
+  };
+  macros['screenShake'] = {
+    handler: function (place, macroName, params, parser) {
+      var time = parseInt(params[0]);
+      if (typeof time !== 'number') {
+        time = 1000;
+      }
+      
+      // we're overriding the fade function. It behaves as usual except it runs screenShake() if time >= 0.
+      fade = function (el, options) {
+        var current;
+        var proxy = el.cloneNode(true);
+        var direction = (options.fade == 'in') ? 1 : -1;
+ 
+        el.parentNode.replaceChild(proxy, el);
+ 
+        if (options.fade == 'in') {
+          current = 0;
+          proxy.style.visibility = 'visible';
+        } else current = 1;
+ 
+        setOpacity(proxy, current);
+        var interval = window.setInterval(tick, 25);
+ 
+        function tick() {
+          current += 0.05 * direction;
+ 
+          setOpacity(proxy, Math.easeInOut(current));
+ 
+          if (((direction == 1) && (current >= 1)) || ((direction == -1) && (current <= 0))) {
+            console.log('swapping fader proxy out');
+            el.style.visibility = (options.fade == 'in') ? 'visible' : 'hidden';
+            proxy.parentNode.replaceChild(el, proxy);
+            delete proxy;
+            window.clearInterval(interval);
+ 
+            if (options.onComplete) options.onComplete();
+ 
+            if (time >= 0) {
+              screenShake(time);
+              time = -1;
+            }
+ 
+          }
+        };
+ 
+        function setOpacity(el, opacity) {
+          var percent = Math.floor(opacity * 100);
+ 
+          // IE
+          el.style.zoom = 1;
+          el.style.filter = 'alpha(opacity=' + percent + ')';
+ 
+          // CSS 3
+          el.style.opacity = opacity;
+        };
+      };
+    },
+    init: function () {},
+  };
+} catch (e) {
+  throwError(place, "screenShake Setup Error: " + e.message);
+}
+
+
+:: background [script]
+
+//changes the background image
+macros['setback'] =
+{
+handler: function (place, macroName, params, parser)
+{
+document.body.style.backgroundImage = "url("+params[0]+")";
+}
+};
+
+
+
+
+
+:: alrededor [puro 2]
+
+A tu derecha y a tu izquierda, personas. Un mar de rostros, miradas, cuerpos.
+
+Escuchas, un murmullo [[creciendo...|cielo2]]
+
+
+<<setback https://dl.dropboxusercontent.com/u/96052803/MULTITUD%20INFINITA/MIVector/Mipuro2.jpg>>
+
+
+
+:: Untitled Passage 1
+La ciudad es un conjunto de encuentros terriblemente afortunados, 
+afortunadamente [[terribles.|link]]
+
+
+:: funciones
+
+<center style>  [img[mapa]] </center>
+
+<<if ($objeto is "true")>> El barco se sacude y pierdes el objeto que te había dado el marino momentos [[antes.|sin  1]] <<else>> Tienes la sensación que corres el mismo [[destino.|sin  1]] . <<endif>>
+
+<<textinput $ultimapalabra [[Siguiente|name]]>>
+
+<<timedgoto $muere 4s >>
+
+
+
+:: cielo2 [txt cielo, cicly, either, puro 3]
+Miras al cielo. Parece un <<cyclinglink $cielo "sugestivo" "impresionante" "inesperado">> conjunto <<print either("de triángulos hipnóticos", "de pistones gigantes", "de engranes eléctricos", "de luces intermitentes") >> y ondas <<print either("luminosas", "destelleantes", "oscuras") >>, ascendentes.
+
+Una sensación de <<textinput $palabracielo [[Siguiente|multitud]]>> recorre todo tu cuerpo.
+
+<<setback https://dl.dropboxusercontent.com/u/96052803/MULTITUD%20INFINITA/MIVector/Mipuro3.jpg>>
+
+
+:: multitud [print cielo, MM puro]
+La multitud tiene voluntad propia. Tu sensación de <<print $palabracielo>> se evapora. 
+
+El clima se vuelve inquietante y al mismo tiempo prometedor. Todo es continuidad, expansión... 
+
+[[Sigues caminando.|caminando]]
+[[Te detienes en seco.|detenerse]]
+
+<<setback https://dl.dropboxusercontent.com/u/96052803/MULTITUD%20INFINITA/MM%20Vector/mpuro.jpg>> 
+
+
+:: detenerse [txt objeto1, mi1]
+Te congelas. Desde tu perspectiva, todo es demasiado <<print either("veloz.", "insoportable.", "confuso.") >>
+
+Alguien te empuja. Miras hacia abajo y encuentras un objeto...
+
+es un...<<textinput $objeto1 [[siguiente|objeto]]>>
+
+<<set $detenerse = "true">>
+
+<<setback https://dl.dropboxusercontent.com/u/96052803/MULTITUD%20INFINITA/MIVector/Mi1.jpg>>
+
+
+:: caminando [MMpuro, caminando true]
+Una sensación envolvente, cálida.
+
+Te mueves al mismo ritmo que muchos otros brazos y piernas y [[torsos.|rostros]] 
+
+ <<set $caminando = "true">>
+
+<<setback https://dl.dropboxusercontent.com/u/96052803/MULTITUD%20INFINITA/MM%20Vector/mpuro.jpg>> 
+
+
+:: rostros [txt rostro1, M1]
+Una gran masa de cuerpos iguales y distintos.  
+
+El más cercano tiene forma de <<textinput $rostro1 [[siguiente|olor]]>>
+
+<<setback https://dl.dropboxusercontent.com/u/96052803/MULTITUD%20INFINITA/MM%20Vector/M1.jpg>>
+
+
+
+:: objeto [txt sonido, mi2]
+No puedes tomarlo. Cientos de pies lo alejan de tus manos.
+
+Desde arriba, un sonido como de <<textinput $sonido [[siguiente|multitud2]]>>  te impide concentrarte. 
+
+<<setback https://dl.dropboxusercontent.com/u/96052803/MULTITUD%20INFINITA/MIVector/Mi2.jpg>>
+
+
+
+
+
+
+:: olor [txt olor, cyci, M2]
+Entre la masa, tratas de moverte <<cyclinglink $moverte "a la derecha" "a la izquierda" "hacia atrás" "al frente" end>>
+
+No hay espacio, estás demasiado cerca.
+
+Sientes su fuerte olor a <<textinput $olor [[siguiente|ritmo]]>>
+
+
+<<setback https://dl.dropboxusercontent.com/u/96052803/MULTITUD%20INFINITA/MM%20Vector/M2.jpg>>
+
+
+
+:: multitud2 [txt eres2, i3]
+Tienes que salir de ahí, pero una muralla de cuerpos te deforma.
+
+Un grupo cercano siente tu desesperación, se vuelve y te mira fijo, como si fueras un <<textinput $eresun2 [[siguiente|hombreallado]]>>
+
+<<setback https://dl.dropboxusercontent.com/u/96052803/MULTITUD%20INFINITA/MIVector/Mi3.jpg>>
+
+
+
+
+
+
+
+:: ritmo [txt ritmo, print rostro1, M3]
+De pronto el conjunto de <<print $rostro1>>s gira <<print either("a la derecha", "a la izquierda") >>.
+
+Todo se vuelve cada vez más ... <<textinput $ritmo1 [[siguiente|centromultitud]]>>
+
+<<setback https://dl.dropboxusercontent.com/u/96052803/MULTITUD%20INFINITA/MM%20Vector/M3.jpg>>
+
+
+:: hombreallado [if print sonido, objeto, rostro1, mi4]
+<<if ($caminando is "true")>>¿Podrás transformarte en <<print $sonido>>, igual que los demás? Serás destrozado como <<print $objeto1>> frente a la mirada terrible de la masa <<print $rostro1>>?
+
+[[Definitivamente no perteneces ahí.|espacio]]
+
+<<else>>¿Podrás transformarte en <<print $sonido>>, igual que los demás? Serás destrozado como <<print $objeto1>> frente a la mirada terrible de la masa? 
+
+[[Te calmas un poco y te reincorporas al grupo.|caminando]]
+[[Definitivamente no perteneces ahí.|espacio]]
+<<endif>>
+
+<<setback https://dl.dropboxusercontent.com/u/96052803/MULTITUD%20INFINITA/MIVector/Mi4.jpg>>
+
+
+
+
+
+:: centromultitud [print rostro1, M4]
+Los cuerpos se desplazan unidos. Uno de los hombres <<print $rostro1>> te empuja. [[Tropiezas.|hombre2]]
+
+<<setback https://dl.dropboxusercontent.com/u/96052803/MULTITUD%20INFINITA/MM%20Vector/M4.jpg>>
+
+
+:: espacio [if print olor, mi 5]
+<<if ($caminando is "true")>>Tomas conciencia de tu lugar en el espacio.
+
+Presientes una pausa y <<cyclinglink $cuerpo "saltas" "empujas" "gritas">> en línea <<cyclinglink $cuerpo "recta" "ondulada" "entrecortada">>. Tu cuerpo de <<print $olor>> se deforma, ahora eres líquido entre [[sólidos.|color]]
+<<else>>Tu cuerpo es conciente del espacio. 
+
+Presientes una pausa y <<cyclinglink $cuerpo "saltas" "empujas" "gritas">> en línea <<cyclinglink $cuerpo "recta" "ondulada" "entrecortada">>. Tu cuerpo se deforma, eres un líquido entre [[sólidos.|color]]<<endif>>
+
+<<setback https://dl.dropboxusercontent.com/u/96052803/MULTITUD%20INFINITA/MIVector/Mi5.jpg>>
+
+
+
+
+
+
+
+:: hombre2 [txt eresun1, either, M5]
+
+Te mira <<print either("confundido", "sonriente", "molesto", "asustado") >> como si fueras un <<textinput $eresun1 [[siguiente|rotro2]]>> y continúa avanzando.
+
+<<setback https://dl.dropboxusercontent.com/u/96052803/MULTITUD%20INFINITA/MM%20Vector/M5.jpg>>
+
+
+:: color [if print ritmo1, mi 6]
+<<if ($caminando is "true")>>Los otros cuerpos te atraviesan <<print $ritmo1>>s. Mucha presión, fragmentos, caos.
+
+Un ojo demasiado cerca, un brazo, <<cyclinglink $cuerpo "rodillas" "un dedo deforme" "cabellos en la cara" "más cabellos en la cara">> un golpe en la [[nariz.|desaparece]] <<else>>Los otros cuerpos te atraviesan. Presión, fragmentos, caos.
+
+Un ojo demasiado cerca, un brazo, <<cyclinglink $cuerpo "rodillas" "un dedo deforme" "cabellos en la cara" "más cabellos en la cara">> un golpe en la [[cabeza.|desaparece]]
+<<endif>>
+
+<<setback https://dl.dropboxusercontent.com/u/96052803/MULTITUD%20INFINITA/MIVector/Mi6.jpg>>
+
+
+
+
+:: rotro2 [if print rostro1/objeto1, sonido, M6]
+<<if ($detenerse is "true")>> Poco a poco dejas de pensar en ese <<print $sonido>>. Tu mente se abandona a la textura del <<print $objeto1>> y [[te liberas.|reaccion1]]
+
+<<else>> Te miras a ti mismo. 
+Dentro de la multitud, también empiezas a parecer <<print $rostro1>>. 
+
+[[Te sorprendes.|grito]]<<endif>>
+
+<<setback https://dl.dropboxusercontent.com/u/96052803/MULTITUD%20INFINITA/MM%20Vector/M6.jpg>>
+
+
+
+
+:: desaparece [if print cielo, eresun1, mi8]
+<<if ($caminando is "true")>>Estas casi afuera, has dejado tu forma de <<print $eresun1>>
+Tu corazón late de nuevo como <<print $palabracielo>>.
+
+[[Suspiras.|ultimo]]
+<<else>>Estas casi afuera.
+Tu corazón late de nuevo como <<print $palabracielo>>.
+
+[[Suspiras.|ultimo]]
+<<endif>>
+
+<<setback https://dl.dropboxusercontent.com/u/96052803/MULTITUD%20INFINITA/MIVector/Mi8.jpg>>
+
+
+:: grito [print rostro1, M7]
+De pronto el conjunto de <<print $rostro1>>s emite un grito ensordecedor, incomprensible. 
+
+[[Empiezas a pensar que no deberías estar ahí.|detenerse]]
+[[Gritas contento al unísono.|reaccion1]]
+
+<<setback https://dl.dropboxusercontent.com/u/96052803/MULTITUD%20INFINITA/MM%20Vector/M7.jpg>>
+
+
+:: comandos
+<<if ($caminando is "true")>>
+<<print $olor>>
+<<else>>
+<<endif>>
+
+
+<<print either("enjambre.", "laberinto.", "panal de cuerpos.", "oasis de voces.") >>
+
+<<cyclinglink $sintaxis "sintaxis" "mirada" "forma de vida" "conciencia">>
+
+
+:: ultimo [print rostro, eresun2, cielo, cycli, either , mi71]
+Eres un <<print $objeto1>> libre. Respiras profundamente.
+
+Pero la multitud cambio tu <<cyclinglink $sintaxis "sintaxis" "mirada" "forma de vida" "conciencia">>. Y te ha dado <<print either ("un lenguaje", "una voz", "una luz")>> surrealista, como de <<print $eresun2>> y <<print $palabracielo>>, en cada [[parpadeo.|Inicio]]
+
+ <<set $fin = "true">>
+
+<<setback https://dl.dropboxusercontent.com/u/96052803/MULTITUD%20INFINITA/MIVector/Mi71.jpg>>
+
+
+:: Untitled Passage 2
+
+
+nadie lo esperaba en el <<cyclinglink $lugar "alli" "afuera" "adentro">>
+
+
+:: reaccion1 [print rostro1, M8]
+Todos empiezan a tener un rostro cada vez más <<print $ritmo1>>
+
+y una mirada llena de <<print $palabracielo>>
+
+[[Tu cuerpo ya no te pertenece.|ahora]]
+
+<<setback https://dl.dropboxusercontent.com/u/96052803/MULTITUD%20INFINITA/MM%20Vector/M8.jpg>>
+
+
+:: ahora [if print eres2, M9]
+<<if ($detenerse is "true")>>Fuiste un <<print $eresun2>>, pero ahora eres los rostros y los ritmos de eso que te [[rodea|fin]].
+<<else>>Ahora eres otro, eres los rostros y los ritmos y todo lo que [[rodea|fin]].
+<<endif>>
+
+<<setback https://dl.dropboxusercontent.com/u/96052803/MULTITUD%20INFINITA/MM%20Vector/M9.jpg>>
+
+
+:: fin [print olor, cielo, cycli, either, MC]
+La multitud es tu nueva <<cyclinglink $sintaxis "sintaxis" "mirada" "forma de vida" "conciencia">>. Ella te ha dado <<print either ("un lenguaje", "una voz", "una luz")>> surrealista que te llena los sentidos de <<print $olor>> y <<print $palabracielo>> en cada [[suspiro.|Inicio]]
+
+ <<set $fin = "true">>
+
+<<setback https://dl.dropboxusercontent.com/u/96052803/MULTITUD%20INFINITA/MM%20Vector/completo.jpg>>
+
+
+
+
+
+
+:: cyclinglink [script]
+version.extensions.cyclinglinkMacro={major:3,minor:3,revision:0};
+macros.cyclinglink={handler:function(a,b,c){var rl="cyclingLink";
+function toggleText(w){w.classList.remove("cyclingLinkInit");
+w.classList.toggle(rl+"Enabled");w.classList.toggle(rl+"Disabled");
+w.style.display=((w.style.display=="none")?"inline":"none")}switch(c[c.length-1]){case"end":var end=true;
+c.pop();break;case"out":var out=true;c.pop();break}var v="";if(c.length&&c[0][0]=="$"){v=c[0].slice(1);
+c.shift()}var h=state.history[0].variables;if(out&&h[v]===""){return
+}var l=Wikifier.createInternalLink(a,null);l.className="internalLink cyclingLink";
+l.setAttribute("data-cycle",0);for(var i=0;i<c.length;i++){var on=(i==Math.max(c.indexOf(h[v]),0));
+var d=insertElement(null,"span",null,"cyclingLinkInit cyclingLink"+((on)?"En":"Dis")+"abled");
+if(on){h[v]=c[i];l.setAttribute("data-cycle",i)}else{d.style.display="none"
+}insertText(d,c[i]);if(on&&end&&i==c.length-1){l.parentNode.replaceChild(d,l)
+}else{l.appendChild(d)}}l.onclick=function(){var t=this.childNodes;
+var u=this.getAttribute("data-cycle")-0;var m=t.length;toggleText(t[u]);
+u=(u+1);if(!(out&&u==m)){u%=m;if(v){h[v]=c[u]}}else{h[v]=""}if((end||out)&&u==m-(end?1:0)){if(end){var n=this.removeChild(t[u]);
+n.className=rl+"End";n.style.display="inline";this.parentNode.replaceChild(n,this)
+}else{this.parentNode.removeChild(this);return}return}toggleText(t[u]);
+this.setAttribute("data-cycle",u)}}};
+
+
