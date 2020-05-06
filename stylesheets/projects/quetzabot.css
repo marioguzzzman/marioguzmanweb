@@ -48,7 +48,6 @@
     left: 0;
     width: 42vw;
     /* height: 100vh; */
-
 }
 
 .bump {
@@ -90,17 +89,26 @@
 }
 
 @media (max-width: 762px) {
-    .parallax-1 img {
+    /* .parallax-1 img {
         top: 0;
         left: 7vw;
         width: 46vw;
+    } */
+    .parallax-1 img {
+        top: 66px;
+        left: 5vw;
+        width: 71vw;
     }
-    .parallax-2 img {
+    /* .parallax-2 img {
         top: -20px;
         left: -20px;
         width: 46vw;
+    } */
+    .parallax-2 img {
+        top: -97px;
+        left: -249px;
+        width: 71vw;
     }
-
     .parallax-3 img {
         top: 0;
         left: 7vw;

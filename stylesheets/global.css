@@ -187,3 +187,27 @@ h4,
     transform: scaleX(1);
     transform-origin: 0% 0%
 }
+
+@media (max-width: 768px) {
+    .underlined:hover:after {
+        visibility: visible;
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+        transform-origin: 0% 0%;
+        margin-bottom: 24px;
+    }
+    h1,
+    .h1 {
+        font-size: 10px;
+        font-size: calc(15px + (23 - 18) * ((100vw - 320px) / (2560 - 320)));
+        letter-spacing: 0.25px;
+        line-height: calc(30px + (45 - 35) * ((100vw - 320px) / (2560 - 320)));
+    }
+    h2,
+    .h2 {
+        font-size: 18px;
+        font-size: calc(11px + (19 - 16) * ((100vw - 320px) / (2560 - 320)));
+        letter-spacing: 1.25px;
+        line-height: 20px;
+    }
+}
