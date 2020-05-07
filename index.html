@@ -68,15 +68,16 @@
     <link rel="stylesheet" href="../stylesheets/projects/index2.css">
 
 
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
 </head>
 
 <body>
 
-    <div id="headerJS"></div>
-
     <div class='body-width'>
+
 
         <div id="headerJS"></div>
 
@@ -176,7 +177,7 @@
                         <div class="glitch-mask"><span>Learning to write: a machine learning experiment</span></div>
                     </div>
 
-                    <div class="h4 project-category glitch-btn" style="margin-bottom: 24px">
+                    <div class="h4 project-category glitch-btn" style="margin-bottom: -9px">
                         <div class="texthover">Machine Learning / Experimental Literature / Installation</div>
                         <div class="glitch-mask"><span>Machine Learning / Experimental Literature / Installation</span>
                         </div>
@@ -458,6 +459,18 @@
 
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myLinks");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+    </script>
+
     <script>
         $(function() {
             // $("#footerJS").load("../footerNav.html");
@@ -468,7 +481,7 @@
     <script src="https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
     <!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js">  -->
-    </script>
+    <!-- </script> -->
     <script src='/javascript/global.js'></script>
     <script src='/javascript/landing.js'></script>
     <script src='/javascript/glitch.js'></script>
