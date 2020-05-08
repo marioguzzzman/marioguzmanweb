@@ -1,9 +1,17 @@
 
+1. how AI help defeat the coronavirus
+2. contact tracing, slow the spread, 
+3. dianogsis tracing 
+4. remote medicine   robotics arms
+
 <!-- TODO
     
 
 GENERAL
-back pages
+* HACER RESPONSIVE
+* REVISAR TODOS LOS     <meta property='og:image' content='/images/global/yoiguana.jpg'>
+*borrar la navegacion del footer, agregar solo un icono que vaya hacia arriba
+
 mejorar fotos
 cambio bio en todas las paginas. hacer in include
 javascript for inc;ude 
@@ -12,16 +20,45 @@ javascript for inc;ude
 ordenar por fecha
 
 
-DONE
-cambiar bio, DONE
-
-agregar lo de la bienal de venecia
-agregar lo del malba
-
-
 //PAGINAS HECHAS INDEX
-TODO ARCHIVE
-TODO EXPERIMENTAL
+
+TODO bio
+    IMAGEN DE LOS TIPOS DE OBRA QUE HAGO
+
+TODO WORK
+    El mar fuera del mar
+    malba
+
+    --------------
+
+    TODO COMMISIONED
+    agregar lo de la bienal de venecia
+    Agregar lo de Hanson
+
+    ---------------
+
+    TODO Photography
+    Agregar series de fotos
+
+TODO Writing experiments
+    blamebot
+    Ciborg Haiku Generator
+    Agrega demo de los modelos entrenados 
+
+TODO EXHIBITS
+    Agregar todas las EXHIBITS
+
+TODO WORKSHOPS
+    nixso
+    Escrituras
+    Floating Projects
+    Literatura digital congreso
+
+TODO TEXTS
+    CERIANI
+    ASAECA
+    LIBROS de ale 2   
+
 TODO CHECKAR LAS DIMENSIONES DLE VIDEO DE VIMEO QUE SEAN IGUALES
 TODO LIMPIAR FOTOS DE LOS ARCHIVOS/ ESO LO PUEDO HACER EN EL AVION
 
@@ -34,7 +71,7 @@ quetzabot (2015) DONE
 
 temazcalli (2015 - 2016) DONE
 
-ped (2016) DONE
+TODO ped (2016) 
     add new video
 
 oraculo (2014) DONE
@@ -44,20 +81,15 @@ lastagreement (2016) DONE
 visionoros (2013 - present) DONE
 look for nice photos
 
-hiperstories (2015) DONE
+TODO hiperstories (2015) 
     links rotos
-
-Hipertext Retorics. Diario Perfil 
+    Hipertext Retorics. Diario Perfil 
 
 ocean TODO
 
 prepixel (2014) DONE
 
 ARENA TODO
-
-
-// EXPERIMENTAL
-
 
 
 //ARCHIVE
@@ -89,13 +121,5 @@ WE KNOW NOTHING ABOUT THE OTHERS (2010 - 2011)
 OTHER PHOTOGRAPHY EXHIBITS
 ●
 Nano Photography Festival . ​ B
-
-
-//EXPERIMENTS
-
-- LSTM
-- GENERATIVE HAIKU
-- LSTM FULL
-   
 
 
