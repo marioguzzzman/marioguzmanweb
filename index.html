@@ -67,7 +67,8 @@
 
     <link rel="stylesheet" href="../stylesheets/projects/index2.css">
 
-
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -456,7 +457,16 @@
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
-
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myLinks");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+    </script>
 
     <script>
         $(function() {
