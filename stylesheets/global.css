@@ -215,8 +215,8 @@ h4,
     color: #010101;
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 17px;
-    display: list-item;
+    font-size: 16px;
+    display: -webkit-inline-box;
 }
 
 
@@ -228,6 +228,12 @@ h4,
     position: absolute;
     right: 0;
     top: 0;
+    /* font-size: 24px; */
+}
+
+.fa.nav-icon {
+    /* background: grey; */
+    font-size: 24px;
 }
 
 
@@ -280,14 +286,16 @@ h4,
         /* text-align: center; */
     }
     /* NAV */
-    .topnav a {
-        font-size: 14px;
-    }
     .topnav a.icon {
         background: #f5f5f5;
         display: block;
         position: absolute;
         right: 0;
         top: 0;
+    }
+    .topnav a {
+        font-size: 13px;
+        padding: 4px 16px;
+        display: -webkit-box;
     }
 }
