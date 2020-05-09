@@ -123,8 +123,10 @@ $(function() {
 
 });
 
-window.addEventListener('load', function() {
-  if (('IntersectionObserver' in window)) {
-    new Viewport();
-  }
-});
+window.addEventListener('load', function () {
+
+  $("#headerJS").load("../headerNav.html", function () {
+    if (('IntersectionObserver' in window)) {
+      new Viewport();
+    }
+  });
