@@ -53,6 +53,13 @@ img {
     height: 80%;
 }
 
+.bio-pic {
+    margin: 20px 30px 20px 0;
+    width: 40%;
+    object-fit: contain;
+    align-self: flex-start;
+}
+
 p {
     margin: 0;
 }
@@ -330,5 +337,8 @@ h4,
         float: none;
         display: block;
         text-align: left;
+    }
+    .bio-pic {
+        width: 90%;
     }
 }
