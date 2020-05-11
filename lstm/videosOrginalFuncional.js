@@ -23,7 +23,7 @@ let meta_experment = false;
 // //SETTING WORKING FOR EXPERIMENTS
 //need to activate both videos and camera code
 let videoEffects = true;
-let randomFrameEffect = true;
+let randomFrameEffect = false;
 let playSimpleVideo = false; //random videos // currently not working, do not know why, probably come changes in for loop // FIX // PROBLEM WITH VOLUME OR SOMETHING // currently appears as defacult is one video is false
 let oneVideo = true; // efects wonk work when false // just 1.mp4
 
@@ -151,10 +151,10 @@ let subtitle = false;
 let showSubtitle = 0;
 
 // //--------------Connectors text XIX CENTURY TRAVELER
-let entrance = [ 'I think this is a ', 'Sometimes when I find a ', 'Later on, I whould think of this ', 'Although I don\'t believe that this is a ', 'But, if you wander through the ', 'Last time I saw a ', 'I couldn\'t believe a ', 'I feel I already saw a ', 'Just after a ', 'Before this ', 'After encountering this ', 'Also, this ', 'Later on, the ', 'Above all, this ', ];
+let entrance = ['I think this is a ', 'Sometimes when I find a ', 'Later on, I whould think of this ', 'Although I don\'t believe that this is a ', 'But, if you wander through the ', 'Last time I saw a ', 'I couldn\'t believe a ', 'I feel I already saw a ', 'Just after a ', 'Before this ', 'After encountering this ', 'Also, this ', 'Later on, the ', 'Above all, this ', ];
 
 
-let middle = [ ' ', ' ', ' ', ' ', ' ', ' ', ' ', '. ', ', ', ', but ', ', moreover, ', ', however, ', ', in short,', ', but also, ', ', in addition, ', ', nevertheless, ', ', I rather think of ', ' we can discuss about', ' I doubted my self, but ', ' was there ', ];
+let middle = [' ', ' ', ' ', ' ', ' ', ' ', ' ', '. ', ', ', ', but ', ', moreover, ', ', however, ', ', in short,', ', but also, ', ', in addition, ', ', nevertheless, ', ', I rather think of ', ' we can discuss about', ' I doubted my self, but ', ' was there ', ];
 
 // //--------------Connectors text XIX CENTURY TRAVELER
 
@@ -223,9 +223,9 @@ function preload() { // To add things that take time to load
 
     //LOAD MODEL LSTM
     if (translate) {
-        rnn = ml5.charRNN("/test-lstm/model_8_latin/"); // lATIN model for GameOn
+        rnn = ml5.charRNN("test-lstm/model_8_latin/"); // lATIN model for GameOn
     } else {
-        rnn = ml5.charRNN("/test-lstm/model_124/"); // XIX century traveler
+        rnn = ml5.charRNN("test-lstm/model_124/"); // XIX century traveler
     }
 
     //SOUND
@@ -335,7 +335,7 @@ function draw() {
 
     //     // terminal = false;
 
-    
+
     //     if (showCamera == 200) {
     //         cameraON = false;
     //         videoON = true;
@@ -380,16 +380,16 @@ function draw() {
 
     // showCamera++;
     // console.log('camera: ' + showCamera++);
-// 
-        // if (showCamera == 700) {
-            // renderCamera(); // FUNCIONA PERO SIN TEXTO
+    // 
+    // if (showCamera == 700) {
+    // renderCamera(); // FUNCIONA PERO SIN TEXTO
 
-            // cameraON = false;
-            // videoON = true;
-            // console.log('render camera is 200');
+    // cameraON = false;
+    // videoON = true;
+    // console.log('render camera is 200');
 
 
-        // }
+    // }
 
 
     // extraText();
