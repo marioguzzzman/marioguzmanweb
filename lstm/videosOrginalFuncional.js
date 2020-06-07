@@ -1,14 +1,14 @@
 // ------------------------------------------------------ TODO
 //CURRENTLY WORKING ON:
 //Setting random video play
-//Managing different efects for videos
+//Managing different effects for videos
 
 // AUDIOS DOES NOT WORK
 //ADD WEBCAM MULTIPLE
 //ADD CODE TO CHANGE BETWEEN WEBCAM AND VIDEO WHEN RECOGNIZING A FACE
 //MODULATE SPANISH VOICE // DOES NOT WORK NOW
 //ADD MENU
-//TODO increse sound length
+//TODO increase sound length
 
 
 //------------------------------------------------------- TESTING 
@@ -18,14 +18,14 @@ let menu = true;
 
 
 let meta_gameOn = true;
-let meta_experment = false;
+let meta_experiment = false;
 
 // //SETTING WORKING FOR EXPERIMENTS
 //need to activate both videos and camera code
-let videoEffects = true;
-let randomFrameEffect = false;
-let playSimpleVideo = false; //random videos // currently not working, do not know why, probably come changes in for loop // FIX // PROBLEM WITH VOLUME OR SOMETHING // currently appears as defacult is one video is false
-let oneVideo = true; // efects wonk work when false // just 1.mp4
+let videoEffects = false;
+let randomFrameEffect = true; // works with no effect
+let playSimpleVideo = false; //actually plays random videos // currently not working, do not know why, probably come changes in for loop // FIX // PROBLEM WITH VOLUME OR SOMETHING // currently appears as default is one video is false
+let oneVideo = true; // effects wonk work when false // just 1.mp4 
 
 // // let bothCameraAndVideo = false;
 
@@ -38,10 +38,10 @@ let cameraEffect = false; // estaba true
 // let videoEffects = true;
 // let randomFrameEffect = true;
 // let playSimpleVideo = false; //random videos
-// let oneVideo = true; // efects wonk work when false // just 1.mp4
+// let oneVideo = true; // effects wonk work when false // just 1.mp4
 
 // let cameraVideo = true; //estaba true
-// let OnlyCamera = false; // GETS ERROR FROM GENERATOR // maybe because generator ins embeded into renderVIdeos()
+// let OnlyCamera = false; // GETS ERROR FROM GENERATOR // maybe because generator ins embeded into renderVideos()
 // let cameraEffect = true; // estaba true
 
 
@@ -103,7 +103,7 @@ let videos = [];
 let whichVideo = 0;
 let amountVideos = 3;
 
-var vScale = 1; // scale of video // chech set up to adjust vscale acording to tipe of video effect  //Adjust video size // actually increses the accuracy of the prediction model
+var vScale = 1; // scale of video // check set up to adjust vscale according to type of video effect  //Adjust video size // actually increases the accuracy of the prediction model
 
 
 let pixelColor;
@@ -114,7 +114,7 @@ let pixelColor;
 let writingOutput = false;
 let writer;
 let linesInPage = 5; // amount of lines in page
-let page = []; // text file writen
+let page = []; // text file written
 
 
 let resultsReady = false;
@@ -132,6 +132,7 @@ let confidence = '';
 let rnnSub = '';
 let regexRnnSub = '';
 let initRegx = '';
+let printFinalText = '';
 
 //parameters for "terminal" text
 let sourceText = ' ';
@@ -151,10 +152,13 @@ let subtitle = false;
 let showSubtitle = 0;
 
 // //--------------Connectors text XIX CENTURY TRAVELER
-let entrance = ['I think this is a ', 'Sometimes when I find a ', 'Later on, I whould think of this ', 'Although I don\'t believe that this is a ', 'But, if you wander through the ', 'Last time I saw a ', 'I couldn\'t believe a ', 'I feel I already saw a ', 'Just after a ', 'Before this ', 'After encountering this ', 'Also, this ', 'Later on, the ', 'Above all, this ', ];
+let entrance = ['I think this is a ', 'When I find a ', 'Later on, I think of this ', 'Although I don\'t believe that this is a ', 'But, if you wander through the ', 'Last time I saw a ', 'I couldn\'t believe a ', 'I feel I already saw a ', 'Just after a ', 'Before this ', 'After encountering this ', 'Also, this ', 'Later on, the ', 'Above all, this ', ];
 
 
 let middle = [' ', ' ', ' ', ' ', ' ', ' ', ' ', '. ', ', ', ', but ', ', moreover, ', ', however, ', ', in short,', ', but also, ', ', in addition, ', ', nevertheless, ', ', I rather think of ', ' we can discuss about', ' I doubted my self, but ', ' was there ', ];
+
+// let entrance = [' '];
+// let middle = [' '];
 
 // //--------------Connectors text XIX CENTURY TRAVELER
 
@@ -196,7 +200,7 @@ p5.disableFriendlyErrors = true; // disables FES //to upgrade performance
 function preload() { // To add things that take time to load
 
 
-    textToLoad = loadStrings('subTexts.txt', txtLoaded);
+    // textToLoad = loadStrings('subTexts.txt', txtLoaded);
 
 
     myMobileNet = ml5.imageClassifier('MobileNet'); // put name of model aT the end
@@ -226,6 +230,7 @@ function preload() { // To add things that take time to load
         rnn = ml5.charRNN("test-lstm/model_8_latin/"); // lATIN model for GameOn
     } else {
         rnn = ml5.charRNN("test-lstm/model_124/"); // XIX century traveler
+        // rnn = ml5.charRNN("test-lstm/lstm-ml5-models/bolano/"); // ml5 Models
     }
 
     //SOUND
@@ -245,8 +250,8 @@ function preload() { // To add things that take time to load
 function setup() {
     noCursor();
 
-    // createCanvas(windowWidth, windowHeight);
-    createCanvas(1920, 1080); // orginal
+    createCanvas(windowWidth, windowHeight);
+    // createCanvas(1280, 720); // original
 
     frameRate(30);
     pixelDensity(1);
@@ -260,7 +265,7 @@ function setup() {
     //-------------VIDEO 
 
     if (videoEffects) {
-        vScale = 15;
+        vScale = 20; // changes size of square, before was 15
     } else {
         vScale = 1;
     }
@@ -268,8 +273,8 @@ function setup() {
     if (OnlyCamera || cameraVideo) {
         v_Cam_Scale = 1;
 
-        // myCamera.size(width / v_Cam_Scale, height / v_Cam_Scale);
-        myCamera.size(1920 / v_Cam_Scale, 1080 / v_Cam_Scale);
+        myCamera.size(width / v_Cam_Scale, height / v_Cam_Scale);
+        // myCamera.size(1920 / v_Cam_Scale, 1080 / v_Cam_Scale);
 
         myCamera.hide();
     }
@@ -313,9 +318,9 @@ function draw() {
     menuComands();
 
     // ENABLE AUDIOCONTEXT REQUIREMENT FOR BROWSER
-    if (getAudioContext().state !== 'running') {
-        text('click to start audio', width / 2, height / 2);
-    }
+    // if (getAudioContext().state !== 'running') {
+    //     text('click to start audio', width / 2, height / 2);
+    // }
 
     // cameraON = true;
     // showCamera++;
@@ -402,7 +407,7 @@ function draw() {
 
         //cuadradito para acentuar subtitulos
         fill(0, 95);
-        rect(0, windowHeight - 160, windowWidth, 200);
+        rect(0, windowHeight - 200, windowWidth, 200);
 
         DoText();
         // talk();
@@ -458,5 +463,8 @@ function menuComands() {
 // In terminal enter the folder in which the code is hosted
 // python3 -m http.server
 // http://localhost:8000/  //works best with this. Does not work with Firefox
+
+// OTHER Option to run server
+// http - server
 
 //You have to click on the screen to be able to hear the background sounds
