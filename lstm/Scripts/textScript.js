@@ -7,12 +7,12 @@ function randomize() {
 
 function DoText() {
 
-    //subtitute for millis
+    //substitute for millis
 
     terminal = true;
     showTerminal++;
 
-    console.log('Counting: ' + count);
+    // console.log('Counting: ' + count);
 
     if (terminal && !subtitle) {
         doTerminal();
@@ -60,7 +60,7 @@ function doTerminal() {
         textFont("Ubuntu Mono");
     }
 
-   // textSize(33); //for proyector
+    // textSize(33); //for projector
     textSize(23); //for screen 
     fill(color);
     noStroke();
@@ -81,8 +81,7 @@ function doTerminal() {
         //MAKE THIS SENTENCE MORE VARIABLE
 
         if (translate) {
-            sourceText = 'Generando narrativa... ' +
-                '\nElemento encontrado: ' +
+            sourceText = '\nElemento encontrado: ' +
                 translatedRes + //latinamerican model
                 //'. \nEnviando a narrador... ' +
                 // ' \nTambién he encontrado un ' +
@@ -90,18 +89,19 @@ function doTerminal() {
                 //'\nCreo estar ' +
                 //mbNetConfidence +
                 //' segure...' +
-                '\nActualizando narrativa...';
+                '\nGenerando descripción...' +
+                '\nActualizando mundo...';
         } else {
-            sourceText = 'Generating narrative...' +
-                '\nElements found: ' +
+            sourceText = '\nElement found: ' +
                 mbNetLabel0 + // XIX travel model
-                '. \nSending to narrator.. ' +
+                // '. \nSending to narrator.. ' +
                 //' \nAlso found a ' +
                 //mbNetLabel1 +
-               // ', I am ' +
-               // mbNetConfidence +
-               // ' sure of that...' +
-                '\nUpdating narrative...';
+                // ', I am ' +
+                // mbNetConfidence +
+                // ' sure of that...' +
+                '\nGenerating description...' +
+                '\nUpdating world representation...';
         }
     }
 
@@ -143,12 +143,12 @@ function DoSubtitle() {
     textAlign(CENTER);
     textFont("Verdana");
 
-    // textSize(52); // for proyection
-    textSize(42); // for screen
+    // textSize(52); // for projection
+    textSize(36); // for screen
 
     textLeading(50); // pixels between each line
 
-    
+
     // fill(0, 70);
     // rect(posYtextS, windowWidth - 140, 300);
 
@@ -160,7 +160,7 @@ function DoSubtitle() {
 
 
 
-    text(regexRnnSub, line, posYtextS, windowWidth - 140, 300);
+    text(printFinalText, line, posYtextS, windowWidth - 140, 300);
 
     // text(rnnSub, line, posYtextS, windowWidth - 100, 300);
 }
@@ -247,7 +247,7 @@ function txtLoaded(textToLoad) {
     return txt;
 }
 
-//--------------------------------------------------------- REPLACER ARTIFICAL EDITOR
+//--------------------------------------------------------- REPLACER ARTIFICIAL EDITOR
 
 
 
