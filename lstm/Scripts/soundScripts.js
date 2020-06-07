@@ -1,4 +1,3 @@
-
 //------------------------------------------ BACKGROUND SOUND
 //Use this function to enable sound in chrome.
 // https://p5js.org/reference/#/p5.sound/getAudioContext
