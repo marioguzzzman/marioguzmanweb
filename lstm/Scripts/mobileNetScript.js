@@ -1,4 +1,3 @@
-
 //--------------------------------------------------------- MOBILE NET + CRNN MODEL
 
 function gotResults(err, results) {
@@ -26,17 +25,17 @@ function gotResults(err, results) {
 
         // -----> CRNN ------> Generate TEXT content
 
-        let randomTxtLength = Math.floor(random(1, 90)); // esto funciona
+        let randomTxtLength = Math.floor(random(50, 100)); // esto funciona
 
         rnn.generate({
             // seed: results[1].label, // this is the label result
             // seed: mbNetLabel0, // this is the hole sentence
 
             //----------------- SEEDS THAT APPEAR ON TEXT
-            seed: `${startingSeeds}${mbNetLabel0} `, // this is the whole sentence that becomes seed
+            seed: `${startingSeeds}${mbNetLabel0[0]}${middleSeeds}`, // this is the whole sentence that becomes seed
             // length: 100, //length of characters
             length: `${randomTxtLength}`,
-            temperature: 0.9 // bring closer to 1 in order to make it closer to seed
+            temperature: 0.5 // bring closer to .1 in order to make it closer to seed
         }, (err, results) => {
 
             console.log("SAMPLE: " + results.sample);
@@ -44,9 +43,9 @@ function gotResults(err, results) {
             rnnSub = results.sample; // ------> RESULTED SINGLE SEED TEXT
             console.log("rnnSub: " + rnnSub);
 
-            rnnSub = rnnSub.split(" "); //breaks label into words
+            rnnSub = rnnSub.split(" "); //breaks sample into words
 
-           // let randomTxtLength = Math.floor(random(1, 3)); // esto funciona
+            // let randomTxtLength = Math.floor(random(1, 3)); // esto funciona
 
             // var rnnSub = "This is an amazing sentence.";
             // var rnnSub = str.split(" ");
@@ -56,7 +55,7 @@ function gotResults(err, results) {
             // console.log(rnnSub);
             //["This ", "is ", "an ", "amazing ", "sentence."]
 
-            rnnSub = rnnSub.join(" + "); // THIS GETS DISPLAYED,but dont know if it reaches the display.
+            rnnSub = rnnSub.join(" "); // Now it works.
 
 
 
@@ -77,9 +76,9 @@ function gotResults(err, results) {
             // si hay un punto, a azar dar enter o nada
             // si hay comillas, en tres o 5 paavbras agregar otras comillas.
 
-            regexRnnSub = rnnSub.replace(/.\b[^\saeiou]\b/gm, ' '); //reemplaza consonantes sueltas por x FUNCIONA
+            regexRnnSub = rnnSub.replace(/.\b[^\saeiou]\b/gm, ''); //reemplaza consonantes sueltas por x FUNCIONA
 
-            // var regex = initRegx.replace(/\.(\s*)([a-z])/, \.\U \1 \2); //grupo uno mathea culquier cantidad de espacios y el grupo dos matchea letras despues de espacios y las hace uppercase...despues hacer uqe e grupo 1 me lo cambie por enter
+            // var regex = initRegx.replace(/\.(\s*)([a-z])/, \.\U\ 1\ 2); //grupo uno mathea culquier cantidad de espacios y el grupo dos matchea letras despues de espacios y las hace uppercase...despues hacer uqe e grupo 1 me lo cambie por enter
 
             // var regex = initRegx.replace(/\"\s*([Aa-zZ]+\s*){1,4}/, \"\1\"); //si encuentra comilla busca hasta 4 palabras y pon una comilla al final
             // regexRnnSub = rnnSub.replace(/\"\s*([A-Za-z.]+\s*){1,4}/, '" "'); //si encuentra comilla busca hasta 4 palabras y pon una comilla al final
@@ -123,11 +122,13 @@ function gotResults(err, results) {
 
             if (translate) {
                 // regex
-                regexRnnSub = `${startingSeeds}${translatedRes}${middleSeeds}${results.sample}`; // ------> LatinAmerican model RESULTED TEXT WITH MULTIPLE ENTRANCES
+                printFinalText = `${startingSeeds}${translatedRes}${middleSeeds}${regexRnnSub}`;
+                // regexRnnSub = `${startingSeeds}${translatedRes}${middleSeeds}${results.sample}`; // ------> LatinAmerican model RESULTED TEXT WITH MULTIPLE ENTRANCES // BEFORE
                 // rnnSub = `${startingSeeds}${translatedRes}${middleSeeds}${results.sample}`; // ------> LatinAmerican model RESULTED TEXT WITH MULTIPLE ENTRANCES
             } else {
-                regexRnnSub = `${startingSeeds}${mbNetLabel0}${middleSeeds}${results.sample}`; // ------> XIX travel literature model RESULTED TEXT WITH MULTIPLE ENTRANCES
-                // rnnSub = `${startingSeeds}${mbNetLabel0}${middleSeeds}${results.sample}`; // ------> XIX travel literature model RESULTED TEXT WITH MULTIPLE ENTRANCES
+                // regexRnnSub = `${startingSeeds}${mbNetLabel0[0]}${middleSeeds}${results.sample}`; // ------> XIX travel literature model RESULTED TEXT WITH MULTIPLE ENTRANCES
+                // rnnSub = `${startingSeeds}${mbNetLabel0[0]}${middleSeeds}${results.sample}`; // ------> XIX travel literature model RESULTED TEXT WITH MULTIPLE ENTRANCES
+                printFinalText = `${startingSeeds}${mbNetLabel0[0]}${middleSeeds}${regexRnnSub}`;
             }
 
 
@@ -174,5 +175,3 @@ function gotResults(err, results) {
         }); // end of generate
     } // end of results
 } //end of gotResults
-
-
