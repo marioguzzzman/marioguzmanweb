@@ -30,7 +30,7 @@ function renderVideos() {
 
     if (playSimpleVideo) {
         // console.log('playing simple video');
-        image(videos[0].play(), 0, 0, width, height); //size and position of video // COMENTED FOR PIXELS // CHECK ALL THIS
+        image(videos[0].play(), 0, 0, width, height); //size and position of video // COMMENTED FOR PIXELS // CHECK ALL THIS
         videos[0].volume(0.3);
 
     } else {
@@ -60,13 +60,13 @@ function renderVideos() {
                 pixelEffect();
                 randomFrame();
 
-                 // * Camera gets in the back of video 
+                // * Camera gets in the back of video 
                 //  if (cameraVideo) { //under video
                 //     // console.log('camera VIdeo');
                 //     renderCamera();
                 // }
 
-                
+
             } else {
                 pixelEffect();
                 //camera video positioned here is also behind video
@@ -83,10 +83,10 @@ function renderVideos() {
             }
 
             // ----->>>>>>> VIDEO HERE! WITHOUT EFFECTS
-            image(videos[whichVideo], 0, 0, width, height); //size and position of video // COMENTED FOR PIXELS
-            // tint(255, 255, 255); //add tranparency to video //https://p5js.org/reference/#/p5.Color/setAlpha
+            image(videos[whichVideo], 0, 0, width, height); //size and position of video // COMMENTED FOR PIXELS
+            // tint(255, 255, 255); //add transparency to video //https://p5js.org/reference/#/p5.Color/setAlpha
 
-            // tint(255, 255, 255, 100); //add tranparency to video //https://p5js.org/reference/#/p5.Color/setAlpha
+            // tint(255, 255, 255, 100); //add transparency to video //https://p5js.org/reference/#/p5.Color/setAlpha
 
             // * Camera gets in front of video y por alguna razon no se ve
             // if (cameraVideo) { //under video
