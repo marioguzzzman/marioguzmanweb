@@ -5,6 +5,8 @@ function gotResults(err, results) {
 
     console.log('ENTER RESULTS'); // see results 
 
+    let randomLabel = Math.floor(random(0, 3)); // get random labels
+
     if (err) console.log(err); //just tell errors
 
     if (results) {
@@ -13,19 +15,22 @@ function gotResults(err, results) {
         console.log('Results ready: ' + results); // see results 
 
         //-----> ML5 ------>  Create a sentence
-        mbNetLabel0 = results[0].label;
+        // mbNetLabel0 = results[0].label;
+        mbNetLabel0 = results[randomLabel].label;
         mbNetConfidence = results[1].confidence;
         mbNetLabel1 = results[1].label;
         mbNetLabel2 = results[2].label;
 
         mbNetLabel0 = mbNetLabel0.split(" "); //breaks label into words
 
+
         toTranslate(mbNetLabel0[0]); //--------------------------------> Translate main label // only one word from label
+
         console.log("Translated Label: " + translatedRes);
 
         // -----> CRNN ------> Generate TEXT content
 
-        let randomTxtLength = Math.floor(random(50, 100)); // esto funciona
+        let randomTxtLength = Math.floor(random(5, 70)); // esto funciona // largo de la frase
 
         rnn.generate({
             // seed: results[1].label, // this is the label result
@@ -94,7 +99,6 @@ function gotResults(err, results) {
 
             console.log("REGEXSUB: " + regexRnnSub);
 
-
             // var words = initRegx.split(regexRnnSub);
 
             // console.log('Total words: ' + words.length);
@@ -121,8 +125,10 @@ function gotResults(err, results) {
             //--------------------INSERT TRANSLATE -----------------------
 
             if (translate) {
-                // regex
-                printFinalText = `${startingSeeds}${translatedRes}${middleSeeds}${regexRnnSub}`;
+                // regex toTranslate
+                toTranslate(regexRnnSub);
+                // printFinalText = `${startingSeeds}${translatedRes}${middleSeeds}${regexRnnSub}` + ".";
+
                 // regexRnnSub = `${startingSeeds}${translatedRes}${middleSeeds}${results.sample}`; // ------> LatinAmerican model RESULTED TEXT WITH MULTIPLE ENTRANCES // BEFORE
                 // rnnSub = `${startingSeeds}${translatedRes}${middleSeeds}${results.sample}`; // ------> LatinAmerican model RESULTED TEXT WITH MULTIPLE ENTRANCES
             } else {
