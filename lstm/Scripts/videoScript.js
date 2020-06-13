@@ -4,17 +4,10 @@ function renderVideos() {
         // DoTextHiperpoesia();
         // console.log(rnnSub);
 
-        //cuadradito para acentuar subtitulos
-        fill(0, 95);
-        rect(0, windowHeight - 160, windowWidth, 200);
 
-        DoText();
-        // talk();
-
-
-        if (writingOutput) {
-            writer = createWriter(month() + "/" + day() + "/" + year() + "_" + 'latinPage' + "_" + ".txt"); // texto en donde escribir   
-        }
+        // if (writingOutput) {
+        //     writer = createWriter(month() + "/" + day() + "/" + year() + "_" + 'latinPage' + "_" + ".txt"); // texto en donde escribir   
+        // }
 
         renderCamera(); // FUNCIONA PERO SIN TEXTO
 
