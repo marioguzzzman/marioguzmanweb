@@ -9,7 +9,7 @@ function DoText() {
 
     //substitute for millis
 
-    terminal = true;
+    terminal = false;
     showTerminal++;
 
     // console.log('Counting: ' + count);
@@ -158,9 +158,15 @@ function DoSubtitle() {
     // fill(255, 255, 64);
     fill(255, 255, 120);
 
+    //add random of this signs
+    // let signs = [".", ",", "", ":", "", "", "", "", "", ];
 
+    // let randomSign = Math.floor(random(0, signs.length-1));
 
-    text(printFinalText, line, posYtextS, windowWidth - 140, 300);
+    // toTranslate(signs[Math.floor(random(0, signs.length))]); //--------------------------------> Translate main label // only one word from label
+
+    // text(printFinalText, line, posYtextS, windowWidth - 140, 300);
+    text(`${translatedRes}`, line, posYtextS, windowWidth - 140, 300);
 
     // text(rnnSub, line, posYtextS, windowWidth - 100, 300);
 }
