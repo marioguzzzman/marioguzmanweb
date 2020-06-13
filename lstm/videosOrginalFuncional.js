@@ -52,13 +52,14 @@ let myMobileNet;
 
 /////----------------------------------------------------- TRANSLATION MODULE
 
-var entryLang = 'en';
-var exitLang = 'es';
+var entryLang = 'es';
+var exitLang = 'en';
 var translatedRes = '';
 
 var translateAPIKey = 'AIzaSyAGvEzCaMeaL_woHEsCo_w85802jZVuYnI';
 // 
-let translate = false;
+
+let translate = true;
 
 //----------------------------------------------------------- CAMERA --------
 
@@ -111,7 +112,7 @@ let pixelColor;
 //------------------------------------------------------------- TEXT ----------
 //To merge all text files
 // cat * > merged-file
-let writingOutput = false;
+let writingOutput = true;
 let writer;
 let linesInPage = 5; // amount of lines in page
 let page = []; // text file written
@@ -176,8 +177,8 @@ let middleSeeds = middle[0];
 // http://ability.nyu.edu/p5.js-speech/ 
 // https://generative.fm/record
 var myVoice = new p5.Speech(); // new P5.Speech object // OFFLINE 
-// let voice = 'Google UK English Male';
-let voice = 'Google español de Estados Unidos';
+let voice = 'Google UK English Male';
+// let voice = 'Google español de Estados Unidos';
 
 //List of voices
 // 'Google Deutsch', 'Google US English', 'Google UK English Female', 'Google UK English Male', 'Google español', 'Google español de Estados Unidos', 'Google français', 'Google हिन्दी', 'Google Bahasa Indonesia', 'Google italiano', 'Google 日本語', 'Google 한국의', 'Google Nederlands', 'Google polski', 'Google português do Brasil', 'Google русский', 'Google 普通话（中国大陆）', 'Google 粤語（香港', 'Google 國語（臺灣'
@@ -229,8 +230,10 @@ function preload() { // To add things that take time to load
     if (translate) {
         rnn = ml5.charRNN("test-lstm/model_8_latin/"); // lATIN model for GameOn
     } else {
-        rnn = ml5.charRNN("test-lstm/model_124/"); // XIX century traveler
+        // rnn = ml5.charRNN("test-lstm/model_124/"); // XIX century traveler
         // rnn = ml5.charRNN("test-lstm/lstm-ml5-models/bolano/"); // ml5 Models
+        rnn = ml5.charRNN("test-lstm/lstm-ml5-models/gpt2-travel-lit/");
+
     }
 
     //SOUND
@@ -407,7 +410,7 @@ function draw() {
 
         //cuadradito para acentuar subtitulos
         fill(0, 95);
-        rect(0, windowHeight - 200, windowWidth, 200);
+        rect(0, windowHeight - 200, windowWidth, 180);
 
         DoText();
         // talk();
