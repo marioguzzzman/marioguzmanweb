@@ -17,32 +17,12 @@ let offline = false; // disable text to test video
 let menu = true;
 
 
-let meta_gameOn = true;
-let meta_experiment = false;
-
 // //SETTING WORKING FOR EXPERIMENTS
 //need to activate both videos and camera code
 let videoEffects = false;
-let randomFrameEffect = true; // works with no effect
-let playSimpleVideo = false; //actually plays random videos // currently not working, do not know why, probably come changes in for loop // FIX // PROBLEM WITH VOLUME OR SOMETHING // currently appears as default is one video is false
-let oneVideo = true; // effects wonk work when false // just 1.mp4 
-
-// // let bothCameraAndVideo = false;
-
-let cameraVideo = false; //estaba true
-let OnlyCamera = false; // GETS ERROR FROM GENERATOR
-let cameraEffect = false; // estaba true
-
-
-// SETTING WORKING FOR GAME ON
-// let videoEffects = true;
-// let randomFrameEffect = true;
-// let playSimpleVideo = false; //random videos
-// let oneVideo = true; // effects wonk work when false // just 1.mp4
-
-// let cameraVideo = true; //estaba true
-// let OnlyCamera = false; // GETS ERROR FROM GENERATOR // maybe because generator ins embeded into renderVideos()
-// let cameraEffect = true; // estaba true
+let randomFrameEffect = false; // works with no effect
+let playSimpleVideo = true; //actually plays random videos // currently not working, do not know why, probably come changes in for loop // FIX // PROBLEM WITH VOLUME OR SOMETHING // currently appears as default iF one video is false
+let oneVideo = false; // effects wonk work when false // just 1.mp4 
 
 
 /////////------------------------------------------------- MOBILE NET VIDEO ----------
@@ -57,7 +37,6 @@ var exitLang = 'en';
 var translatedRes = '';
 
 var translateAPIKey = 'AIzaSyAGvEzCaMeaL_woHEsCo_w85802jZVuYnI';
-// 
 
 let translate = true;
 
@@ -65,8 +44,6 @@ let translate = true;
 
 // https://ml5js.github.io/ml5-examples/javascript/ImageClassification_Video/ // REVIEW
 //ls -ltrh /dev/video* // check cameras available in Linux
-
-let myCamera; //WEB CAM
 
 // https://github.com/ITPNYU/ICM-2015/blob/master/09_video_sound/02_capture/13_get_sources/sketch.js // get cameras available
 // Seriously.js
@@ -81,11 +58,6 @@ let myCamera; //WEB CAM
 //SCAN
 // https://www.youtube.com/watch?v=YqVbuMPIRwY&list=PLRqwX-V7Uu6aKKsDHZdDvN6oCJ2hRY_Ig&index=7
 
-var capture;
-var options;
-
-let cameraON = false;
-var showCamera = 0;
 
 let videoON = false;
 let showVideo = 0;
@@ -102,7 +74,7 @@ let playing = false;
 let stage = 1;
 let videos = [];
 let whichVideo = 0;
-let amountVideos = 3;
+let amountVideos = 18;
 
 var vScale = 1; // scale of video // check set up to adjust vscale according to type of video effect  //Adjust video size // actually increases the accuracy of the prediction model
 
@@ -112,9 +84,9 @@ let pixelColor;
 //------------------------------------------------------------- TEXT ----------
 //To merge all text files
 // cat * > merged-file
-let writingOutput = true;
+let writingOutput = false;
 let writer;
-let linesInPage = 5; // amount of lines in page
+let linesInPage = 10; // amount of lines in page
 let page = []; // text file written
 
 
@@ -206,12 +178,6 @@ function preload() { // To add things that take time to load
 
     myMobileNet = ml5.imageClassifier('MobileNet'); // put name of model aT the end
 
-    //CAMERAS
-    if (OnlyCamera || cameraVideo) {
-        myCamera = createCapture(VIDEO); //captures video from webcam
-        console.log('CAMERA ON');
-    }
-
     // VIDEOS
     if (oneVideo) {
         videos[whichVideo] = createVideo("videos/1.mp4"); //captures video from videofile
@@ -220,7 +186,7 @@ function preload() { // To add things that take time to load
         console.log('MULTI VIDEO ON');
 
         for (i = 0; i < amountVideos; i++) {
-            videos[i] = createVideo(`videos/random_narrative_videos/${i + 1}.mp4`); //captures video from videofile
+            videos[i] = createVideo(`videos/random_narrative_videos/small/colors/${i + 1}.mp4`); //captures video from videofile
         }
         console.log('x Videos: ' + videos.length);
 
@@ -228,11 +194,11 @@ function preload() { // To add things that take time to load
 
     //LOAD MODEL LSTM
     if (translate) {
-        rnn = ml5.charRNN("test-lstm/model_8_latin/"); // lATIN model for GameOn
+        rnn = ml5.charRNN("test-lstm/model_8_latin/"); // lATIN model for GameOn --> ESTE ES EL QUE ANDA Y ES TRADUCIDO AL INGLES
     } else {
-        // rnn = ml5.charRNN("test-lstm/model_124/"); // XIX century traveler
+        rnn = ml5.charRNN("test-lstm/model_124/"); // XIX century traveler
         // rnn = ml5.charRNN("test-lstm/lstm-ml5-models/bolano/"); // ml5 Models
-        rnn = ml5.charRNN("test-lstm/lstm-ml5-models/gpt2-travel-lit/");
+        // rnn = ml5.charRNN("test-lstm/lstm-ml5-models/gpt2-travel-lit/"); --> NO funciona, arquitectura diferente
 
     }
 
@@ -253,15 +219,19 @@ function preload() { // To add things that take time to load
 function setup() {
     noCursor();
 
-    createCanvas(windowWidth, windowHeight);
+    var canvas = createCanvas(windowWidth, windowHeight);
+    canvas.style('display', 'block'); // Remove scrollbars by setting the style property display: block
+
+    canvas.parent('sketch-holder'); // Move the canvas so it’s inside our <div id="sketch-holder">.
+
+
+    // background(255, 0, 200);
+
+    // createCanvas(windowWidth, windowHeight);
     // createCanvas(1280, 720); // original
 
     frameRate(30);
     pixelDensity(1);
-
-    //-------------CAMERA
-
-
 
     // console.log('my Mobile: ', myMobileNet) // to test
 
@@ -271,15 +241,6 @@ function setup() {
         vScale = 20; // changes size of square, before was 15
     } else {
         vScale = 1;
-    }
-
-    if (OnlyCamera || cameraVideo) {
-        v_Cam_Scale = 1;
-
-        myCamera.size(width / v_Cam_Scale, height / v_Cam_Scale);
-        // myCamera.size(1920 / v_Cam_Scale, 1080 / v_Cam_Scale);
-
-        myCamera.hide();
     }
 
     if (oneVideo) {
@@ -295,17 +256,7 @@ function setup() {
 
     //-------------  ML5
     // myMobileNet.classify(myVideo, callback);
-
-    if (offline) {
-        // Don't use any model to classify any video
-    } else {
-
-        // if (OnlyCamera || cameraVideo) { // just in case this is a problem
-        //     myMobileNet.classify(myCamera, gotResultsCam);
-        // }
-
-        myMobileNet.classify(videos[0], gotResults);
-    }
+    myMobileNet.classify(videos[0], gotResults);
 }
 
 
@@ -316,7 +267,7 @@ function setup() {
 
 function draw() {
 
-
+    colorMode(RGB, 255, 255, 255, 1);
     background(0, 50); //antes 50
     menuComands();
 
@@ -325,80 +276,20 @@ function draw() {
     //     text('click to start audio', width / 2, height / 2);
     // }
 
-    // cameraON = true;
-    // showCamera++;
-
-    // console.log('camera: ' + showCamera++);
-
-    // if (cameraON && !videoON) {
-    //     renderCamera();
-    //     // renderVideos();
-    //     // myCamera.hide();
-
-    //     turnOffCamera();
-
-
-    //     showCamera++;
-    //     console.log('render camera');
-
-    //     // terminal = false;
-
-
-    //     if (showCamera == 200) {
-    //         cameraON = false;
-    //         videoON = true;
-    //         console.log('render camera is 200');
-
-
-    //     }
-    // }
-
-
-
-    // if (videoON) {
-    //     renderVideos();
-    //     // renderCamera();
-
-    //     showVideo++;
-    //     console.log('render video');
-
-    // }
-
-    // if (showVideo == 200) {
-    //     console.log('turn of camera');
-
-    //     turnOffCamera();
-
-    //     cameraON = true;
-    //     videoON = false;
-
-    //     videoON = 0;
-    //     showCamera = 0;
-    // }
-
-
-    // switchCameraAndVIdeo();
-
-
-    // if (OnlyCamera) {
-    // renderCamera();
-    // } else {
     renderVideos();
-    // }
 
-    // showCamera++;
-    // console.log('camera: ' + showCamera++);
-    // 
-    // if (showCamera == 700) {
-    // renderCamera(); // FUNCIONA PERO SIN TEXTO
+    // filter(BLUR, 3);
 
-    // cameraON = false;
-    // videoON = true;
-    // console.log('render camera is 200');
+    // let c = get(windowWidth / 2, windowHeight / 2);
+    // tint(127, 127, 127);
+    // let c = get();
 
+    // fill(c, 127);
 
-    // }
-
+    // noStroke();
+    // rectMode(CENTER);
+    // blendMode(DIFFERENCE);
+    // rect(50, 50, windowWidth - 300, windowHeight - 300);
 
     // extraText();
 
@@ -409,8 +300,8 @@ function draw() {
         // console.log(rnnSub);
 
         //cuadradito para acentuar subtitulos
-        fill(0, 95);
-        rect(0, windowHeight - 200, windowWidth, 180);
+        // fill(0, 95);
+        // rect(0, windowHeight - 200, windowWidth, 180);
 
         DoText();
         // talk();
@@ -465,9 +356,11 @@ function menuComands() {
 // https://ml5js.org/reference/api-ImageClassifier/
 // In terminal enter the folder in which the code is hosted
 // python3 -m http.server
+// python -m http.server 8000 --bind 127.0.0.1
 // http://localhost:8000/  //works best with this. Does not work with Firefox
 
 // OTHER Option to run server
 // http - server
+// service nginx restart
 
 //You have to click on the screen to be able to hear the background sounds
