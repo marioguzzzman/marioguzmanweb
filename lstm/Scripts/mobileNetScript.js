@@ -167,16 +167,12 @@ function gotResults(err, results) {
             // ------------- VIDEO
             // ------------- clasiffy video with mobile net
 
-            if (OnlyCamera) {
-                setTimeout(() => myMobileNet.classify(cameraVideo, gotResults), 5000); //setTimeout to slow the results. we also added an arow function
-                // 3000 is too slowed to be read
-                // 5000 was kind of ok
-            } else {
-                setTimeout(() => myMobileNet.classify(videos[whichVideo], gotResults), 5000); //setTimeout to slow the results. we also added an arow function
-                // 3000 is too slowed to be read
-                // 5000 was kind of ok
 
-            }
+            setTimeout(() => myMobileNet.classify(videos[whichVideo], gotResults), 5000); //setTimeout to slow the results. we also added an arow function
+            // 3000 is too slowed to be read
+            // 5000 was kind of ok
+
+
 
         }); // end of generate
     } // end of results
