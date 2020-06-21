@@ -1,30 +1,10 @@
 function renderVideos() {
 
-    if (resultsReady) {
-        // DoTextHiperpoesia();
-        // console.log(rnnSub);
-
-
-        // if (writingOutput) {
-        //     writer = createWriter(month() + "/" + day() + "/" + year() + "_" + 'latinPage' + "_" + ".txt"); // texto en donde escribir   
-        // }
-
-        renderCamera(); // FUNCIONA PERO SIN TEXTO
-
-
-    }
-
-
-    // // * Camera gets in the back of video 
-    if (cameraVideo) { //under video
-        // console.log('camera VIdeo');
-        // renderCamera(); // no tiene texto
-    }
-
-    if (playSimpleVideo) {
+    if (!playSimpleVideo) { /// if set to false, then just play one video
         // console.log('playing simple video');
         image(videos[0].play(), 0, 0, width, height); //size and position of video // COMMENTED FOR PIXELS // CHECK ALL THIS
-        videos[0].volume(0.3);
+        // videos[0].volume(0.3);
+        videos[0].volume(0);
 
     } else {
         //PLAY VIDEOS IN RANDOM
@@ -53,22 +33,9 @@ function renderVideos() {
                 pixelEffect();
                 randomFrame();
 
-                // * Camera gets in the back of video 
-                //  if (cameraVideo) { //under video
-                //     // console.log('camera VIdeo');
-                //     renderCamera();
-                // }
-
-
             } else {
                 pixelEffect();
-                //camera video positioned here is also behind video
 
-                // // * Camera gets in the back of video 
-                // if (cameraVideo) { //under video
-                //     // console.log('camera VIdeo');
-                //     renderCamera();
-                // }
             }
         } else {
             if (randomFrameEffect) {
@@ -77,17 +44,10 @@ function renderVideos() {
 
             // ----->>>>>>> VIDEO HERE! WITHOUT EFFECTS
             image(videos[whichVideo], 0, 0, width, height); //size and position of video // COMMENTED FOR PIXELS
-            // tint(255, 255, 255); //add transparency to video //https://p5js.org/reference/#/p5.Color/setAlpha
 
+            // filter(BLUR, 5);
+            // tint(200, 0, 0); //add transparency to video //https://p5js.org/reference/#/p5.Color/setAlpha
             // tint(255, 255, 255, 100); //add transparency to video //https://p5js.org/reference/#/p5.Color/setAlpha
-
-            // * Camera gets in front of video y por alguna razon no se ve
-            // if (cameraVideo) { //under video
-            //     // console.log('camera VIdeo');
-            //     renderCamera()
-            // }
-
-
 
         }
 
