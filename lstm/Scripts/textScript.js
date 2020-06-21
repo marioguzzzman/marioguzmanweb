@@ -138,7 +138,7 @@ function doTerminal() {
 function DoSubtitle() {
     // SUBTITLE TEXT
 
-    posYtextS = windowHeight - 150;
+    posYtextS = windowHeight / 2;
     line = 70;
     textAlign(CENTER);
     textFont("Verdana");
