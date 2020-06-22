@@ -13,12 +13,19 @@ let menu = true;
 
 
 // //SETTING WORKING FOR EXPERIMENTS
-//need to activate both videos and camera code
+//FOR MULTPLE VIDEOS
 let videoEffects = false;
-let randomFrameEffect = true; // works with no effect
-let playSimpleVideo = false; //actually plays random videos // currently not working, do not know why, probably come changes in for loop // FIX // PROBLEM WITH VOLUME OR SOMETHING // currently appears as default iF one video is false
-let oneVideo = true; // effects wonk work when false // just 1.mp4 
+let randomFrameEffect = false; // works with no effect
+let playSimpleVideo = true; //actually plays random videos // currently not working, do not know why, probably come changes in for loop // FIX // PROBLEM WITH VOLUME OR SOMETHING // currently appears as default iF one video is false
+let oneVideo = false; // effects wonk work when false // just 1.mp4 
 
+
+// //SETTING WORKING FOR EXPERIMENTS
+//FOR SINGLE VIDEO WITH RANDOM FRAME
+// let videoEffects = false;
+// let randomFrameEffect = true; // works with no effect
+// let playSimpleVideo = false; //actually plays random videos // currently not working, do not know why, probably come changes in for loop // FIX // PROBLEM WITH VOLUME OR SOMETHING // currently appears as default iF one video is false
+// let oneVideo = true; // effects wonk work when false // just 1.mp4 
 /////////------------------------------------------------- CANVAS----------
 
 let canvas;
@@ -72,7 +79,7 @@ let playing = false;
 let stage = 1;
 let videos = [];
 let whichVideo = 0;
-let amountVideos = 27;
+let amountVideos = 5;
 
 var vScale = 1; // scale of video // check set up to adjust vscale according to type of video effect  //Adjust video size // actually increases the accuracy of the prediction model
 
