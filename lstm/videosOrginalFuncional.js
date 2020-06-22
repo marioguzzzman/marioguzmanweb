@@ -24,6 +24,9 @@ let randomFrameEffect = false; // works with no effect
 let playSimpleVideo = true; //actually plays random videos // currently not working, do not know why, probably come changes in for loop // FIX // PROBLEM WITH VOLUME OR SOMETHING // currently appears as default iF one video is false
 let oneVideo = false; // effects wonk work when false // just 1.mp4 
 
+/////////------------------------------------------------- CANVAS----------
+
+let canvas;
 
 /////////------------------------------------------------- MOBILE NET VIDEO ----------
 
@@ -74,7 +77,7 @@ let playing = false;
 let stage = 1;
 let videos = [];
 let whichVideo = 0;
-let amountVideos = 18;
+let amountVideos = 27;
 
 var vScale = 1; // scale of video // check set up to adjust vscale according to type of video effect  //Adjust video size // actually increases the accuracy of the prediction model
 
@@ -84,7 +87,7 @@ let pixelColor;
 //------------------------------------------------------------- TEXT ----------
 //To merge all text files
 // cat * > merged-file
-let writingOutput = false;
+let writingOutput = true;
 let writer;
 let linesInPage = 10; // amount of lines in page
 let page = []; // text file written
@@ -219,7 +222,7 @@ function preload() { // To add things that take time to load
 function setup() {
     noCursor();
 
-    var canvas = createCanvas(windowWidth, windowHeight);
+    canvas = createCanvas(windowWidth, windowHeight);
     canvas.style('display', 'block'); // Remove scrollbars by setting the style property display: block
 
     canvas.parent('sketch-holder'); // Move the canvas so it’s inside our <div id="sketch-holder">.
@@ -306,9 +309,17 @@ function draw() {
         DoText();
         // talk();
 
+        let interval = 10;
+
+        if (frameCount % (interval * 30) == 0 || key === 's') {
+            save(canvas, month() + "/" + day() + "/" + year() + "_" + 'canvas' + "_" + frameCount + "_" + ".jpg");
+
+        }
 
         if (writingOutput) {
-            writer = createWriter(month() + "/" + day() + "/" + year() + "_" + 'latinPage' + "_" + ".txt"); // texto en donde escribir   
+            writer = createWriter(month() + "/" + day() + "/" + year() + "_" + 'latinPage' + "_" + frameCount + "_" + ".txt"); // texto en donde escribir 
+
+
         }
 
     }
@@ -320,6 +331,18 @@ function draw() {
 // ------------------------------------------------------------------------------------------------------------
 
 //------------------------------------------WINDOW SIZE ELEMENTS
+
+// if (key === 's') {
+//     save(canvas, month() + "/" + day() + "/" + year() + "_" + 'canvas' + "_" + frameCount + "_" + ".jpg");
+// }
+
+//Set a fullscreen button
+function mousePressed() {
+    if (mouseX > 0 && mouseX < 100 && mouseY > 0 && mouseY < 100) {
+        let fs = fullscreen();
+        fullscreen(!fs);
+    }
+}
 
 // dynamically adjust the canvas to the window
 function windowResized() {
