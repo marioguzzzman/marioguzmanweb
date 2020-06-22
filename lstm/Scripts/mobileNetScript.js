@@ -44,7 +44,7 @@ function gotResults(err, results) {
         }, (err, results) => {
 
             console.log("SAMPLE: " + results.sample);
-            g
+
             rnnSub = results.sample; // ------> RESULTED SINGLE SEED TEXT
             console.log("rnnSub: " + rnnSub);
 
