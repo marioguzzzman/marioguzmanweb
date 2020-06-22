@@ -5,7 +5,7 @@ function gotResults(err, results) {
 
     console.log('ENTER RESULTS'); // see results 
 
-    let randomLabel = Math.floor(random(0, 3)); // get random labels
+    let randomLabel = Math.floor(random(0, 3)); // set random labels
 
     if (err) console.log(err); //just tell errors
 
@@ -44,7 +44,7 @@ function gotResults(err, results) {
         }, (err, results) => {
 
             console.log("SAMPLE: " + results.sample);
-
+            g
             rnnSub = results.sample; // ------> RESULTED SINGLE SEED TEXT
             console.log("rnnSub: " + rnnSub);
 
@@ -54,13 +54,13 @@ function gotResults(err, results) {
 
             // var rnnSub = "This is an amazing sentence.";
             // var rnnSub = str.split(" ");
-            for (var i = 0; i < rnnSub.length - 10; i++) {
+            for (var i = 0; i < rnnSub.length - 10; i++) { //go through rnnSub array
                 rnnSub[i - 1] += " ";
             }
             // console.log(rnnSub);
             //["This ", "is ", "an ", "amazing ", "sentence."]
 
-            rnnSub = rnnSub.join(" "); // Now it works.
+            rnnSub = rnnSub.join(" "); // Now it works // joins the array in a sentence
 
 
 
