@@ -1,14 +1,9 @@
 // ------------------------------------------------------ TODO
-//CURRENTLY WORKING ON:
-//Setting random video play
-//Managing different effects for videos
+//SET UP FULLSCREEN
+//ADD CSS TO PAGE
+// COMPLETE DESCRIPTION
 
-// AUDIOS DOES NOT WORK
-//ADD WEBCAM MULTIPLE
-//ADD CODE TO CHANGE BETWEEN WEBCAM AND VIDEO WHEN RECOGNIZING A FACE
-//MODULATE SPANISH VOICE // DOES NOT WORK NOW
-//ADD MENU
-//TODO increase sound length
+
 
 
 //------------------------------------------------------- TESTING 
@@ -87,13 +82,16 @@ let pixelColor;
 //------------------------------------------------------------- TEXT ----------
 //To merge all text files
 // cat * > merged-file
-let writingOutput = true;
+let writingOutput = false;
 let writer;
 let linesInPage = 10; // amount of lines in page
 let page = []; // text file written
 
-
 let resultsReady = false;
+
+//------------------------------------------------------------- SAVE IMAGES ----------
+
+let saveImages = false;
 
 
 //text displayed in "TERMINAL" text
@@ -189,7 +187,7 @@ function preload() { // To add things that take time to load
         console.log('MULTI VIDEO ON');
 
         for (i = 0; i < amountVideos; i++) {
-            videos[i] = createVideo(`videos/random_narrative_videos/small/colors/${i + 1}.mp4`); //captures video from videofile
+            videos[i] = createVideo(`videos/random_narrative_videos/${i + 1}.mp4`); //captures video from videofile
         }
         console.log('x Videos: ' + videos.length);
 
@@ -270,9 +268,9 @@ function setup() {
 
 function draw() {
 
-    colorMode(RGB, 255, 255, 255, 1);
+    // colorMode(RGB, 255, 255, 255, 1);
     background(0, 50); //antes 50
-    menuComands();
+    menuCommands();
 
     // ENABLE AUDIOCONTEXT REQUIREMENT FOR BROWSER
     // if (getAudioContext().state !== 'running') {
@@ -309,11 +307,15 @@ function draw() {
         DoText();
         // talk();
 
-        let interval = 10;
 
-        if (frameCount % (interval * 30) == 0 || key === 's') {
-            save(canvas, month() + "/" + day() + "/" + year() + "_" + 'canvas' + "_" + frameCount + "_" + ".jpg");
 
+        if (saveImages) {
+
+            let interval = 10;
+            if (frameCount % (interval * 30) == 0 || key === 's') {
+                save(canvas, month() + "/" + day() + "/" + year() + "_" + 'canvas' + "_" + frameCount + "_" + ".jpg");
+
+            }
         }
 
         if (writingOutput) {
@@ -337,6 +339,7 @@ function draw() {
 // }
 
 //Set a fullscreen button
+
 function mousePressed() {
     if (mouseX > 0 && mouseX < 100 && mouseY > 0 && mouseY < 100) {
         let fs = fullscreen();
@@ -351,7 +354,7 @@ function windowResized() {
 
 // ------------------------------- MENU
 
-function menuComands() {
+function menuCommands() {
     if (keyCode == 77) { //letter m
         textSize(18);
         fill(255);
