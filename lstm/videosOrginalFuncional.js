@@ -15,9 +15,9 @@ let menu = true;
 // //SETTING WORKING FOR EXPERIMENTS
 //need to activate both videos and camera code
 let videoEffects = false;
-let randomFrameEffect = false; // works with no effect
-let playSimpleVideo = true; //actually plays random videos // currently not working, do not know why, probably come changes in for loop // FIX // PROBLEM WITH VOLUME OR SOMETHING // currently appears as default iF one video is false
-let oneVideo = false; // effects wonk work when false // just 1.mp4 
+let randomFrameEffect = true; // works with no effect
+let playSimpleVideo = false; //actually plays random videos // currently not working, do not know why, probably come changes in for loop // FIX // PROBLEM WITH VOLUME OR SOMETHING // currently appears as default iF one video is false
+let oneVideo = true; // effects wonk work when false // just 1.mp4 
 
 /////////------------------------------------------------- CANVAS----------
 
