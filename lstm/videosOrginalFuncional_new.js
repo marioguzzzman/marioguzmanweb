@@ -245,18 +245,14 @@ function setup() {
 
     //-------------VIDEO 
 
-    // if (videoEffects) {
-    //     vScale = 20; // changes size of square, before was 15
-    // } else {
-    // vScale = 1; //if 0 ml5 does not work
-    // }
+    if (videoEffects) {
+        vScale = 20; // changes size of square, before was 15
+    } else {
+        vScale = 1;
+    }
 
     if (oneVideo) {
-        videos[whichVideo].size(width, height);
-        // videos[whichVideo].size(width / vScale, height / vScale);
-        videos[whichVideo].size(width, height);
-
-
+        videos[whichVideo].size(width / vScale, height / vScale);
         videos[whichVideo].hide();
     } else if (playSimpleVideo) {
         for (i = 0; i < videos.length; i++) {

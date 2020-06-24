@@ -7,6 +7,29 @@ function renderVideos() {
         videos[0].volume(0);
         pixelEffect();
 
+        if (videoEffects) {
+            if (randomFrameEffect) { // plays pixel + random
+                pixelEffect();
+                randomFrame();
+
+            } else {
+                pixelEffect();
+
+            }
+        } else {
+            if (randomFrameEffect) {
+                randomFrame();
+            }
+
+            // ----->>>>>>> VIDEO HERE! WITHOUT EFFECTS
+            // image(videos[whichVideo], 0, 0, width, height); //size and position of video // COMMENTED FOR PIXELS
+
+            // filter(BLUR, 5);
+            // tint(200, 0, 0); //add transparency to video //https://p5js.org/reference/#/p5.Color/setAlpha
+            // tint(255, 255, 255, 100); //add transparency to video //https://p5js.org/reference/#/p5.Color/setAlpha
+
+        }
+
 
     } else {
         //PLAY VIDEOS IN RANDOM
@@ -30,30 +53,11 @@ function renderVideos() {
             }
         }
 
-        if (videoEffects) {
-            if (randomFrameEffect) { // plays pixel + random
-                pixelEffect();
-                randomFrame();
 
-            } else {
-                pixelEffect();
+        // ----->>>>>>> VIDEO HERE! WITHOUT EFFECTS
+        image(videos[whichVideo], 0, 0, width, height); //size and position of video // COMMENTED FOR PIXELS
 
-            }
-        } else {
-            if (randomFrameEffect) {
-                randomFrame();
-            }
-
-            // ----->>>>>>> VIDEO HERE! WITHOUT EFFECTS
-            image(videos[whichVideo], 0, 0, width, height); //size and position of video // COMMENTED FOR PIXELS
-
-            // filter(BLUR, 5);
-            // tint(200, 0, 0); //add transparency to video //https://p5js.org/reference/#/p5.Color/setAlpha
-            // tint(255, 255, 255, 100); //add transparency to video //https://p5js.org/reference/#/p5.Color/setAlpha
-
-        }
-
-    }
+    } // else
 
 }
 
