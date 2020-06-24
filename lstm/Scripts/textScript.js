@@ -138,7 +138,9 @@ function doTerminal() {
 function DoSubtitle() {
     // SUBTITLE TEXT
 
-    posYtextS = windowHeight / 2;
+    // posYtextS = windowHeight / 2;
+    posYtextS = windowHeight - 130;
+
     line = 70;
     textAlign(CENTER);
     textFont("Verdana");
@@ -157,6 +159,8 @@ function DoSubtitle() {
     stroke(0);
     // fill(255, 255, 64);
     fill(255, 255, 120);
+    fill(250);
+
 
     //add random of this signs
     // let signs = [".", ",", "", ":", "", "", "", "", "", ];
