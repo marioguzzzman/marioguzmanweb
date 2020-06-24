@@ -23,14 +23,14 @@ function touchStarted() {
         otherSong = Math.floor(random(0, sounds.length));
 
         sounds[otherSong].play();
-        sounds[otherSong].setVolume(.5); //antes 5
+        // sounds[otherSong].setVolume(.5); //antes 5
 
         // console.log('Entered Frame Song: ' + frameCount);
         // console.log('\nSong: ' + otherSong);
 
     } else {
         sounds[1].play();
-        sounds[1].setVolume(.7); //antes 7
+        // sounds[1].setVolume(.7); //antes 7
         // console.log('First loop song');
     }
     // sound1.loop();
