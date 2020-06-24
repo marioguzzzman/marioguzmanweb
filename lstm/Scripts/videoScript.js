@@ -5,6 +5,8 @@ function renderVideos() {
         image(videos[0].play(), 0, 0, width, height); //size and position of video // COMMENTED FOR PIXELS // CHECK ALL THIS
         // videos[0].volume(0.3);
         videos[0].volume(0);
+        pixelEffect();
+
 
     } else {
         //PLAY VIDEOS IN RANDOM
