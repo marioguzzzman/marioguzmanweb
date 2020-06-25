@@ -77,7 +77,7 @@ let playing = false;
 let stage = 1;
 let videos = [];
 let whichVideo = 0;
-let amountVideos = 20;
+let amountVideos = 27;
 
 var vScale = 1; // scale of video // check set up to adjust vscale according to type of video effect  //Adjust video size // actually increases the accuracy of the prediction model
 
