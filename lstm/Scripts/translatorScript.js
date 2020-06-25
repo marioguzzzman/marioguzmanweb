@@ -12,5 +12,6 @@ function toTranslate(wordToTranslate) {
 function gotTranslation(result) {
     if (result.data.translations) {
         translatedRes = result.data.translations[0].translatedText;
+
     }
 }

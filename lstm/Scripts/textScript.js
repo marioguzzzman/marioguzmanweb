@@ -146,7 +146,7 @@ function DoSubtitle() {
     textFont("Verdana");
 
     // textSize(52); // for projection
-    textSize(36); // for screen
+    textSize(37); // for screen
 
     textLeading(50); // pixels between each line
 
@@ -169,8 +169,18 @@ function DoSubtitle() {
 
     // toTranslate(signs[Math.floor(random(0, signs.length))]); //--------------------------------> Translate main label // only one word from label
 
-    // text(printFinalText, line, posYtextS, windowWidth - 140, 300);
+    // let timer2 = 5;
+    // timer2--;
+
+    // // text(printFinalText, line, posYtextS, windowWidth - 140, 300);
+    // if (frameCount % 60 == 0 && timer > 0) { // if the frameCount is divisible by 60, then a second has passed. it will stop at 0
+    //     text(`${translatedRes}`, line, posYtextS, windowWidth - 140, 300);
+    // } else {
+    //     text("[" + regexRnnSub + "]", line, posYtextS - 50, windowWidth - 100, 300);
+    // }
+
     text(`${translatedRes}`, line, posYtextS, windowWidth - 140, 300);
+
 
     // text(rnnSub, line, posYtextS, windowWidth - 100, 300);
 }
@@ -278,4 +288,72 @@ function replacer(match) {
     console.log('match: ' + match);
 
 
+}
+
+function intro() {
+
+    let color = 255;
+
+    textAlign(CENTER);
+
+    textFont("Ubuntu Mono");
+
+    // textSize(33); //for projector
+    textSize(50); //for screen 
+    fill(250);
+    textLeading(30);
+
+    var startWriting = 0;
+    var right = startWriting + textSpeed;
+
+    // Speed of the text being generated
+    if (textSpeed < sourceText.length) {
+        textSpeed += timer / speedDif;
+    } else {
+        textSpeed = 0;
+        textSpeed += 0.3;
+    }
+
+    text(sourceText.substring(startWriting, right + 1), width / 2, height / 2);
+
+}
+
+
+function soundHelp() {
+    // SUBTITLE TEXT
+
+    posYtextS = windowHeight - 200;
+
+    line = 70;
+    textAlign(CENTER);
+    textFont("Verdana");
+
+    // textSize(52); // for projection
+    textSize(36); // for screen
+
+    textLeading(50); // pixels between each line
+
+
+    // fill(0, 70);
+    // rect(posYtextS, windowWidth - 140, 300);
+
+    fill(0, 0, 0, 5); //shadow for subtitle
+    // text('I can tell you that' + rnnSub, line + 2, posYtextS + 2, windowWidth, 300);
+    stroke(0);
+    // fill(255, 255, 64);
+    fill(255, 255, 120);
+    fill(250);
+
+
+    //add random of this signs
+    // let signs = [".", ",", "", ":", "", "", "", "", "", ];
+
+    // let randomSign = Math.floor(random(0, signs.length-1));
+
+    // toTranslate(signs[Math.floor(random(0, signs.length))]); //--------------------------------> Translate main label // only one word from label
+
+    // text(printFinalText, line, posYtextS, windowWidth - 140, 300);
+    text(`${translatedRes}`, line, posYtextS, windowWidth - 140, 300);
+
+    // text(rnnSub, line, posYtextS, windowWidth - 100, 300);
 }
