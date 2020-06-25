@@ -5,33 +5,33 @@ function renderVideos() {
         image(videos[0].play(), 0, 0, width, height); //size and position of video // COMMENTED FOR PIXELS // CHECK ALL THIS
         // videos[0].volume(0.3);
         videos[0].volume(0);
-        pixelEffect();
+        // pixelEffect();
 
-        if (videoEffects) {
-            if (randomFrameEffect) { // plays pixel + random
-                pixelEffect();
-                randomFrame();
+        // if (videoEffects) {
+        //     if (randomFrameEffect) { // plays pixel + random
+        //         pixelEffect();
+        //         randomFrame();
 
-            } else {
-                pixelEffect();
+        //     } else {
+        //         pixelEffect();
 
-            }
-        } else {
-            if (randomFrameEffect) {
-                randomFrame();
-            }
+        //     }
+        // } else {
+        //     if (randomFrameEffect) {
+        //         randomFrame();
+        //     }
 
-            // ----->>>>>>> VIDEO HERE! WITHOUT EFFECTS
-            // image(videos[whichVideo], 0, 0, width, height); //size and position of video // COMMENTED FOR PIXELS
+        // ----->>>>>>> VIDEO HERE! WITHOUT EFFECTS
+        // image(videos[whichVideo], 0, 0, width, height); //size and position of video // COMMENTED FOR PIXELS
 
-            // filter(BLUR, 5);
-            // tint(200, 0, 0); //add transparency to video //https://p5js.org/reference/#/p5.Color/setAlpha
-            // tint(255, 255, 255, 100); //add transparency to video //https://p5js.org/reference/#/p5.Color/setAlpha
+        // filter(BLUR, 5);
+        // tint(200, 0, 0); //add transparency to video //https://p5js.org/reference/#/p5.Color/setAlpha
+        // tint(255, 255, 255, 100); //add transparency to video //https://p5js.org/reference/#/p5.Color/setAlpha
 
-        }
+        // }
 
 
-    } else {
+        // } else { // sacar el else arreglo el problema de la escala
         //PLAY VIDEOS IN RANDOM
         if (stage === 1) {
 
@@ -65,6 +65,41 @@ function renderVideos() {
 
 
 //--------------------------------------------------------- VIDEO FUNCTIONS
+
+function playTheVideo() {
+    // https://forum.processing.org/two/discussion/23870/p5js-problem-with-asynchronous-video-loading-playing
+    videoSound(); // now is set to 0
+
+
+    if (!randomFrameEffect) {
+        console.log('normal video effect');
+
+        if (oneVideo) {
+
+            videos[whichVideo].loop(); // video never goes to videoOver because it is looping and never ends.
+
+        } else {
+            console.log('multiple videos');
+            videos[whichVideo].play();
+            videos[whichVideo].onended(videoOver); //when video ends, call videoOver to return to first screen
+        }
+
+    } else {
+        console.log('playing random Frame');
+        // videos[whichVideo].time(random() * videos[whichVideo].duration() - 2);
+        videos[whichVideo].loop().time(5); // time sets a place for the video to be played. it is expressed in seconds
+    }
+}
+
+function videoOver() {
+    console.log("Pausing video now VIDEO OVER / Stage 1");
+    // videos[whichVideo].stop();// esto estaba comentado
+    // videos[whichVideo].rewind();
+    // videos[whichVideo].hide(); // esto estaba comentado
+    videos[whichVideo].pause(); // esto estaba comentado
+
+    stage = 1;
+}
 
 function pixelEffect() {
 
@@ -191,39 +226,4 @@ function randomFrame() {
         }
     }
 
-}
-
-function playTheVideo() {
-    // https://forum.processing.org/two/discussion/23870/p5js-problem-with-asynchronous-video-loading-playing
-    videoSound(); // now is set to 0
-
-
-    if (!randomFrameEffect) {
-        console.log('normal video effect');
-
-        if (oneVideo) {
-
-            videos[whichVideo].loop(); // video never goes to videoOver because it is looping and never ends.
-
-        } else {
-            console.log('multiple videos');
-            videos[whichVideo].play();
-            videos[whichVideo].onended(videoOver); //when video ends, call videoOver to return to first screen
-        }
-
-    } else {
-        console.log('playing random Frame');
-        // videos[whichVideo].time(random() * videos[whichVideo].duration() - 2);
-        videos[whichVideo].loop().time(5); // time sets a place for the video to be played. it is expressed in seconds
-    }
-}
-
-function videoOver() {
-    console.log("Pausing video now VIDEO OVER / Stage 1");
-    // videos[whichVideo].stop();// esto estaba comentado
-    // videos[whichVideo].rewind();
-    // videos[whichVideo].hide(); // esto estaba comentado
-    videos[whichVideo].pause(); // esto estaba comentado
-
-    stage = 1;
 }
