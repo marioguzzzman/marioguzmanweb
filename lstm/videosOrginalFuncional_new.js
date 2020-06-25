@@ -79,7 +79,7 @@ let playing = false;
 let stage = 1;
 let videos = [];
 let whichVideo = 0;
-let amountVideos = 20;
+let amountVideos = 2;
 
 var vScale = 1; // scale of video // check set up to adjust vscale according to type of video effect  //Adjust video size // actually increases the accuracy of the prediction model
 
@@ -165,8 +165,11 @@ let voice = 'Google UK English Male';
 
 
 //BACKGROUND MUSIC
-let sounds = [];
-let otherSong;
+// let sounds = [];
+// let otherSong;
+
+//TIMER FOR INTRO
+let timer = 0;
 
 //------------------------------------------------------------- WEB SETTINGS ----------
 
@@ -213,9 +216,9 @@ function preload() { // To add things that take time to load
     //SOUND
     // createConvolver('background_sound/drones.wav', soundReady);
 
-    sounds[1] = loadSound('background_sounds/drones.wav');
-    sounds[2] = loadSound('background_sounds/seven.wav');
-    sounds[0] = loadSound('background_sounds/pulse-modulation.wav');
+    // sounds[1] = loadSound('background_sounds/drones.wav');
+    // sounds[2] = loadSound('background_sounds/seven.wav');
+    // sounds[0] = loadSound('background_sounds/pulse-modulation.wav');
     // sounds[3] = loadSound('background_sound/eyes.wav');
 
 }
@@ -225,9 +228,9 @@ function preload() { // To add things that take time to load
 // ------------------------------------------------------------------------------------------------------------
 
 function setup() {
-    noCursor();
+    // noCursor();
 
-    canvas = createCanvas(windowWidth, windowHeight);
+    canvas = createCanvas(displayWidth, displayHeight);
     canvas.style('display', 'block'); // Remove scrollbars by setting the style property display: block
 
     canvas.parent('sketch-holder'); // Move the canvas so it’s inside our <div id="sketch-holder">.
@@ -252,11 +255,15 @@ function setup() {
     }
 
     if (oneVideo) {
+        // videos[whichVideo].size(width, height);
         videos[whichVideo].size(width / vScale, height / vScale);
+
         videos[whichVideo].hide();
     } else if (playSimpleVideo) {
         for (i = 0; i < videos.length; i++) {
+            // videos[i].size(width, height);
             videos[i].size(width / vScale, height / vScale);
+
             videos[i].hide();
         }
     }
@@ -284,7 +291,23 @@ function draw() {
     //     text('click to start audio', width / 2, height / 2);
     // }
 
-    renderVideos();
+    // textAlign(CENTER, CENTER);
+    textSize(100);
+    fill(250);
+    text(timer, width / 2, height / 2);
+
+    if (frameCount % 60 == 0 && timer > 0) { // if the frameCount is divisible by 60, then a second has passed. it will stop at 0
+
+
+        timer--;
+    }
+
+    if (timer == 0) {
+        // text("GAME OVER", width / 2, height * 0.7);
+        renderVideos();
+    }
+
+
 
     // filter(BLUR, 3);
 
