@@ -63,6 +63,7 @@ let translate = true;
 //SCAN
 // https://www.youtube.com/watch?v=YqVbuMPIRwY&list=PLRqwX-V7Uu6aKKsDHZdDvN6oCJ2hRY_Ig&index=7
 
+let cameraVideo;
 
 let videoON = false;
 let showVideo = 0;
