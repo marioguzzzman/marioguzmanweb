@@ -31,7 +31,7 @@ function renderVideos() {
         // }
 
 
-        // } else { // sacar el else arreglo el problema de la escala
+    } else {
         //PLAY VIDEOS IN RANDOM
         if (stage === 1) {
 
