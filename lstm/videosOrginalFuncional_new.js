@@ -3,14 +3,10 @@
 //ADD CSS TO PAGE
 // COMPLETE DESCRIPTION
 
-
-
-
 //------------------------------------------------------- TESTING 
 
 let offline = false; // disable text to test video
 let menu = true;
-
 
 // //SETTING WORKING FOR EXPERIMENTS
 //FOR MULTPLE VIDEOS
@@ -29,6 +25,8 @@ let oneVideo = false; // effects wonk work when false // just 1.mp4
 /////////------------------------------------------------- CANVAS----------
 
 let canvas;
+let screenFullIcon;
+
 
 /////////------------------------------------------------- MOBILE NET VIDEO ----------
 
@@ -79,7 +77,7 @@ let playing = false;
 let stage = 1;
 let videos = [];
 let whichVideo = 0;
-let amountVideos = 2;
+let amountVideos = 20;
 
 var vScale = 1; // scale of video // check set up to adjust vscale according to type of video effect  //Adjust video size // actually increases the accuracy of the prediction model
 
@@ -116,7 +114,7 @@ let initRegx = '';
 let printFinalText = '';
 
 //parameters for "terminal" text
-let sourceText = ' ';
+let sourceText = 'Learning to write';
 let textSpeed = 0;
 
 
@@ -169,7 +167,10 @@ let voice = 'Google UK English Male';
 // let otherSong;
 
 //TIMER FOR INTRO
-let timer = 0;
+let timer = 5;
+let speedDif = 54; //42
+
+let introT = false;
 
 //------------------------------------------------------------- WEB SETTINGS ----------
 
@@ -182,6 +183,7 @@ p5.disableFriendlyErrors = true; // disables FES //to upgrade performance
 
 
 function preload() { // To add things that take time to load
+    screenFullIcon = loadImage('images/screen.png'); // Load the image
 
 
     // textToLoad = loadStrings('subTexts.txt', txtLoaded);
@@ -281,10 +283,9 @@ function setup() {
 
 
 function draw() {
-
-    // colorMode(RGB, 255, 255, 255, 1);
-    background(0, 50); //antes 50
+    background(0); //antes 50
     menuCommands();
+
 
     // ENABLE AUDIOCONTEXT REQUIREMENT FOR BROWSER
     // if (getAudioContext().state !== 'running') {
@@ -292,35 +293,30 @@ function draw() {
     // }
 
     // textAlign(CENTER, CENTER);
-    textSize(100);
-    fill(250);
-    text(timer, width / 2, height / 2);
+    // textSize(100);
+    // fill(250);
+    // text(timer, width / 2, height / 2);
+
+    // introT = true;
+
+
+    if (!introT) {
+        intro();
+    } else {
+        renderVideos();
+
+    }
 
     if (frameCount % 60 == 0 && timer > 0) { // if the frameCount is divisible by 60, then a second has passed. it will stop at 0
-
-
         timer--;
     }
 
     if (timer == 0) {
         // text("GAME OVER", width / 2, height * 0.7);
-        renderVideos();
+        introT = true;
     }
 
 
-
-    // filter(BLUR, 3);
-
-    // let c = get(windowWidth / 2, windowHeight / 2);
-    // tint(127, 127, 127);
-    // let c = get();
-
-    // fill(c, 127);
-
-    // noStroke();
-    // rectMode(CENTER);
-    // blendMode(DIFFERENCE);
-    // rect(50, 50, windowWidth - 300, windowHeight - 300);
 
     // extraText();
 
@@ -337,6 +333,11 @@ function draw() {
         DoText();
         // talk();
 
+        // fill(255);
+        // stroke(400);
+        // line(0, 0, 100, 100);
+        // line(0, 100, 100, 0);
+        // noFill();
 
 
         if (saveImages) {
@@ -356,6 +357,8 @@ function draw() {
 
     }
 
+
+
 }
 
 // ------------------------------------------------------------------------------------------------------------
@@ -370,11 +373,22 @@ function draw() {
 
 //Set a fullscreen button
 
+function full() {
+    // tint(255, 10); // Display at half opacity
+    var scale = .05;
+    // imageMode(CENTER);
+    image(screenFullIcon, width - 100, height - 100, scale * width, scale * screenFullIcon.height * width / screenFullIcon.width); // to fit wid
+
+
+    // image(screenFull, 0, 0);
+}
+
 function mousePressed() {
-    if (mouseX > 0 && mouseX < 100 && mouseY > 0 && mouseY < 100) {
-        let fs = fullscreen();
-        fullscreen(!fs);
-    }
+    // if (width > 0 && mouseX < 100 && height > 0 && mouseY < 100) {
+    // if (width > 0 && mouseX < 100 && height > 0 && mouseY < 100) {
+    let fs = fullscreen();
+    fullscreen(!fs);
+    // }
 }
 
 // dynamically adjust the canvas to the window
