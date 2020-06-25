@@ -168,7 +168,7 @@ function gotResults(err, results) {
             // ------------- clasiffy video with mobile net
 
 
-            setTimeout(() => myMobileNet.classify(videos[whichVideo], gotResults), 5000); //setTimeout to slow the results. we also added an arow function
+            setTimeout(() => myMobileNet.classify(videos[whichVideo], gotResults), 5500); //setTimeout to slow the results. we also added an arow function
             // 3000 is too slowed to be read
             // 5000 was kind of ok
 
