@@ -114,7 +114,7 @@ let initRegx = '';
 let printFinalText = '';
 
 //parameters for "terminal" text
-let sourceText = 'Learning to write';
+let sourceText = 'Memory of everywhere';
 let textSpeed = 0;
 
 
@@ -168,7 +168,7 @@ let voice = 'Google UK English Male';
 
 //TIMER FOR INTRO
 let timer = 5;
-let speedDif = 54; //42
+let speedDif = 47; //42
 
 let introT = false;
 
