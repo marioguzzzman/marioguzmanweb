@@ -1,17 +1,8 @@
-# Set-UP Server
+# Mario Guzman
+Mexican researcher, experimental writer and new media artist merging language with audiovisual phenomena, web development, electronic art, algorithmic literature, and robotics.
+In my work, I explore the communication between human and non-human agents, robot-human interaction, and different methods to encode perception and narrative through technology.
+I want to bring code, storytelling, and culture together. From my perspective, writing is a performative process that creates meaningful scenarios in which humans and machines participate together in the creation and negotiation of meaning as an interactive experience.
 
-Change to the directory containing your static web files (e.g. html, javascript, css etc) in the command line window, e.g:
+Topics of research: Electronic literature, web development, live performance, interactive media, code studies, generative design, Natural Language Processing, robotics, machine learning.
 
-`cd \projects\angular-registration-login-example`
-
-Start the server with this command:
-
-`http-server`
-You should see something like the following:
-
-C:\projects\angular-registration-login-example>http-server
-Starting up http-server, serving ./
-Available on:
-  http://192.168.0.5:8080
-  http://127.0.0.1:8080
-Hit CTRL-C to stop the server
+http://www.mario-guzman.com/
