@@ -5,14 +5,8 @@
 GENERAL
 cambiar en todas las paginas el load de la barra
 * HACER RESPONSIVE
-* REVISAR TODOS Los html  
-<meta property='og:image' content='/images/global/yoiguana.jpg'>
-<!-- image must be 600x315 -->
 
-*borrar la navegacion del footer, agregar solo un icono que vaya hacia arriba
 
-mejorar fotos
-cambio bio en todas las paginas. hacer in include
 javascript for inc;ude 
 /media/storage/Desktop Shared/WINDOWS DESKTOP/marioguzmanweb/javascript/global.js
 
@@ -20,9 +14,6 @@ ordenar por fecha
 
 
 //PAGINAS HECHAS INDEX
-
-TODO bio
-    IMAGEN DE LOS TIPOS DE OBRA QUE HAGO
 
 TODO WORK
     El mar fuera del mar
@@ -38,29 +29,11 @@ TODO WORK
 
     TODO Photography
     Agregar series de fotos
-
-TODO Writing experiments
-    blamebot
-    Ciborg Haiku Generator
-    Agrega demo de los modelos entrenados 
+ 
 
 TODO EXHIBITS
     Agregar todas las EXHIBITS
-
-TODO WORKSHOPS
-    nixso
-    Escrituras
-    Floating Projects
-    Literatura digital congreso
-
-TODO TEXTS
-    CERIANI
-    ASAECA
-    LIBROS de ale 2   
-
-TODO CHECKAR LAS DIMENSIONES DLE VIDEO DE VIMEO QUE SEAN IGUALES
-TODO LIMPIAR FOTOS DE LOS ARCHIVOS/ ESO LO PUEDO HACER EN EL AVION
-
+  
 learningtowrite (2019) DONE
 Add poems
 
@@ -71,7 +44,6 @@ quetzabot (2015) DONE
 temazcalli (2015 - 2016) DONE
 
 TODO ped (2016) 
-    add new video
 
 oraculo (2014) DONE
 
@@ -81,8 +53,6 @@ visionoros (2013 - present) DONE
 look for nice photos
 
 TODO hiperstories (2015) 
-    links rotos
-    Hipertext Retorics. Diario Perfil 
 
 ocean TODO
 
