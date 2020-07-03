@@ -1,12 +1,7 @@
 
-1. how AI help defeat the coronavirus
-2. contact tracing, slow the spread, 
-3. dianogsis tracing 
-4. remote medicine   robotics arms
 
 <!-- TODO
     
-
 GENERAL
 cambiar en todas las paginas el load de la barra
 * HACER RESPONSIVE
