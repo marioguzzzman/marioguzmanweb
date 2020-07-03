@@ -5,7 +5,10 @@
 GENERAL
 cambiar en todas las paginas el load de la barra
 * HACER RESPONSIVE
-* REVISAR TODOS LOS     <meta property='og:image' content='/images/global/yoiguana.jpg'>
+* REVISAR TODOS Los html  
+<meta property='og:image' content='/images/global/yoiguana.jpg'>
+<!-- image must be 600x315 -->
+
 *borrar la navegacion del footer, agregar solo un icono que vaya hacia arriba
 
 mejorar fotos
@@ -29,7 +32,7 @@ TODO WORK
 
     TODO COMMISIONED
     agregar lo de la bienal de venecia
-    Agregar lo de Hanson
+    //TODO: @marioguzzzman Agregar lo de Hanson
 
     ---------------
 
