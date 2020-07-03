@@ -1,0 +1,27 @@
+Mario Guzman (http://www.mario-guzman.com/)
+
+Investigador, escritor experimental y artista de nuevos medios mexicano actualmente residiendo en Hong Kong / Argentina. Es licenciado y profesor en Letras (UBA) especializado en Teoría y Análisis Literario, egresado de la Maestría en Tecnología y Estética de las Artes Electrónicas (UNTREF). 
+Su trabajo vincula el lenguaje con medios audiovisuales, web, arte electrónico, literatura algorítmica y robótica. Utiliza estos medios para explorar la comunicación entre agentes humanos y no humanos, la interacción robot-humano y las diferentes formas de codificar la percepción y la narrativa a través de la tecnología.
+
+Su obra intenta establecer un vínculo entre los estudios sobre código, narración y cultura. Para él, la escritura es un proceso performático que se desarrolla a partir de eventos y escenarios en los que humanos y máquinas participan juntos en la creación y negociación de significado como una experiencia interactiva.
+
+Su obra ha sido expuesta en México, Panamá, Bolivia, Argentina, Brasil, EUA, Francia, Alemania y Hong Kong. Se destacan la XIX Bienal Internacional de Artes Visuales de Santa Cruz de la Sierra, Bolivia (2014), la antología 2015 del Premio Itaú de Cuento Digital, Fulldome-UVM (Understanding Visual Music) (2015-2016), el 105º Salón Nacional en Instalaciones y Medios Alternativos (2016) y el Festival ZERO1 en La Rochelle, Francia (2017), la Galería Floating Projects, Hong Kong (2018), la exposición del Concurso de Arte y Tecnología 2018 del Fondo Nacional de las Artes en el Centro Cultural Kirchner (2019), y la exposición (un)continuity. Electronic Literature Organization, EUA (2020).
+
+Actualmente trabaja en Hanson Robotics como Robot Operator y Lead Writer, en el desarrollo de contenido, diseño de interacciones e implementación de chatbots.
+
+
+
+
+Mario Guzman is a Mexican researcher, experimental writer, and new media artist based in Argentina / Hong Kong. 
+He has an MA in Literature and a Master in Technology and Aesthetics of Electronic.
+
+In his thesis: "Interfaces and writing modes at the intersection between digital literature and electronic arts", he proposes to merge writing with sound, electromagnetic phenomenons, web development, electronic art, algorithmic literature, and robotics.
+Interested in the border between the illegible, the non-linear, and the unstable, he works with the dynamics of disappearing, and continuously looping elements. 
+For him, writing is a performative process that unfolds during performative events and meaningful scenarios in which humans and machines participate together in the creation and negotiation of meaning as an interactive experience.
+His process aims to bring code studies, storytelling, and culture together by exploring the communication between human and non-human agents, robot-human interaction, and different ways to encode perception and narrative through machines and Artificial Intelligence.
+
+His work has been exhibited in México, Panamá, Bolivia, Brazil, Argentina, France, USA, Hong Kong, and Germany. Highlights include Itaú Digital Story Award, XIX International Biennial of Visual Arts in Santa Cruz de la Sierra, Biennial of Young Art in Buenos Aires, Full-dome Understanding Visual Music residency, and the 105th Installations and Media Arts National Hall.
+Currently, he works at Hanson Robotics traveling the world with Sophia the Robot, while designing an artificial neural network narrator based on different kinds of literary works.
+
+
+
