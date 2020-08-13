@@ -13,7 +13,7 @@ Actualmente trabaja en Hanson Robotics como Robot Operator y Lead Writer, en el 
 
 
 Mario Guzman is a Mexican researcher, experimental writer, and new media artist based in Argentina / Hong Kong. 
-He has an MA in Literature and a Master in Technology and Aesthetics of Electronic.
+He has a BAs in Literature and a Master in Technology and Aesthetics of Electronic Arts.
 
 In his thesis: "Interfaces and writing modes at the intersection between digital literature and electronic arts", he proposes to merge writing with sound, electromagnetic phenomenons, web development, electronic art, algorithmic literature, and robotics.
 Interested in the border between the illegible, the non-linear, and the unstable, he works with the dynamics of disappearing, and continuously looping elements. 
