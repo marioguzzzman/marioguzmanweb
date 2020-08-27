@@ -39,9 +39,9 @@ var entryLang = 'es';
 var exitLang = 'en';
 var translatedRes = '';
 
-var translateAPIKey = 'AIzaSyAGvEzCaMeaL_woHEsCo_w85802jZVuYnI';
+var translateAPIKey = ' ';
 
-let translate = true;
+let translate = false;
 
 //----------------------------------------------------------- CAMERA --------
 
@@ -209,7 +209,7 @@ function preload() { // To add things that take time to load
     if (translate) {
         rnn = ml5.charRNN("test-lstm/model_8_latin/"); // lATIN model for GameOn --> ESTE ES EL QUE ANDA Y ES TRADUCIDO AL INGLES
     } else {
-        rnn = ml5.charRNN("test-lstm/model_124/"); // XIX century traveler
+        rnn = ml5.charRNN("test-lstm/model-travel-fix/"); // XIX century traveler
         // rnn = ml5.charRNN("test-lstm/lstm-ml5-models/bolano/"); // ml5 Models
         // rnn = ml5.charRNN("test-lstm/lstm-ml5-models/gpt2-travel-lit/"); --> NO funciona, arquitectura diferente
 
@@ -430,7 +430,7 @@ function menuCommands() {
 // http://localhost:8000/  //works best with this. Does not work with Firefox
 
 // OTHER Option to run server
-// http - server
+// http-server
 // service nginx restart
 
 //You have to click on the screen to be able to hear the background sounds
