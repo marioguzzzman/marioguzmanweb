@@ -179,10 +179,13 @@ function DoSubtitle() {
     //     text("[" + regexRnnSub + "]", line, posYtextS - 50, windowWidth - 100, 300);
     // }
 
-    text(`${translatedRes}`, line, posYtextS, windowWidth - 140, 300);
+    if (translate) {
+        text(`${translatedRes}`, line, posYtextS, windowWidth - 140, 300);
 
+    } else {
+        text(rnnSub, line, posYtextS, windowWidth - 140, 300);
+    }
 
-    // text(rnnSub, line, posYtextS, windowWidth - 100, 300);
 }
 
 // ----------------------------ADDS EXTERNAL TEXT
@@ -352,8 +355,12 @@ function soundHelp() {
 
     // toTranslate(signs[Math.floor(random(0, signs.length))]); //--------------------------------> Translate main label // only one word from label
 
-    // text(printFinalText, line, posYtextS, windowWidth - 140, 300);
-    text(`${translatedRes}`, line, posYtextS, windowWidth - 140, 300);
+    if (translate) {
+        text(`${translatedRes}`, line, posYtextS, windowWidth - 140, 300);
 
-    // text(rnnSub, line, posYtextS, windowWidth - 100, 300);
+    } else {
+        // text(`${mbNetLabel0}`, line, posYtextS, windowWidth - 140, 300);
+
+        text(printFinalText, line, posYtextS, windowWidth - 140, 300);
+    }
 }
