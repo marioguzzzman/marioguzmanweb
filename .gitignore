@@ -9,3 +9,5 @@ ehthumbs.db
 # Ignore npm packages
 node_modules/
 designs
+lstm/videos/*
+*.code-workspace
