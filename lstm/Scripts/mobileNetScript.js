@@ -24,9 +24,13 @@ function gotResults(err, results) {
         mbNetLabel0 = mbNetLabel0.split(" "); //breaks label into words
 
 
-        toTranslate(mbNetLabel0[0]); //--------------------------------> Translate main label // only one word from label
+        if (translate) {
+            toTranslate(mbNetLabel0[0]); //--------------------------------> Translate main label // only one word from label
+            console.log("Translated Label: " + translatedRes);
+        } else {
 
-        console.log("Translated Label: " + translatedRes);
+            console.log("Label: " + mbNetLabel0);
+        }
 
         // -----> CRNN ------> Generate TEXT content
 

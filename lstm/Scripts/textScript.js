@@ -183,7 +183,7 @@ function DoSubtitle() {
         text(`${translatedRes}`, line, posYtextS, windowWidth - 140, 300);
 
     } else {
-        text(rnnSub, line, posYtextS, windowWidth - 140, 300);
+        text(regexRnnSub, line, posYtextS, windowWidth - 140, 300);
     }
 
 }
