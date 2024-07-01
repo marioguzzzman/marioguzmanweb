@@ -41,7 +41,7 @@ var translatedRes = '';
 
 var translateAPIKey = ' ';
 
-let translate = false;
+let translate = true;
 
 //----------------------------------------------------------- CAMERA --------
 
@@ -131,10 +131,10 @@ let subtitle = false;
 let showSubtitle = 0;
 
 // //--------------Connectors text XIX CENTURY TRAVELER
-let entrance = ['I think this is a ', 'When I find a ', 'Later on, I think of this ', 'Although I don\'t believe that this is a ', 'But, if you wander through the ', 'Last time I saw a ', 'I couldn\'t believe a ', 'I feel I already saw a ', 'Just after a ', 'Before this ', 'After encountering this ', 'Also, this ', 'Later on, the ', 'Above all, this ', ];
+// let entrance = ['I think this is a ', 'When I find a ', 'Later on, I think of this ', 'Although I don\'t believe that this is a ', 'But, if you wander through the ', 'Last time I saw a ', 'I couldn\'t believe a ', 'I feel I already saw a ', 'Just after a ', 'Before this ', 'After encountering this ', 'Also, this ', 'Later on, the ', 'Above all, this ', ];
 
 
-let middle = [' ', ' ', ' ', ' ', ' ', ' ', ' ', '. ', ', ', ', but ', ', moreover, ', ', however, ', ', in short,', ', but also, ', ', in addition, ', ', nevertheless, ', ', I rather think of ', ' we can discuss about', ' I doubted my self, but ', ' was there ', ];
+// let middle = [' ', ' ', ' ', ' ', ' ', ' ', ' ', '. ', ', ', ', but ', ', moreover, ', ', however, ', ', in short,', ', but also, ', ', in addition, ', ', nevertheless, ', ', I rather think of ', ' we can discuss about', ' I doubted my self, but ', ' was there ', ];
 
 // let entrance = [' '];
 // let middle = [' '];
@@ -142,9 +142,9 @@ let middle = [' ', ' ', ' ', ' ', ' ', ' ', ' ', '. ', ', ', ', but ', ', moreov
 // //--------------Connectors text XIX CENTURY TRAVELER
 
 //--------------Connectors text LATIN GAMEON
-// let entrance = ['Creo que esto es un ', 'A veces, cuando encuentro un ', 'Más tarde, yo pensaría que un ', 'Aunque no crea que esto es un ', 'Pero, si recorres el ', 'La última vez que ví un ', 'No podría crer que un ', 'Siento que ya he visto este ', 'Justo antes de este ', 'Antes de este ', 'Después de reconcer este ', 'También, este ', 'Más tarde, el ', 'Sobre todo, este ', ];
+let entrance = ['Creo que esto es un ', 'A veces, cuando encuentro un ', 'Más tarde, yo pensaría que un ', 'Aunque no crea que esto es un ', 'Pero, si recorres el ', 'La última vez que ví un ', 'No podría crer que un ', 'Siento que ya he visto este ', 'Justo antes de este ', 'Antes de este ', 'Después de reconcer este ', 'También, este ', 'Más tarde, el ', 'Sobre todo, este ', ];
 
-// let middle = [' ', ' ', ' ', ' ', ' ', ' ', ' ', '. ', ', ', '. ', ', ', ', pero ', ', sin embargo, ', ', en resumen,', ', pero también, ', ', además, ', ', me gustaría pensar que ', ' podemos discutir acerca de', ' dudaba de mi, pero ', ' estaba ahí ', ];
+let middle = [' ', ' ', ' ', ' ', ' ', ' ', ' ', '. ', ', ', '. ', ', ', ', pero ', ', sin embargo, ', ', en resumen,', ', pero también, ', ', además, ', ', me gustaría pensar que ', ' podemos discutir acerca de', ' dudaba de mi, pero ', ' estaba ahí ', ];
 
 //--------------------------TEXT SEEDS ----------
 let startingSeeds = entrance[0];
