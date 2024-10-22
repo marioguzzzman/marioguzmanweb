@@ -37,10 +37,21 @@
     width: 42vw;
 }
 
+.parallax-1 img.golem-image {
+    top: 5px; /* Adjust this value to lower the image as needed */
+    width: 50vw;
+}
+
 .parallax-2 img {
-    top: -50px;
+    top: -100px;
     left: -30px;
     width: 39vw;
+}
+
+.parallax-2 img.golem-image {
+    width: 36vw; /* Increased from 39vw to 45vw */
+    top: -56px; /* Adjusted to compensate for larger size */
+    left: -154px; /* Adjusted to compensate for larger size */
 }
 
 .parallax-3 img {
@@ -61,19 +72,49 @@
     color: white;
 }
 
+.carousel-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.carousel {
+    background: #FAFAFA;
+}
+
 .carousel-cell {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    min-height: 100%;
-    cursor: move;
+    width: 100%;
+    height: auto;
+    margin-right: 10px;
 }
 
 .carousel-cell img {
-    margin-right: 3vw;
-    margin-left: 3vw;
-    min-height: 100%;
-    width: 55vw;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Flickity viewport */
+.flickity-viewport {
+    transition: height 0.2s;
+}
+
+/* Flickity page dots */
+.flickity-page-dots {
+    bottom: -40px;
+}
+
+.flickity-page-dots .dot {
+    width: 12px;
+    height: 12px;
+    opacity: 1;
+    background: transparent;
+    border: 2px solid #333;
+}
+
+.flickity-page-dots .dot.is-selected {
+    background: #333;
 }
 
 .team {
@@ -85,7 +126,72 @@
 }
 
 .team .col {
-    padding: 10vh 5vw;
+    padding: 5vh 0; /* Reduced vertical padding */
+    width: 100%; /* Full width for each column */
+    margin-bottom: 30px; /* Added margin between columns */
+}
+
+.team .col:last-child {
+    margin-bottom: 0; /* Remove margin from last column */
+}
+
+/* Add more space between different sections */
+.team .col .observable.h1 {
+    margin-bottom: 20px; /* Increased space below headings */
+}
+
+/* Add space between items within a column */
+.team .col .observable.body {
+    margin-bottom: 15px; /* Space between body paragraphs */
+}
+
+/* Responsive adjustments */
+@media (max-width: 762px) {
+    .team .col {
+        padding: 3vh 0; /* Further reduced padding for mobile */
+    }
+}
+
+/* Flickity prev/next buttons */
+.flickity-prev-next-button {
+    width: 44px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+}
+
+.flickity-prev-next-button:hover {
+    background: white;
+}
+
+/* Arrow icon color */
+.flickity-prev-next-button .arrow {
+    fill: #333;
+}
+
+.flickity-prev-next-button.no-svg {
+    color: #333;
+}
+
+/* Position the prev/next buttons */
+.flickity-prev-next-button.previous {
+    left: 10px;
+}
+.flickity-prev-next-button.next {
+    right: 10px;
+}
+
+/* Smaller buttons on mobile */
+@media screen and ( max-width: 800px ) {
+    .flickity-prev-next-button {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/* Hide disabled buttons */
+.flickity-button:disabled {
+    display: none;
 }
 
 @media (max-width: 762px) {
@@ -99,6 +205,9 @@
         left: 5vw;
         width: 71vw;
     }
+    .parallax-1 img.golem-image {
+        top: 116px; /* Adjust this value for mobile view */
+    }
     /* .parallax-2 img {
         top: -20px;
         left: -20px;
@@ -108,6 +217,11 @@
         top: -97px;
         left: -249px;
         width: 71vw;
+    }
+    .parallax-2 img.golem-image {
+        width: 80vw; /* Increased from 71vw to 80vw for mobile */
+        top: -110px; /* Adjusted for mobile */
+        left: -260px; /* Adjusted for mobile */
     }
     .parallax-3 img {
         top: 0;
@@ -122,4 +236,9 @@
         padding-left: 0;
         width: 100%;
     }
+}
+
+.photo-credit {
+    font-size: 0.6em; /* Set the font size to half of the current size */
+    margin-top: -11px; /* Optional: Add some space above the credit text */
 }
