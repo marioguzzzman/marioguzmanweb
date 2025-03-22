@@ -15,7 +15,7 @@
 
     <title>Mario Guzman</title>
     <meta name="charset" content="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
 
     <meta name="description" content="I am a Mexican researcher, experimental writer, and new media artist.
 
@@ -30,13 +30,13 @@
     <!-- TAGS FOR SOCIAL -->
     <meta name='theme-color' content='white'>
     <meta property='og:type' content='website'>
-    <meta property='og:url' content='http://www.mario-guzman.com'>
+    <meta property='og:url' content='https://www.mario-guzman.com'>
     <meta property='og:title' content='Artist: Mario Guzman'>
 
     <meta property='og:description' content='Researcher, experimental writer, and new media artist.
     I focus on the intersection of language studies, web development, interactive media, algorithmic literature, and robotics. I want to bring code, storytelling, and culture together.'>
 
-    <meta property='og:image' content='/images/global/mario-guzman-web.jpg'>
+    <meta property='og:image' content='https://www.mario-guzman.com/images/global/mario-guzman-web.jpg'>
     <!-- image must be 600x315 -->
 
 
@@ -85,7 +85,7 @@
                 <div class="textglitch2">
                     <span class="selected" style="margin-right: 8px;">New Media artist</span>&amp;
                     <!-- <a class="underlined" href="/experimental" style="margin-left: 8px;">Experimental writer</a> -->
-                    <a class="underlined" style="margin-left: 8px;">Experimental writer</a>
+                    <a class="underlined" href="#about" aria-label="Experimental writer">Experimental writer</a>
 
 
                     <!-- OLD PARRAGRPAH  
@@ -155,11 +155,14 @@
                 <a class="project-hover observable" href="/project/liminal_sanctuary.html">
                     <picture>
                         <source media="(max-width: 765px)" srcset="/images/home/liminalSanctuaryhome1.png">
-                        <img alt="Liminal Sanctuary - Stories of Displacement" src="/images/home/liminalSanctuaryhome1.png">
+                        <img 
+                            alt="Liminal Sanctuary - Stories of Displacement" 
+                            src="/images/home/liminalSanctuaryhome1.png"
+                            loading="lazy">
                     </picture>
 
-                    <div class="project-title">
-                        <div class="texthover">Liminal Sanctuary </div>
+                    <div class="project-title" aria-label="Project title">
+                        <div class="texthover">Liminal Sanctuary</div>
                     </div>
 
                     <div class="h4 project-category glitch-btn" style="margin-bottom: -9px">
@@ -495,36 +498,13 @@
                         <div class="texthover">Digital Literature / Non-linear</div>
                     </div>
                 </a>
-                <br><br>
             </div>
 
-
-            <!-- --------------------------------------------------------------------->
-            <!-- OCEAN -->
-
-            <!-- <div class="project-45 parallax-1 project">
-                <a class=" project-hover observable" href="/project/ocean">
-                    <picture>
-                        <source media="(max-width: 765px)" srcset="/images/home/mario-guzman-miramar-video-nido.jpg">
-                        <img alt="mario-guzman-miramar-video-nido The sea out of the sea"
-                            src="/images/home/mario-guzman-miramar-video-nido.jpg">
-                    </picture>
-
-                    <div class="project-title">
-                        <div class="texthover">The sea out of the sea</div>
-                    </div>
-
-                    <div class="h4 project-category">
-                        <div class="texthover">Video / Documentary</div>
-                    </div>
-                </a>
-            </div> -->
-
             <!-- --------------------------------------------------------------------->
 
-
+            <!-- Pre-pixel symphony -->
             <div class="project-45 parallax-1 project">
-                <a class=" project-hover observable" href="/project/prepixel.html">
+                <a class="project-hover observable" href="/project/prepixel.html">
                     <picture>
                         <source media="(max-width: 765px)" srcset="/images/home/mario-guzman-prepixel-nosferatu-vhs-2014.jpg">
                         <img alt="mario guzman prepixel nosferatu vhs 2014 Pre-pixel symphony in major fractal I" src="/images/home/mario-guzman-prepixel-nosferatu-vhs-2014.jpg">
@@ -580,7 +560,7 @@
         document.getElementById("obra").innerHTML = myObj.name;
         document.getElementById("desc").innerHTML = myObj.description;
     </script>
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js" defer></script>
     <script src="https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js" defer></script>
@@ -593,6 +573,8 @@
             $("#footerJS").load("footerNav.html");
         });
     </script>
+
+    <script src="/javascript/imageLoader.js" defer></script>
 
 </body>
 
