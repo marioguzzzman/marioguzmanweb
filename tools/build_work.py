@@ -94,6 +94,19 @@ def get_lists(p):
     return ex, pr, cr
 
 
+# works by other artists: Mario is a contributor, not the creator
+CONTRIBUTOR = {"ona", "legible-journey", "mirar-al-cielo"}
+
+
+def work_ld(p, og):
+    data = {"@context": "https://schema.org", "@type": "CreativeWork", "name": p["title"],
+            "url": f"{SITE}project/{p['slug']}.html", "image": SITE + og}
+    if re.fullmatch(r"\d{4}", p["year"] or ""):
+        data["dateCreated"] = p["year"]
+    data["contributor" if p["slug"] in CONTRIBUTOR else "creator"] = {"@id": PERSON_ID}
+    return ld_script(data)
+
+
 def nav(root):
     return f"""<header>
   <div class="wrap">
@@ -102,8 +115,8 @@ def nav(root):
     <a href="{root}index.html#works">works</a>
     <a href="{root}index.html#robots">robots</a>
     <a href="{root}index.html#tech">creative technologist</a>
+    <a href="{root}index.html#workshops">workshops</a>
     <a href="{root}index.html#texts">texts</a>
-    <a href="{root}index.html#open">open source</a>
     <a href="{root}index.html#about">about</a>
     </nav>
   </div>
@@ -118,7 +131,7 @@ def build(p):
     desc = short(p["intro"][0]) if p["intro"] else (
         f"{title}" + (f", {year}" if year else "") + (f". {p['venue'][0]}" if p["venue"] else "") + ". A work by Mario Guzman.")
     og = f"{W}{folder}/{lead}.jpg"
-    out = [head("en", f"{title} · Mario Guzman", desc, og, f"project/{slug}.html", root)]
+    out = [head("en", f"{title} · Mario Guzman", desc, og, f"project/{slug}.html", root, work_ld(p, og))]
     out.append(f'<body data-root="{root}">\n<a class="skip" href="#content">Skip to content</a>\n{nav(root)}\n<main id="content" class="wrap">\n')
     out.append(f'  <article>\n  <div class="work-head">\n    <h1>{esc(title)}</h1>\n    <div class="meta">')
     out.append(f'      <p>{esc(year)}</p>')
