@@ -228,7 +228,7 @@ page(
     ],
     exhibitions=[
         ("AI Robot Roadshow. AI for Good Global Summit 2023, Geneva, Switzerland", "Participating visual artist. Event concept: Jovanka v. Wilsdorf and David Hanson.", "https://jovanka-von-wilsdorf.de/en/project/ai-robot-roadshow"),
-        ("AI Robot Roadshow, video", "", "https://www.youtube.com/watch?v=b4Zz6L9RjVs"),
+        ("AI Robot Roadshow, video", "", "https://www.youtube.com/watch?v=b4Zz6L9RjVs&t=1354s"),
     ],
     drop_press=True,
 )
