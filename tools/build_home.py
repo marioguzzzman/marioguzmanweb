@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Writes index.html, es/index.html and fr/index.html (the three homepages).
 Run:  python tools/build_home.py
-ES and FR text is a draft for Mario to correct (see TODO-CONTENT.md)."""
+ES and FR text is a draft for Mario to correct (see designs/TODO-CONTENT.md, which is not published)."""
 import os
 import sys
 
