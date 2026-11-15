@@ -17,12 +17,12 @@ L = {
     "en": dict(
         title="Mario Guzman · Artist-researcher and creative technologist",
         desc="Mario Guzman, artist-researcher and creative technologist. Installations, robots and texts on artificial voice and social robots. Former operator and writer for the humanoid robot Sophia.",
-        nav=["works", "robots", "creative technologist", "workshops", "texts", "about"],
+        nav=["artworks", "robots", "creative technologist", "workshops", "texts", "about"],
         role="Artist-researcher and<br>creative technologist",
         say='I make installations, robots, texts and open tools about artificial entities: <span class="ask" role="button" tabindex="0" title="click">who is speaking when a machine speaks?</span>',
         say_plain="I make installations, robots, texts and open tools about artificial entities: who is speaking when a machine speaks?",
-        words=["Works", "Humanoid robots", "Creative tech", "Workshops", "Texts"],
-        h2=["Works", "Humanoid robots", "Creative technologist", "Workshops", "Texts", "About"],
+        words=["Artworks", "Humanoid robots", "Creative tech", "Workshops", "Texts"],
+        h2=["Artworks", "Humanoid robots", "Creative technologist", "Workshops", "Texts", "About"],
         also="Also",
         robots_lead="Interaction design for the humanoid robots Sophia and Desdemona, 2018–2026, across Hanson Robotics and SingularityNET: what they said, how they moved, how they were shown. Also the empirical core of my PhD.",
         tech_lead="Commissioned work where I designed and built the technology.",
@@ -195,7 +195,7 @@ def build(lang):
             cell(W + "mirar/center-thumb.jpg", "Mirar al cielo", PROJ + "mirar-al-cielo.html", alt="Mirar al cielo: skies with generated words"),
         ]),
         (w[3], "#workshops", [
-            cell(W + "workshops/melly-thumb.jpg", "Who Am I Really Talking To? We All Know your chatbot is slowly changing you", MELLY, alt="Poster of the CLiP Open Session with Mario Guzman at Kunstinstituut Melly", contain=True),
+            cell(W + "workshops/melly-cell-thumb.jpg", "Who Am I Really Talking To? We All Know your chatbot is slowly changing you", MELLY, alt="Poster of the CLiP Open Session with Mario Guzman at Kunstinstituut Melly"),
             cell(W + "workshops/hackathon-thumb.jpg", "Making Machines Feel", HACK, alt="Making Machines Feel: hands attach electronics to a person's head"),
             cell(W + "workshops/som-thumb.jpg", "Algorithmic Poetry: Speculative Imagination, Machine Learning, and Code Studies", SOMURL, alt="School of Machines, Algorithmic Poetry: two vintage computers shaking hands"),
         ]),
@@ -275,7 +275,7 @@ def build(lang):
     out.append(f"""  <section id="workshops">
     <h2>{sec[3]}</h2>
     <div class="kit k3">
-      <a class="kc" data-n="Who Am I Really Talking To? We All Know your chatbot is slowly changing you" href="{MELLY}"><img class="contain" src="{root}{W}workshops/melly-thumb.jpg" alt="Poster of the CLiP Open Session with Mario Guzman at Kunstinstituut Melly" loading="lazy" decoding="async"></a>
+      <a class="kc" data-n="Who Am I Really Talking To? We All Know your chatbot is slowly changing you" href="{MELLY}"><img src="{root}{W}workshops/melly-cell-thumb.jpg" alt="Poster of the CLiP Open Session with Mario Guzman at Kunstinstituut Melly" loading="lazy" decoding="async"></a>
       <a class="kc" data-n="Making Machines Feel" href="{HACK}"><img src="{root}{W}workshops/hackathon-thumb.jpg" alt="Making Machines Feel: hands attach electronics to a person's head" loading="lazy" decoding="async"></a>
       <a class="kc" data-n="Algorithmic Poetry: Speculative Imagination, Machine Learning, and Code Studies" href="{SOMURL}"><img src="{root}{W}workshops/som-thumb.jpg" alt="School of Machines, Algorithmic Poetry: two vintage computers shaking hands" loading="lazy" decoding="async"></a>
     </div>
@@ -321,7 +321,7 @@ def build(lang):
   </section>
 
 </main>
-<script src="{root}js/site.js"></script>
+<script src="{asset(root, 'js/site.js')}"></script>
 </body>
 </html>
 """)
