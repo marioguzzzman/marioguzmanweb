@@ -41,7 +41,7 @@ var entryLang = 'es';
 var exitLang = 'en';
 var translatedRes = '';
 
-var translateAPIKey = 'AIzaSyAGvEzCaMeaL_woHEsCo_w85802jZVuYnI';
+var translateAPIKey = ''; // key removed from the public site
 
 let translate = true;
 
