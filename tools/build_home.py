@@ -234,10 +234,10 @@ def build(lang):
       <div>
         <div class="vids">
           <a class="vid" href="{MUX1}"><img src="{root}{W}robots/desdemona-robot.jpg" alt="{DESD}. Desdemona, a robot wearing a green mask." loading="lazy" decoding="async"></a>
-          <a class="vid" href="{MUX2}"><img src="{root}{W}robots/desdemona-phone.jpg" alt="Desdemona seen through a phone camera" loading="lazy" decoding="async"></a>
+          <a class="vid" href="{MUX2}" title="Desdemona at the Vatican"><img src="{root}{W}robots/desdemona-phone.jpg" alt="Desdemona at the Vatican, seen through a phone camera" loading="lazy" decoding="async"></a>
         </div>
         <h3>Desdemona</h3>
-        <p class="sm">SingularityNET, 2021–2026. Dialogue writing and live operation.<br><span class="soft">Video: {DESD}.</span></p>
+        <p class="sm">SingularityNET, 2021–2026. Dialogue writing and live operation.<br><span class="soft">Videos: {DESD} · Desdemona at the Vatican.</span></p>
       </div>
     </div>
   </section>
@@ -256,7 +256,7 @@ def build(lang):
     <div class="rows">
       <div class="row four"><span class="t2 t"><a href="https://shetells.stream/toolkit/build/">DIY Shell Phone toolkit</a></span><span class="sm">with Helin Ulaş, Rita Eperjesi and Christian Kokott. S+T+ARTS Aqua Motion, Esposende</span><span class="sm soft">Custom audio board for a Raspberry Pi Zero, bone-conduction speaker, shell enclosure</span></div>
       <div class="row four"><span class="t2 t"><a href="{root}{PROJ}legible-journey.html">Legible Journey</a></span><span class="sm">by Colectivo Línea 60. Festival ZERO1, La Rochelle, and Espace Mendès France</span><span class="sm soft">Device concept, microcontroller system and programming. <a class="link" href="https://vimeo.com/1064248159/bf6588966a">Video</a></span></div>
-      <div class="row four"><span class="t2">Robot personalities and interaction devices</span><span class="sm">YayaLabs, London</span><span class="sm soft">Personality development, device design, voice research</span></div>
+      <div class="row four"><span class="t2 t"><a href="https://www.yayalabs.io/">Robot personalities and interaction devices</a></span><span class="sm">YayaLabs, London</span><span class="sm soft">Personality development, device design, voice research</span></div>
       <div class="row four"><span class="t2 t"><a href="{root}{PROJ}mirar-al-cielo.html">Mirar al cielo / 52 tonos de azul</a></span><span class="sm">by Gabriela Golder. Fundación Andreani, BIENALSUR 2021, Videoformes 2022</span><span class="sm soft">Neural network implementation</span></div>
       <div class="row four"><span class="t2 t"><a href="{root}{PROJ}ona.html">ONA</a></span><span class="sm">by Joaquín Gómez and Tomás Terzano. Open Borders, Palazzo Mora, European Cultural Centre, Venice</span><span class="sm soft">Light synchronisation and programming, with Agustín Ramos Anzorena</span></div>
     </div>
