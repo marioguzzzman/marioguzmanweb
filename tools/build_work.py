@@ -181,7 +181,7 @@ def build(p):
     if cr:
         cols.append((p.get("credit_title", "Credits"), [(c[0], c[1], "") for c in cr]))
     if cols:
-        out.append(f'  <div class="lists" style="grid-template-columns:repeat({min(3, len(cols))},minmax(0,1fr))">')
+        out.append(f'  <div class="lists n{min(3, len(cols))}">')
         for h, items in cols:
             out.append(f'    <div>\n      <h2>{h}</h2>\n      <ul>\n{items_html(items)}\n      </ul>\n    </div>')
         out.append("  </div>")
