@@ -68,10 +68,6 @@ MANIFEST = {
         ("01", P + "combinatory-nierika/Screenshot_20201015_165543.jpg"),
         ("02", P + "combinatory-nierika/Screenshot_20201015_165613.jpg"),
         ("03", P + "combinatory-nierika/Screenshot_20201015_165644.jpg"),
-        ("04", P + "combinatory-nierika/Screenshot_20201015_165707.jpg"),
-        ("05", P + "combinatory-nierika/Screenshot_20201015_165738.jpg"),
-        ("06", P + "combinatory-nierika/Screenshot_20201015_165821.jpg"),
-        ("deer", P + "combinatory-nierika/deer_illustration-wallpaper-1920x1080.jpg"),
     ],
     "learning": [
         ("lead", P + "lstm/lstm1.png"),
@@ -146,6 +142,7 @@ MANIFEST = {
     ],
     "prepixel": [
         ("lead", "home/mario-guzman-prepixel-nosferatu-vhs-2014.jpg"),
+        ("rooster", "external/prepixel/rooster.jpg"),
     ],
     "ona": [
         ("lead", "external/ona/ona_1.jpg"),

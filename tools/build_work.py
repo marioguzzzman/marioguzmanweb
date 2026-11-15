@@ -130,7 +130,8 @@ def build(p):
     else:
         out.append(f'  <div class="work-lead">{tag}</div>')
     if p["intro"]:
-        out.append('  <div class="block nohead"><div class="prose">' + "".join(f"<p>{esc(t)}</p>" for t in p["intro"]) + "</div></div>")
+        paras = p.get("intro_html") or [esc(t) for t in p["intro"]]
+        out.append('  <div class="block nohead"><div class="prose">' + "".join(f"<p>{t}</p>" for t in paras) + "</div></div>")
     if p.get("intro_credit"):
         out.append(f'  <p class="sm soft prose" style="margin-top:10px">{esc(p["intro_credit"])}</p>')
     if p.get("intro_link"):
@@ -159,9 +160,10 @@ def build(p):
                 figs.append(f'<figure style="--r:{r:.4f}">{tag}{c}</figure>')
                 ratios.append(r)
             rows = "\n".join('    <div class="gr">' + "".join(figs[i] for i in row) + "</div>" for row in pack(ratios))
-            out.append('  <div class="grid">\n' + rows + "\n  </div>")
+            cls = "grid half" if len(blk) > 2 and blk[2] == "half" else "grid"
+            out.append(f'  <div class="{cls}">\n' + rows + "\n  </div>")
         elif kind == "vimg":
-            tag, r = img_tag(folder, lead, blk[2], root)
+            tag, r = img_tag(folder, blk[3] if len(blk) > 3 else lead, blk[2], root)
             out.append(f'  <a class="work-lead" style="margin-top:40px" href="{blk[1]}">{tag}</a>')
         elif kind == "v":
             out.append(f'  <p class="playlink"><a class="link" href="{blk[1]}">&#9654; {esc(blk[2])}</a></p>')

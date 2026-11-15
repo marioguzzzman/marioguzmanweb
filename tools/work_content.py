@@ -24,8 +24,9 @@ page(
     people="with Helin Ulaş, Rita Eperjesi and Christian Kokott",
     lead_alt="She Tells, Sea Shells: a hand holds a shell above a glass sphere on a beach",
     intro=[
-        "Our project is called She Tells, Sea Shells (as you could have guessed already), and we want you to get closer to water, because it's important to pay more attention to your environment, there is the climate change, sustainability, AI using a lot of water, a big part of you is water, seafood is delicious and it's more and more full of plastic, swimming is nice, but there is plastic here too... well, we have tonnes of reasons, but mainly because we care about water, and we want you to care more.",
+        "Sea Shells, She Tells, is an artistic research project in Esposende. It begins with the simple, almost childlike gesture of holding a shell to the ear and hearing the ocean. Through field recordings, performed voices, local stories and speculative futures, we extend a playful voice to the waters of Esposende, and invite the people who live alongside them to answer.",
     ],
+    intro_html=['<a href="https://shetells.stream/">Sea Shells, She</a> Tells, is an artistic research project in Esposende. It begins with the simple, almost childlike gesture of holding a shell to the ear and hearing the ocean. Through field recordings, performed voices, local stories and speculative futures, we extend a playful voice to the waters of Esposende, and invite the people who live alongside them to answer.'],
     intro_link=("Visit the main project site: shetells.stream", "https://shetells.stream"),
     kind="", tech="",
     blocks=[
@@ -167,7 +168,7 @@ page(
             "The piece addresses the “mind-body” problem (Chalmers, 1996) by juxtaposing corporeal entities that are self-complete in their mutual perception. The skull-ceramic as a simple subject that proposes an experience, responds to the presence of the skull-human/complex subject, and enables a space for the synchronization of frequencies that in their texture open a mutual reflection.",
             "Consciousness is the precooking of the universal mind is a space for the synchronization of frequencies that, in their texture, open a mutual reflection on the complex connections between matter and consciousness.",
         ]),
-        ("i", [("03", "Diagram of the piece: microcontrollers, copper capacitive sensors, capacitive ink sensors, ceramic skull, contrabass strings, wooden wheel, motor", "")]),
+        ("i", [("03", "Diagram of the piece: microcontrollers, copper capacitive sensors, capacitive ink sensors, ceramic skull, contrabass strings, wooden wheel, motor", "")], "half"),
     ],
     drop_press=True,
 )
@@ -246,7 +247,7 @@ page(
         "The background color performs a metaphorical passage from the ocean to the desert, and from day to night. By pressing the Wirikuta button, you can experience the minimalistic virtual pilgrimage's time on the scale of 24 hours or 24 seconds.",
     ],
     kind="", tech="",
-    blocks=[("i", [("01", "Combinatory Nierika, screenshot", ""), ("02", "Combinatory Nierika, screenshot", ""), ("03", "Combinatory Nierika, screenshot", ""), ("04", "Combinatory Nierika, screenshot", ""), ("05", "Combinatory Nierika, screenshot", ""), ("06", "Combinatory Nierika, screenshot", ""), ("deer", "Illustration of a deer", "")])],
+    blocks=[("i", [("01", "Combinatory Nierika, screenshot", ""), ("02", "Combinatory Nierika, screenshot", ""), ("03", "Combinatory Nierika, screenshot", "")])],
     links=[("Combinatory Nierika in Taper #5", "https://taper.badquar.to/5/combinatory_nierika.html")],
     exhibitions=[], press=[], credits=[],
 )
@@ -284,7 +285,7 @@ page(
         "The Machine de transcodage bit-cellule, is an audioVisual exploration of computation substrate and its evolution into ever-digitally-mediated organic cells. From binary light and logic gates that undergo the complexity of discrete agent simulation, to ASCII-defined cellular forms. This piece placed at the House of Henri II as the inauguration mapping of the Electronic Art Festival ZERO1 at La Rochelle, France.",
     ],
     kind="Mapping / ASCII art / Inauguration", tech="",
-    blocks=[("i", ["01"])],
+    blocks=[("i", ["01"], "half")],
 )
 
 page(
@@ -377,7 +378,7 @@ page(
             "Digital Literature / Non-linear Digital Literature, Non-linear Narrative, Database, Internet.",
         ]),
         ("links", "Read story", [("Bermuda Triangle. A story about pixels, glitches and the forces of nature Spanish Ed.", "hiperstories/triangulo/triangulo_de_las_bermudas.html")]),
-        ("i", ["04"]),
+        ("i", ["04"], "half"),
     ],
     exhibitions=[("Digital storytelling week.", "Salvador de Bahía, Brasil, 2018.", "https://www.antologiaitau2015.org/infinitud-discreta"),
                  ("Digital Story Award Anthology.", "Itaú Bank, 2015.", "https://www.antologiaitau2015.org/infinitud-discreta")],
@@ -427,7 +428,7 @@ page(
             "\"The song of the rooster\", is part of a series of analog live interventions on classic films in VHS format.",
             "Performance / VHS / Electronic Music VHS feedback, Found footage. Length 7,47\"",
         ]),
-        ("v", "https://vimeo.com/100402508", "The song of the rooster: watch the video"),
+        ("vimg", "https://vimeo.com/100402508", "The song of the rooster: watch the video", "rooster"),
     ],
 )
 
@@ -513,10 +514,9 @@ page(
     ],
     kind="Machine Learning / Experimental Literature / Live Installation", tech="Machine Learning, convolutional neural network, mobile vision, long short-term memory (LSTM), projection, XIX century travel literature corpus, travel videos.",
     blocks=[],
-    exhibitions=[("(Un)Continuity. Electronic Literature Organization.", "UCF Gallery, Orlando, USA, 2020.", "https://projects.cah.ucf.edu/mediaartsexhibits/uncontinuity/Guzman/guzman.html")],
-    press=[("Neologías Artificiales: arte con inteligencia artificial, Linne Magazine", "", "https://linnemagazine.com/2021/07/13/neologias-artificiales-arte-con-inteligencia-artificial/")],
-    links=[("The piece at the (Un)Continuity exhibition", "https://projects.cah.ucf.edu/mediaartsexhibits/uncontinuity/Guzman/guzman.html"),
-           ("Original web version", "../lstm/index.html")], credits=[],
+    exhibitions=[("(Un)Continuity. Electronic Literature Organization.", "UCF Gallery, Orlando, USA, 2020.", "https://projects.cah.ucf.edu/mediaartsexhibits/uncontinuity/Guzman/guzman.html"),
+                 ("Neologías Artificiales: arte con inteligencia artificial, Linne Magazine", "", "https://linnemagazine.com/2021/07/13/neologias-artificiales-arte-con-inteligencia-artificial/")],
+    press=[], links=[], credits=[],
 )
 
 # Previous / next order on the pager (the Works list of the homepage)
