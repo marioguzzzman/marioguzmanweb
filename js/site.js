@@ -1,8 +1,7 @@
 /* mario-guzman.com v2. Vanilla JavaScript, no libraries.
    1. the main image rotates through the works (homepage only)
    2. click the question in the opening statement: the browser's synthetic voice asks it
-   3. click the name: the letters scramble for a moment and settle back
-   4. YouTube, Vimeo and Mux links open in an overlay; other outside links open in a new tab
+   3. YouTube, Vimeo and Mux links open in an overlay; other outside links open in a new tab
    Pages set <body data-root="../"> when they sit one folder down. */
 (function () {
   var root = document.body.getAttribute("data-root") || "";
@@ -73,28 +72,7 @@
     });
   }
 
-  // 3. the name scrambles for about 0.7 s (skipped when reduced motion is set)
   var me = document.getElementById("me");
-  if (me) {
-    var name = me.textContent, busy = false, pool = "abcdefghijklmnopqrstuvwxyz";
-    var run = function () {
-      if (busy || reduced) return;
-      busy = true;
-      var start = Date.now(), dur = 700;
-      var timer = setInterval(function () {
-        var k = (Date.now() - start) / dur, out = "";
-        for (var j = 0; j < name.length; j++) {
-          var c = name[j];
-          if (c === " " || j / name.length < k) out += c;
-          else { var r = pool[Math.floor(Math.random() * pool.length)]; out += (c === c.toUpperCase()) ? r.toUpperCase() : r; }
-        }
-        me.textContent = out;
-        if (k >= 1) { clearInterval(timer); me.textContent = name; busy = false; }
-      }, 45);
-    };
-    me.addEventListener("click", run);
-    me.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); run(); } });
-  }
 
   // the small name in the nav appears once the big name has scrolled out of view (homepage only)
   var small = document.querySelector("header a.me");
@@ -103,7 +81,7 @@
     else new IntersectionObserver(function (en) { small.classList.toggle("show", !en[0].isIntersecting); }).observe(me);
   }
 
-  // 4. overlay player for YouTube, Vimeo and Mux; other outside links open in a new tab
+  // 3. overlay player for YouTube, Vimeo and Mux; other outside links open in a new tab
   var box = document.createElement("div");
   box.id = "box";
   box.innerHTML = '<button type="button">close</button><iframe allow="autoplay; fullscreen; picture-in-picture" title="video"></iframe>';

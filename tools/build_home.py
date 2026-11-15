@@ -151,7 +151,7 @@ def build(lang):
 <main id="top" class="wrap">
 
   <div class="hero">
-    <h1 id="me" tabindex="0" role="button">Mario Guzman</h1>
+    <h1 id="me">Mario Guzman</h1>
     <div class="say">
       <p class="sm"><span id="role">{t['role']}</span><br><span class="soft">Berlin / La Rochelle</span></p>
       <p class="big" id="say">{t['say']}</p>

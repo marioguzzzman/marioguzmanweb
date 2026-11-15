@@ -26,7 +26,6 @@ body.home header a.me.show{opacity:1;pointer-events:auto}
 
 /* hero */
 .hero h1{font-weight:400;font-size:clamp(54px,11vw,168px);line-height:.92;letter-spacing:-.045em;margin:56px 0 44px -.04em}
-#me{cursor:pointer;outline-offset:6px}
 .ask{cursor:pointer;border-bottom:2px solid currentColor;transition:color .3s}
 .ask:hover,.ask.on{color:var(--link)}
 .avail{border-top:var(--rule);margin-top:44px;padding-top:16px;font-size:clamp(20px,2vw,27px);letter-spacing:-.01em}

@@ -27,7 +27,6 @@ page(
         "Sea Shells, She Tells, is an artistic research project in Esposende. It begins with the simple, almost childlike gesture of holding a shell to the ear and hearing the ocean. Through field recordings, performed voices, local stories and speculative futures, we extend a playful voice to the waters of Esposende, and invite the people who live alongside them to answer.",
     ],
     intro_html=['<a href="https://shetells.stream/">Sea Shells, She Tells</a>, is an artistic research project in Esposende. It begins with the simple, almost childlike gesture of holding a shell to the ear and hearing the ocean. Through field recordings, performed voices, local stories and speculative futures, we extend a playful voice to the waters of Esposende, and invite the people who live alongside them to answer.'],
-    intro_link=("Visit the main project site: shetells.stream", "https://shetells.stream"),
     kind="", tech="",
     blocks=[
         ("t", "The Shellphone", [
@@ -306,7 +305,7 @@ page(
             "The sound poem declared appropriately by the computational interface of the installation is generated from the sensing, in real time, of electromagnetic waves that recombine neo-classical texts and philosophical texts found within the installation space.",
         ]),
         ("i", ["03", "04", ("cck", "Ped at Centro Cultural Kirchner", "")]),
-        ("i", ["p2", "p3", "p4", "p5"]),
+        ("i", ["p2", "p3", "p5"]),
     ],
 )
 
@@ -512,7 +511,7 @@ page(
         "The system articulates two structures: a convolutional neural network using mobile vision and a long short-term memory (LSTM) architecture of recurrent neural network (RNN).",
         "The work is also an experiment around an endless writing that tries to understand a world constituted by limited objects and perceptions, perhaps a reflection of our own cognitive operations.",
     ],
-    kind="Machine Learning / Experimental Literature / Live Installation", tech="Machine Learning, convolutional neural network, mobile vision, long short-term memory (LSTM), projection, XIX century travel literature corpus, travel videos.",
+    kind="Experimental Literature / Live Installation", tech="Machine Learning, convolutional neural network, mobile vision, long short-term memory (LSTM), projection, XIX century travel literature corpus, travel videos.",
     blocks=[],
     exhibitions=[("(Un)Continuity. Electronic Literature Organization.", "UCF Gallery, Orlando, USA, 2020.", "https://projects.cah.ucf.edu/mediaartsexhibits/uncontinuity/Guzman/guzman.html"),
                  ("Neologías Artificiales: arte con inteligencia artificial, Linne Magazine", "", "https://linnemagazine.com/2021/07/13/neologias-artificiales-arte-con-inteligencia-artificial/")],

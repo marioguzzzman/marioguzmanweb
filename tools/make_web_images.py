@@ -110,7 +110,6 @@ MANIFEST = {
         # PED MARIO GUZMAN 1.jpg is the same file as the lead (home/ped.jpg), so it is not repeated
         ("p2", P + "ped/PED MARIO GUZMAN 2.jpg"),
         ("p3", P + "ped/PED MARIO GUZMAN 3.jpg"),
-        ("p4", P + "ped/PED MARIO GUZMAN 4.jpg"),
         ("p5", P + "ped/PED MARIO GUZMAN 5.jpg"),
     ],
     "oraculo": [
