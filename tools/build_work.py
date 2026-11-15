@@ -206,6 +206,34 @@ def verify():
     return bad
 
 
+# Old pages replaced by homepage sections: short pages that point to the matching section.
+STUBS = {
+    "bio": ("About", "index.html#about", "The biography is now the About section of the homepage."),
+    "exhibits": ("Works", "index.html#works", "Exhibitions are now listed with each work on the homepage."),
+    "texts": ("Texts", "index.html#texts", "Texts and talks are now a section of the homepage."),
+    "writing": ("Texts", "index.html#texts", "Texts and talks are now a section of the homepage."),
+    "workshops": ("About", "index.html#about", "This page has moved to the homepage."),
+    "classes": ("About", "index.html#about", "This page has moved to the homepage."),
+    "experimental": ("Works", "index.html#works", "This page has moved to the homepage."),
+    "ai-seeds": ("AI Seeds / Aerodynamics of Seeds", "project/aerodynamics-seeds.html", "This page has moved."),
+    "ocean": ("Works", "index.html#works", "This page has moved to the homepage."),
+}
+
+
+def stub(slug):
+    label, target, msg = STUBS[slug]
+    href = "../" + target if not target.startswith("project/") else target[len("project/"):]
+    nl = chr(10)
+    top = head("en", f"{label} · Mario Guzman", msg, W + "global/mario-guzman-2026.jpg", f"project/{slug}.html", "../",
+               '<meta name="robots" content="noindex">' + nl)
+    body = nl.join([
+        '<body data-root="../">', nav("../"), '<main class="wrap">',
+        f'  <div class="work-head"><h1>{esc(label)}</h1></div>',
+        f'  <p class="lead">{esc(msg)} <a class="link" href="{href}">Go to {esc(label)}</a></p>',
+        '</main>', '<script src="../js/site.js"></script>', '</body>', '</html>', ''])
+    return top + body
+
+
 def main():
     if "--verify" in sys.argv:
         sys.exit(1 if verify() else 0)
@@ -214,6 +242,10 @@ def main():
         with open(path, "w", encoding="utf-8", newline="\n") as f:
             f.write(build(p))
         print("wrote project/%s.html" % p["slug"])
+    for slug in STUBS:
+        with open(os.path.join(ROOT, "project", slug + ".html"), "w", encoding="utf-8", newline="\n") as f:
+            f.write(stub(slug))
+        print("wrote stub project/%s.html" % slug)
 
 
 if __name__ == "__main__":
