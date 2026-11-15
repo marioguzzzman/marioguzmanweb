@@ -26,7 +26,7 @@ page(
     intro=[
         "Sea Shells, She Tells, is an artistic research project in Esposende. It begins with the simple, almost childlike gesture of holding a shell to the ear and hearing the ocean. Through field recordings, performed voices, local stories and speculative futures, we extend a playful voice to the waters of Esposende, and invite the people who live alongside them to answer.",
     ],
-    intro_html=['<a href="https://shetells.stream/">Sea Shells, She</a> Tells, is an artistic research project in Esposende. It begins with the simple, almost childlike gesture of holding a shell to the ear and hearing the ocean. Through field recordings, performed voices, local stories and speculative futures, we extend a playful voice to the waters of Esposende, and invite the people who live alongside them to answer.'],
+    intro_html=['<a href="https://shetells.stream/">Sea Shells, She Tells</a>, is an artistic research project in Esposende. It begins with the simple, almost childlike gesture of holding a shell to the ear and hearing the ocean. Through field recordings, performed voices, local stories and speculative futures, we extend a playful voice to the waters of Esposende, and invite the people who live alongside them to answer.'],
     intro_link=("Visit the main project site: shetells.stream", "https://shetells.stream"),
     kind="", tech="",
     blocks=[
