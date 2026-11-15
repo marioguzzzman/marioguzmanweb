@@ -113,9 +113,17 @@ $(function() {
   });
 
   $('a').click(function(event) {
-    event.preventDefault();
-    newLocation = this.href;
+    const href = this.getAttribute('href');
+    if (!href || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:') || href.startsWith('javascript:') || this.target === '_blank' || this.hasAttribute('download')) {
+      return;
+    }
+    const isSameOrigin = this.origin === window.location.origin;
+    if (!isSameOrigin) {
+      return;
+    }
 
+    event.preventDefault();
+    const newLocation = this.href;
     $('body').fadeOut(500, function() {
       window.location = newLocation;
     });
