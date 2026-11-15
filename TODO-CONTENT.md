@@ -44,3 +44,4 @@ Not part of this build. Pushes to `master` since March 2025 have not reached the
 - Profile photo: `images/web/global/mario-guzman-2026.jpg` is made from the 1200 px web copy. Replace `images/external/global/portrait-web.jpg` with the 3470 px original if you want a sharper file, then run `python tools/make_web_images.py`.
 - Contact links: email, Instagram and GitHub use the addresses from the old site (`marioguzzzman`).
 - Tools: `tools/make_web_images.py` (images), `tools/build_home.py` and `tools/build_work.py` (write the HTML pages from the text in `tools/work_content.py`), `tools/check_site.py` (browser check). The site itself needs no build step.
+- Voice pool: Mario to supply lines from Sophia's speeches and from the generative texts, in any language. The pool is the `POOL` array at the top of the voice section in `js/site.js`.

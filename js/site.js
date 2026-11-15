@@ -49,20 +49,54 @@
     }
   }
 
-  // 2. the question is spoken by a different installed voice on each click
+  // 2. click the question: first click, the voice asks it in the page language. Later clicks, one line
+  //    from the pool below, never repeating until the pool is used up; then the question again.
+  //    The text on the page never changes. Never speaks without a click.
+  // Lines from Mario's own works; add more here: {lang: "en", text: "..."}
+  var POOL = [
+    { lang: "fr", text: "Suis-je un Golem ?" },
+    { lang: "fr", text: "Est-ce un cristal ?" },
+    { lang: "en", text: "I feel strange." },
+    { lang: "en", text: "Golems are learning." },
+    { lang: "en", text: "Prompt is being created." },
+    { lang: "en", text: "How can we program matter? How can matter program us?" },
+    { lang: "en", text: "Can Golems reclaim their voice?" },
+    { lang: "en", text: "What degree of autonomy creates a \"living\" being?" },
+    { lang: "en", text: "Where does \"Home\" begin, and where does it end?" },
+    { lang: "en", text: "What happens to the body when it is altered recursively, not as a form but as a formula?" },
+    { lang: "en", text: "I trained a writing system to explain to me what it thought it was happening." }
+  ];
   var say = document.getElementById("say");
   if (say && "speechSynthesis" in window) {
-    var n = 0;
-    var speak = function (el) {
-      var lang = document.documentElement.lang || "en";
-      var voices = speechSynthesis.getVoices().filter(function (x) { return x.lang.slice(0, 2) === lang; });
-      var u = new SpeechSynthesisUtterance(el.textContent);
+    var n = 0, bag = null;
+    var voicesFor = function (lang) {
+      return speechSynthesis.getVoices().filter(function (x) { return x.lang.slice(0, 2) === lang; });
+    };
+    var shuffled = function () {
+      var a = POOL.slice(), i, j, t;
+      for (i = a.length - 1; i > 0; i--) { j = Math.floor(Math.random() * (i + 1)); t = a[i]; a[i] = a[j]; a[j] = t; }
+      return a;
+    };
+    var utter = function (el, text, lang, voices) {
+      var u = new SpeechSynthesisUtterance(text);
       u.lang = lang;
       if (voices.length) { u.voice = voices[n % voices.length]; n++; }
       u.onstart = function () { el.classList.add("on"); };
       u.onend = u.onerror = function () { el.classList.remove("on"); };
       speechSynthesis.cancel();
       speechSynthesis.speak(u);
+    };
+    var speak = function (el) {
+      var page = document.documentElement.lang || "en";
+      if (bag && bag.length) {
+        while (bag.length) {
+          var line = bag.pop(), v = voicesFor(line.lang);
+          if (v.length) { utter(el, line.text, line.lang, v); return; }
+        }
+      }
+      // first click, or the pool is used up: ask the question, then start a new round
+      utter(el, el.textContent, page, voicesFor(page));
+      bag = shuffled();
     };
     speechSynthesis.getVoices();
     say.addEventListener("click", function (e) { var el = e.target.closest(".ask"); if (el) speak(el); });
