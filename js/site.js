@@ -99,7 +99,7 @@
   // 4. overlay player for YouTube, Vimeo and Mux; other outside links open in a new tab
   var box = document.createElement("div");
   box.id = "box";
-  box.innerHTML = '<button type="button">close</button><iframe allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="video"></iframe>';
+  box.innerHTML = '<button type="button">close</button><iframe allow="autoplay; fullscreen; picture-in-picture" title="video"></iframe>';
   document.body.appendChild(box);
   var frame = box.querySelector("iframe");
   var embed = function (url) {
