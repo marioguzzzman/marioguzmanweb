@@ -20,6 +20,7 @@ SNAPSHOT = "8fb3430"  # commit "Snapshot of old design before v2"
 W = "images/web/"
 LISTS = json.load(open(os.path.join(HERE, "work_lists.json"), encoding="utf-8"))
 BY = {p["slug"]: p for p in C.PAGES}
+TECH = {"she-tells-sea-shells", "ona", "legible-journey", "mirar-al-cielo"}
 
 
 def short(s, n=200):
@@ -37,6 +38,31 @@ def img_tag(folder, name, alt, root="../", lazy=True):
     w, h = Image.open(path).size
     la = ' loading="lazy" decoding="async"' if lazy else ""
     return f'<img src="{root}{W}{folder}/{name}.jpg" alt="{esc(alt)}" width="{w}" height="{h}"{la}>', w / h
+
+
+def pack(ratios, width=1304, gap=12, target=290):
+    """Split images into rows of 2 to 4 (a lone image only if it is the only one) so that every
+    row is complete and row heights stay close to the target. Returns a list of index lists."""
+    n = len(ratios)
+    if n <= 1:
+        return [list(range(n))]
+    INF = float("inf")
+    best = [0.0] + [INF] * n
+    back = [0] * (n + 1)
+    for j in range(1, n + 1):
+        for k in (2, 3, 4):
+            i = j - k
+            if i < 0 or best[i] == INF:
+                continue
+            h = (width - gap * (k - 1)) / sum(ratios[i:j])
+            cost = best[i] + (h - target) ** 2
+            if cost < best[j]:
+                best[j], back[j] = cost, i
+    rows, j = [], n
+    while j > 0:
+        rows.append(list(range(back[j], j)))
+        j = back[j]
+    return rows[::-1]
 
 
 def items_html(items):
@@ -105,6 +131,10 @@ def build(p):
         out.append(f'  <div class="work-lead">{tag}</div>')
     if p["intro"]:
         out.append('  <div class="block nohead"><div class="prose">' + "".join(f"<p>{esc(t)}</p>" for t in p["intro"]) + "</div></div>")
+    if p.get("intro_credit"):
+        out.append(f'  <p class="sm soft prose" style="margin-top:10px">{esc(p["intro_credit"])}</p>')
+    if p.get("intro_link"):
+        out.append(f'  <p class="prose" style="margin-top:18px;font-size:24px"><a href="{p["intro_link"][1]}">{esc(p["intro_link"][0])}</a></p>')
     sub = [esc(x) for x in (p.get("kind"), p.get("tech")) if x]
     if sub:
         out.append('  <p class="sm soft prose" style="margin-top:14px">' + "<br>".join(sub) + "</p>")
@@ -121,13 +151,18 @@ def build(p):
             links = " · ".join(f'<a href="{esc(h)}">{esc(t)}</a>' for t, h in blk[2])
             out.append(f'  <p class="sm prose" style="margin-top:14px"><span class="soft">{esc(blk[1])}:</span> {links}</p>')
         elif kind == "i":
-            figs = []
+            figs, ratios = [], []
             for it in blk[1]:
                 name, alt, cap = (it, f"{title}", "") if isinstance(it, str) else it
                 tag, r = img_tag(folder, name, alt, root)
                 c = f"<figcaption>{esc(cap)}</figcaption>" if cap else ""
-                figs.append(f'    <figure style="--r:{r:.4f}">{tag}{c}</figure>')
-            out.append('  <div class="grid">\n' + "\n".join(figs) + "\n  </div>")
+                figs.append(f'<figure style="--r:{r:.4f}">{tag}{c}</figure>')
+                ratios.append(r)
+            rows = "\n".join('    <div class="gr">' + "".join(figs[i] for i in row) + "</div>" for row in pack(ratios))
+            out.append('  <div class="grid">\n' + rows + "\n  </div>")
+        elif kind == "vimg":
+            tag, r = img_tag(folder, lead, blk[2], root)
+            out.append(f'  <a class="work-lead" style="margin-top:40px" href="{blk[1]}">{tag}</a>')
         elif kind == "v":
             out.append(f'  <p class="playlink"><a class="link" href="{blk[1]}">&#9654; {esc(blk[2])}</a></p>')
         elif kind == "yt":
@@ -150,27 +185,25 @@ def build(p):
         out.append("  </div>")
     if p.get("source"):
         out.append(f'  <p class="sm soft" style="margin-top:24px">Source: <a href="{p["source"]}">{p["source"].replace("https://", "")}</a></p>')
-    # pager
-    if slug in C.ORDER:
-        i = C.ORDER.index(slug)
-        prev = BY.get(C.ORDER[i - 1]) if i > 0 else None
-        nxt = BY.get(C.ORDER[i + 1]) if i < len(C.ORDER) - 1 else None
-        back = ("../index.html#works", "Back to works")
+    # one link back to the section the page belongs to
+    if slug in TECH:
+        back = ("../index.html#tech", "Back to creative technologist")
     else:
-        prev = nxt = None
-        back = ("../index.html#tech", "Back to Creative technologist")
-
-    def pg(pp, label):
-        if not pp:
-            return "<span></span>"
-        return f'<a href="{pp["slug"]}.html"><small>{label}</small>{esc(pp["title"])}</a>'
-    out.append(f'  <nav class="pager" aria-label="Works">\n    {pg(prev, "Previous")}\n    <a href="{back[0]}">{back[1]}</a>\n    {pg(nxt, "Next")}\n  </nav>')
+        back = ("../index.html#works", "Back to works")
+    out.append(f'  <nav class="pager" aria-label="Back"><a href="{back[0]}">{back[1]}</a></nav>')
     out.append("  </article>\n</main>\n<footer>\n  <div class=\"wrap\">\n    " + contact_row() + "\n  </div>\n</footer>")
     out.append(f'<script src="{root}js/site.js"></script>\n</body>\n</html>\n')
     return "\n".join(out)
 
 
 # ---------------------------------------------------------------- verify
+SKIP_VERIFY = {"she-tells-sea-shells", "ona", "legible-journey", "mirar-al-cielo", "combinatory_nierika"}
+# spelling corrections made to Mario's old text (whitespace removed, as plain() does)
+FIXES = [("OEtymologically", "Etymologically"), ("prehispanicinstuments", "prehispanicinstruments"), ("Natual", "Natural"),
+         ("adecuate", "adequate"), ("glitchs", "glitches"), ("TrestheFebrero", "TresdeFebrero"), ("Luterie", "Lutherie"),
+         ("Chamanism", "Shamanism"), ("theNNRmodel", "theRNNmodel"), ("AgustinRamos", "AgustínRamos"),
+         ("foreknowledge", "precooking"), ("Prehispanicinstuments", "Prehispanicinstruments")]
+
 def plain(src):
     src = re.sub(r"(?s)<!--.*?-->", "", src)
     src = re.sub(r"(?s)<(script|style)\b.*?</\1>", "", src)
@@ -182,11 +215,16 @@ def verify():
     bad = 0
     for p in C.PAGES:
         slug = p["slug"]
-        r = subprocess.run(["git", "show", f"{SNAPSHOT}:project/{slug}.html"], cwd=ROOT, capture_output=True, encoding="utf-8")
+        if slug in SKIP_VERIFY:
+            print(f"-- {slug}: text from the brief or another site, skipped")
+            continue
+        r = subprocess.run(["git", "show", f"{SNAPSHOT}:{p.get('old', 'project/' + slug + '.html')}"], cwd=ROOT, capture_output=True, encoding="utf-8")
         if r.returncode != 0:
             print(f"-- {slug}: no old page, skipped")
             continue
         old = plain(r.stdout)
+        for a, b in FIXES:
+            old = old.replace(a, b)
         strings = list(p["intro"]) + [x for x in (p.get("kind"), p.get("tech")) if x]
         for blk in p["blocks"]:
             if blk[0] == "t":

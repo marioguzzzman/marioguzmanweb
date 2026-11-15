@@ -6,24 +6,25 @@ Nothing here was guessed. Each gap is left visible on the site or left out.
 
 - **Desdemona videos** are Mux streams. They open in the overlay player on the homepage (`player.mux.com`). If that player does not work for you, supply MP4 files or a public page to link to.
 - **Recording or abstract links** for the texts and talks that point nowhere yet: Reconstitution (Routledge, forthcoming) has no link.
-- **Venue lines** still missing: Pre-pixel Symphony in Major Fractal I (no venue in the homepage row; its page lists one exhibition, Paco Urondo Cultural Center, 2016), Cenote Reflections (page has no venue line, see below), Visionoros Collective, Memory of Everywhere has no page.
+- **Venue lines** still missing: Pre-pixel Symphony in Major Fractal I (no venue in the homepage row; its page lists one exhibition, Paco Urondo Cultural Center, 2016), Cenote Reflections (page has no venue line, see below), Visionoros Collective.
 - **Language versions:** ES and FR versions of each work page (work pages are English only for now).
 - **Spanish and French text is a draft** for Mario to correct (interface text, section names, role line, opening statement, section leads, About bio). The Sophia and Desdemona blurbs and the row descriptions (venues, credits) are kept in English on purpose.
 
 ## Problems found in the old pages (decide, then I fix)
 
-- `combinatory_nierika.html` was a copy of the Learning to Write page. The new page has only the title, 2020, "Taper #5", "POSVERSO 2026" and a link to the Taper #5 page (the old homepage linked there). Needs a text, credits and images (images exist in `images/projects/combinatory-nierika/`, not yet used).
 - `cenotes.html` carried the Exhibitions and Press of Quetzalcóatl-bot (ZERO1 2017, Electronic November, 105º Salón Nacional, Poetic Hybrids, Inlets/Outlets, Malacara Press). They were left out. Please supply the real exhibitions and press for Cenote Reflections.
-- `conciencia.html`: Press was a placeholder ("ACA poner lo de HOLO magazine"), left out. The body text still says "Consciousness is the foreknowledge of the universal mind"; the title now follows your choice, "Precooking". Decide whether the body text should change too.
-- `ped.html` had a broken image (`2ped.JPG` does not exist). It is not on the page. Photos named `PED MARIO GUZMAN 1-5.jpg` exist in `images/projects/ped/` if you want more.
 - `lastagreement.html` and `prepixel.html` have only one image each (low resolution, 765 px). Better photos would help.
 - `aerodynamics-seeds.html`: the page uses only the seed image. The Works row links to the project site.
 - `learningtowrite.html`: the exhibitions list uses your wording ("Game On! The Art in Videogames", ACUD MACHT NEU). Old press link kept.
-- Old typos in your project texts were kept word for word (for example "instuments", "Natual", "adecuate", "OEtymologically", "glitchs"). Say if you want them corrected.
 - Videos from the old pages: Vimeo links open in the overlay player (lead image or "Watch" link). YouTube videos on three pages are lazy embeds.
 - Alt texts on work-page photos are short and generic. Please refine.
-- The Creative technologist list has no pages in the brief for Legible Journey and Mirar al cielo, so two small pages were added (`project/legible-journey.html`, `project/mirar-al-cielo.html`) using only facts from the mockup. Years are missing there.
 - ONA page: text and credits are from pleek.net as given, with the venue written as you asked. The spelling "Lights sinchronization" there was changed to your credit line.
+
+- `conciencia.html`: the Press line was a placeholder ("ACA poner lo de HOLO magazine") and is left out. Supply real press if there is any.
+- Memory of Everywhere: the page uses the text of the old `lstm/index.html`. The Linne Magazine article you named does not mention the piece or you, so the page links it without saying anything about it. Check it is the right link.
+- Legible Journey and Mirar al cielo have no year yet.
+- AI Robot Roadshow row: the link labels "Video" and "Project page" are English on the ES and FR homepages.
+- Spanish and French text lives in `tools/build_home.py` (dictionary `L`, keys "es" and "fr"), and in the generated `es/index.html` and `fr/index.html`. Edit `build_home.py` and run `python tools/build_home.py`, or edit the two HTML files directly.
 
 ## Not migrated
 

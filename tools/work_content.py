@@ -26,6 +26,7 @@ page(
     intro=[
         "Our project is called She Tells, Sea Shells (as you could have guessed already), and we want you to get closer to water, because it's important to pay more attention to your environment, there is the climate change, sustainability, AI using a lot of water, a big part of you is water, seafood is delicious and it's more and more full of plastic, swimming is nice, but there is plastic here too... well, we have tonnes of reasons, but mainly because we care about water, and we want you to care more.",
     ],
+    intro_link=("Visit the main project site: shetells.stream", "https://shetells.stream"),
     kind="", tech="",
     blocks=[
         ("t", "The Shellphone", [
@@ -101,7 +102,7 @@ page(
             "What degree of autonomy creates a \"living\" being? How can we program matter? How can matter program us? Can Golems reclaim their voice? Is the capability of interpreting reality a sign of consciousness, of identity? What does 'interpretation' mean for different agents?",
             "In Entangled Matter: AI, Humans and Golems, control over text is not an overpowering force, and neither humans nor Golems are in total control of each other. Humans, machines, and matter are influenced and moved by their own different forms of interpreting information. Each agent imprints its identity and distinct voice into the process of interpreting \"otherness.\"",
         ]),
-        ("i", [("screen1", "A golem in its virtual world, render", ""), ("screen3", "A golem in its virtual world, render", ""), ("je-suis", "A golem in its virtual world, render", ""), ("main", "Entangled Matter, render of golems in a virtual space", "")]),
+        ("i", [("screen1", "A golem in its virtual world, render", ""), ("screen3", "Purple golems in a virtual space, render", ""), ("je-suis", "A golem in its virtual world, render, with the text Suis-je un Golem ?", "")]),
         ("t", "Virtuality as a possible realm", [
             "In this piece, different technologies bridging both realms (AI 3D generation, 3D rendering, handmade sculpting, text-to-image models, photogrammetry, generative language and generative sound) are used to subvert the Golem's traditional narrative in which human written text and symbols control matter, often leading to the obliteration of a fragile emergent subjectivity.",
             "After being sculpted, the scanned Golems become animated inside a virtual world built in Unreal Engine. They will perform several activities guided by rudimentary Artificial Intelligence behaviors. One of the most important is to develop a basic generative language out of simplified grammar to produce words, phrases and, finally, prompts that will be used for students to create more Golems.",
@@ -150,9 +151,9 @@ page(
     venue=["Latin American Artificial Intelligence Biennial, Mexico"], people="",
     lead_alt="Consciousness Is the Precooking of the Universal Mind: ceramic skull and electronics",
     intro=[
-        "Consciousness is the foreknowledge of the universal mind, explores Resonance Theory through the integration of experimental lutherie, ceramics, electronics and neural networks trained on texts by Jacobo Grinberg and the history of shamanism in Mexico. It addresses the perception of consciousness concerning the body, sound and voice in the field of AI.",
+        "Consciousness is the precooking of the universal mind, explores Resonance Theory through the integration of experimental lutherie, ceramics, electronics and neural networks trained on texts by Jacobo Grinberg and the history of shamanism in Mexico. It addresses the perception of consciousness concerning the body, sound and voice in the field of AI.",
     ],
-    kind="Interactive Installation Ancestral AI / Experimental Luterie / Techno-Chamanism / Sound Sculpture", tech="",
+    kind="Interactive Installation Ancestral AI / Experimental Lutherie / Techno-Shamanism / Sound Sculpture", tech="",
     blocks=[
         ("yt", "ASrmGYQaXNI", "Consciousness Is the Precooking of the Universal Mind, video"),
         ("t", "Resonance Theory", [
@@ -162,11 +163,11 @@ page(
         ("t", "The mind-body problem", [
             "The piece aims to create a potential sonic space for two entities to achieve resonance and intuitively explore the \"mind-body\" problem. A skull-ceramic acting as a simple subject proposes an experience. At the same time, a human/complex responds to this experience by modifying the resonance conditions while being surrounded by voices depicting shamanic interpretations of consciousness and alternate descriptions of the mind created by AI.",
         ]),
-        ("i", ["03"]),
         ("t", "Materiality", [
             "The piece addresses the “mind-body” problem (Chalmers, 1996) by juxtaposing corporeal entities that are self-complete in their mutual perception. The skull-ceramic as a simple subject that proposes an experience, responds to the presence of the skull-human/complex subject, and enables a space for the synchronization of frequencies that in their texture open a mutual reflection.",
-            "Consciousness is the foreknowledge of the universal mind is a space for the synchronization of frequencies that, in their texture, open a mutual reflection on the complex connections between matter and consciousness.",
+            "Consciousness is the precooking of the universal mind is a space for the synchronization of frequencies that, in their texture, open a mutual reflection on the complex connections between matter and consciousness.",
         ]),
+        ("i", [("03", "Diagram of the piece: microcontrollers, copper capacitive sensors, capacitive ink sensors, ceramic skull, contrabass strings, wooden wheel, motor", "")]),
     ],
     drop_press=True,
 )
@@ -190,7 +191,7 @@ page(
         ("i", ["03"]),
         ("t", "Writing as destruction.", [
             "Quetzalcoatl-bot’s serpentine activity acts as a writing method dynamically motivated by the viewer's circulation around the technical-symbolic system of the work. This movement becomes a dialogue framework between life forms to display and exchange signs that potentially can transform space.",
-            "OEtymologically, writing imposes a form, forces linearity and produces a regime of (in)formation on objects and materials. However,in this work, the surface is not passive against the destructive gesture of writing and creates a counter-writing.",
+            "Etymologically, writing imposes a form, forces linearity and produces a regime of (in)formation on objects and materials. However, in this work, the surface is not passive against the destructive gesture of writing and creates a counter-writing.",
         ]),
         ("t", "Counter-writing.", [
             "The work displays a kind writing that accentuates the resistance of matter and abandons the conservation of information in favor of a fading movement of signs. Counter-writing thus performs against the traditional and social function of the codex - safeguarding information and preserving a mythological narrative - to impose on it the logic of the eternal beginning, the blank page or the eternal vacuum.",
@@ -232,9 +233,16 @@ page(
     slug="combinatory_nierika", folder="nierika", title="Combinatory Nierika", year="2020",
     venue=["Taper #5", "POSVERSO 2026"], people="",
     lead_alt="Combinatory Nierika",
-    intro=[],
+    intro=[
+        "Following Taper's: Pent Up invitation to reflect on the significance of the number 5, the term \"Nierika\" relates to the quincunx structure, a geometric pattern consisting of four points forming a square and a fifth at its center. For the Huichols or Wixáritari, an indigenous culture located deep in the mountains of Mexico, it also represents a device crafted by their goddess mother to create the universe: a rhomboid embroidered with her hairs and two crossed arrows provided by her sons.",
+        "Nierika also means the \"gift-of-seeing,\" an ability that shamans develop after practicing self-sacrifice, austerity, pilgrimage, fasting, and several other forms of vision searches.",
+        "One of the most important of these activities is the ritual travel to Wirikuta, where they recreate the search for the mythical deer that transformed its heart into a peyote, a cactus with psychoactive properties.",
+        "To become a shaman or a healer, an individual must participate in at least five pilgrimages to Wirikuta.",
+        "The work \"Combinatory Nierika\" reimagines, in Spanish and Wixárika, the multiple visions that the Wixáritari may encounter while performing their ritual pilgrimage from the coastlines of Nayarit to Wirikuta, the northern part of San Luis Potosí, where the ritual ends and the sun rises for the first time.",
+        "The background color performs a metaphorical passage from the ocean to the desert, and from day to night. By pressing the Wirikuta button, you can experience the minimalistic virtual pilgrimage's time on the scale of 24 hours or 24 seconds.",
+    ],
     kind="", tech="",
-    blocks=[],
+    blocks=[("i", [("01", "Combinatory Nierika, screenshot", ""), ("02", "Combinatory Nierika, screenshot", ""), ("03", "Combinatory Nierika, screenshot", ""), ("04", "Combinatory Nierika, screenshot", ""), ("05", "Combinatory Nierika, screenshot", ""), ("06", "Combinatory Nierika, screenshot", ""), ("deer", "Illustration of a deer", "")])],
     links=[("Combinatory Nierika in Taper #5", "https://taper.badquar.to/5/combinatory_nierika.html")],
     exhibitions=[], press=[], credits=[],
 )
@@ -255,7 +263,7 @@ page(
         ("i", ["01"]),
         ("t", "Writing with Neural Networks", [
             "A convolutional neural network using mobile vision interprets a set of audiovisual micro-narratives that represent personal waiting times or moments in which I feel present.",
-            "Then, the objects and situations recognized by the machine are sent to a long short-term memory (LSTM) recurrent neural network (RNN) that has been trained on 19th-century travel literature, the NNR model then narrates what is happening -or what it thinks is happening- in the image.",
+            "Then, the objects and situations recognized by the machine are sent to a long short-term memory (LSTM) recurrent neural network (RNN) that has been trained on 19th-century travel literature, the RNN model then narrates what is happening -or what it thinks is happening- in the image.",
             "The work is also an experiment around an endless writing action that tries to understand a world constituted by limited objects and perceptions, perhaps a reflection of our own cognitive operations.",
         ]),
         ("i", ["02"]),
@@ -293,6 +301,7 @@ page(
             "The sound poem declared appropriately by the computational interface of the installation is generated from the sensing, in real time, of electromagnetic waves that recombine neo-classical texts and philosophical texts found within the installation space.",
         ]),
         ("i", ["03", "04", ("cck", "Ped at Centro Cultural Kirchner", "")]),
+        ("i", ["p2", "p3", "p4", "p5"]),
     ],
 )
 
@@ -319,23 +328,23 @@ page(
     intro=[
         "The Temazcalli Dome project is an audiovisual experience that transports the audience through an intense journey from within the medical and ritual practice of the temazcal towards the constellation of the Pleiades showing intricate patterns that emulate the cosmic and mythological visions of the Huichol people.",
     ],
-    kind="FullDome Projection Mapping", tech="Projection mapping, Prehispanic instuments, 8K & 4K visuals, Custom Software, Surround 5.1, 4.1, and stereo high-bitrate sound / Duration 5\"",
+    kind="FullDome Projection Mapping", tech="Projection mapping, Prehispanic instruments, 8K & 4K visuals, Custom Software, Surround 5.1, 4.1, and stereo high-bitrate sound / Duration 5\"",
     blocks=[
         ("i", ["01", "02"]),
         ("t", "The Aesthetics of Temazcalli-Dome", [
             "Temazcalli-Dome is an immersive voyage through the Huichol spiritual experience that honors the hypnotic patterns of Huichol's art, uses shamanic voices in surround spatiality, and recreates ritualistic music actually built with traditional prehispanic instruments.",
         ]),
-        ("i", ["03", "04", "05", "06", "07", "08"]),
+        ("i", ["03", "05", "06", "07"]),
         ("t", "Prehispanic Temazcalli", [
             "Temazcalli (from the nahuatl temazcalli: ‘house where you sweat’. temaz, ‘sweat’ and calli, ‘House’) is a steam bath used in traditional medicine and everyday life by the people of central Mexico.",
         ]),
-        ("i", ["codex1", "codex2", "long"]),
+        ("i", ["codex1", "codex2"]),
         ("t", "Huichol Art", [
             "The word, Huichol, derived from Wirrarika, is the original name of these indigenous people. It means soothsayer or medicine man. The medicine man is the shaman who links the community with the \"other world\" from where their creativity pours forth as a gift from their deified ancestors to be given back as offerings to the gods.",
         ]),
         ("i", ["jaguar"]),
         ("t", "Making of", [
-            "This project was completed thanks to the University of Tres the Febrero, and the “Understanding Visual Music” International Conference, during a two-year residency at the Galileo Galilei Planetarium. In order to create an accurate portrait of the Huichol culture and the ritual experience of the temazcalli, we assisted to ceremonies, researched on the Museum of Anthropology and Natual History in Mexico City and collaborated with Tozomoni, a prehispanic instrument developer.",
+            "This project was completed thanks to the University of Tres de Febrero, and the “Understanding Visual Music” International Conference, during a two-year residency at the Galileo Galilei Planetarium. In order to create an accurate portrait of the Huichol culture and the ritual experience of the temazcalli, we assisted to ceremonies, researched on the Museum of Anthropology and Natural History in Mexico City and collaborated with Tozomoni, a prehispanic instrument developer.",
         ]),
         ("i", ["making-of", "rochelle"]),
         ("v", "https://vimeo.com/296226291", "Watch the second video"),
@@ -358,12 +367,12 @@ page(
             "These stories were built as an integral part of a National Digital Literacy program funded by the Argentinian Library of Congress inside the Bibliomovil project: a double-decker bus which included technological equipment and a nearly 5,000 book library.",
         ]),
         ("i", ["01", "02", "03"]),
-        ("t", "Bermuda Triangle. A story about pixels, glitchs and the forces of nature (2014)", [
+        ("t", "Bermuda Triangle. A story about pixels, glitches and the forces of nature (2014)", [
             "This interactive story raises an analogy between the forces of nature and the codifications of body and speech in the digital age.",
             "Much has been theorized about the famous Bermuda Triangle and the mysterious disappearances that surround it, however little is known about the open coordinates within its perimeter. This story tells precisely these discoveries.",
             "Digital Literature / Non-linear Digital Literature, Non-linear Narrative, Database, Internet.",
         ]),
-        ("links", "Read story", [("Bermuda Triangle. A story about pixels, glitchs and the forces of nature Spanish Ed.", "hiperstories/triangulo/triangulo_de_las_bermudas.html")]),
+        ("links", "Read story", [("Bermuda Triangle. A story about pixels, glitches and the forces of nature Spanish Ed.", "hiperstories/triangulo/triangulo_de_las_bermudas.html")]),
         ("i", ["04"]),
     ],
     exhibitions=[("Digital storytelling week.", "Salvador de Bahía, Brasil, 2018.", "https://www.antologiaitau2015.org/infinitud-discreta"),
@@ -390,7 +399,7 @@ page(
         ("t", "Writing contemporary omens.", [
             "In ancient times, oracular practice was considered a spiritual and intellectual activity of a religious nature that provided answers to logical and pragmatic dilemmas. Formulated as irrefutable facts, their omens were used to resolve moral, economic, war and territorial conflicts.",
             "Today we recognize the role of polysemy (the very word 'oracle' refers to both the physical space, the enunciator, the discourse and the interpreter) in the productive and enigmatic result of its propositions.",
-            "To write these omens, the project received advice from the Department of Ancient Philology at the Faculty of Philosophy and Letters of the University of Buenos Aires to find adecuate critical, literary and philosophical materials.",
+            "To write these omens, the project received advice from the Department of Ancient Philology at the Faculty of Philosophy and Letters of the University of Buenos Aires to find adequate critical, literary and philosophical materials.",
         ]),
         ("i", ["portada"]),
     ],
@@ -414,7 +423,7 @@ page(
             "\"The song of the rooster\", is part of a series of analog live interventions on classic films in VHS format.",
             "Performance / VHS / Electronic Music VHS feedback, Found footage. Length 7,47\"",
         ]),
-        ("v", "https://vimeo.com/100402508", "The song of the rooster"),
+        ("v", "https://vimeo.com/100402508", "The song of the rooster: watch the video"),
     ],
 )
 
@@ -430,7 +439,7 @@ page(
     blocks=[
         ("i", ["01", "02", "03", "04", "05", "06"]),
         ("t", "Visionoros Cosmic Ed. (2016)", [
-            "Mario Guzman, Agustin Ramos Anzorena",
+            "Mario Guzman, Agustín Ramos Anzorena",
             "Performance / Soundscapes / VHS feedback / Analog Visuals VHS feedback, Found footage, original music Length 30 min",
         ]),
         ("v", "https://vimeo.com/149999400", "Visionoros Cosmic Ed., video"),
@@ -454,24 +463,58 @@ page(
 
 page(
     slug="legible-journey", folder="robots", lead="legible", title="Legible Journey", year="",
-    venue=["Festival ZERO1, La Rochelle, and Espace Mendès France"], people="by Colectivo Línea 60",
+    venue=["Festival ZERO1, La Rochelle, 17 to 21 April 2025", "Espace Mendès France, 7 March 2025"], people="by Colectivo Línea 60",
     lead_alt="Legible Journey: a visitor pedals a bicycle on a platform among 3D-printed letters", video="https://vimeo.com/1064248159/bf6588966a",
-    intro=[], kind="", tech="",
-    blocks=[],
-    credits=[("Mario Guzman", "Device concept, microcontroller system and programming")],
-    links=[("Legible Journey at Festival ZERO1", "https://www.festivalzero1.com/en/projets/legible-journey")],
-    exhibitions=[], press=[], tech_section=True,
+    intro=[
+        "Legible Journey is a work by Colectivo Línea 60. A bicycle stands on a platform in front of a city of 3D-printed letters, and visitors pedal to trigger a sound composition. The sound is made from recordings of a bike journey between La Rochelle and Athens, and it stops when the pedalling stops.",
+        "The work reinterprets Legible City (1988) by Jeffrey Shaw.",
+    ],
+    kind="", tech="", blocks=[],
+    credits=[("Mario Guzman", "concept and programming"), ("Simon Breil", "programming and electronics"),
+             ("Eléanor Faber", "traveller and sound capture"), ("João Garcia", "concept and graphics"),
+             ("Diego Jarak", "artistic direction, concept, 3D, fabrication"), ("Maela Le Scouarnec", "traveller and sound capture"),
+             ("Birgit Mollemelier", "fabrication and artistic advice"), ("Sarah Paixão", "distribution"),
+             ("Jeanne Soccorsi", "coordination"), ("Julia Suero", "concept and sound design")],
+    links=[("Legible Journey at Festival ZERO1", "https://www.festivalzero1.com/en/projets/legible-journey"),
+           ("Video", "https://vimeo.com/1064248159/bf6588966a")],
+    exhibitions=[("Festival ZERO1.", "La Rochelle, 17 to 21 April 2025.", ""), ("Espace Mendès France.", "7 March 2025.", "")], press=[], tech_section=True,
 )
 
 page(
     slug="mirar-al-cielo", folder="mirar", title="Mirar al cielo / 52 tonos de azul", year="",
     venue=["Fundación Andreani, BIENALSUR 2021, Videoformes 2022"], people="by Gabriela Golder",
     lead_alt="Mirar al cielo / 52 tonos de azul: four skies with generated words",
-    intro=[], kind="", tech="",
-    blocks=[],
-    credits=[("Mario Guzman", "Neural network implementation")],
-    links=[("Mirar al cielo 4, by Gabriela Golder", "https://gabrielagolder.com/mirar%20al%20cielo%204.htm")],
+    intro=[
+        "Since the beginning of the quarantine, March 2020, I collect skies, my own skies, skies of friends from other cities in the world. We all look at the sky. What does the sky have to tell us? Using a neural network system with a long short-term memory (LSTM) architecture of recurrent neural network (RNN) and a convolutional neural network applied to mobile vision, the system of this work will interpret videos of skies from different parts of the world, generating a dialogue between skies and scientific and poetic texts. The skies say about colour theory, perspective, about the atmosphere, about astronomy, about explorations and travels, about meteorological phenomena, about ornithology, about geography, about looking at the sky, about the sky being looked.",
+        "The video installation version of the project is called 52 shades of blue and was exhibited at Fundación Andreani, Buenos Aires, Argentina, 2021; Jax District, BienalSur 2021, Riyadh, Saudi Arabia and Videoformes, Clermont-Ferrand, France, 2022.",
+        "Versions of the work are available in Spanish, English and French.",
+    ],
+    intro_credit="Text by Gabriela Golder",
+    kind="", tech="", blocks=[],
+    credits=[("Idea and creation", "Gabriela Golder"), ("Neural network implementation", "Mario Guzmán"), ("Web development", "Lucas Medina"),
+             ("General assistance", "Abel Cassanelli"), ("Translation", "Mariana Lombard"),
+             ("Thanks for the skies to", "Paz Encina, Luciano Zubillaga, Hrair Sarkissian, Andres Hilarion, Claudia Joskowicz")],
+    links=[("Link to the project", "http://gabrielagolder.com/cielos.html")],
     exhibitions=[], press=[], tech_section=True,
+)
+
+page(
+    slug="memory-of-everywhere", folder="memory", title="Memory of Everywhere", year="2020",
+    venue=["(Un)Continuity. Electronic Literature Organization. UCF Gallery, Orlando, USA, 2020"], people="",
+    lead_alt="Memory of Everywhere: output of the neural network over a video still", old="lstm/index.html",
+    intro=[
+        "\"Memory of everywhere\" is a textual artificial organism that performs a reading and writing exercise using video input from around the globe and a generative language model trained on 19th-century travel literature. The work focuses on the notion of travel, journey, discovery, and cognition.",
+        "The work arises from a need to comprehend a series of chaotic experiences while traveling to more than 45 countries and 1,723 flight hours with a social robot.",
+        "To make sense of the speed and heterogeneity of these episodes, I trained a writing system to explain to me what it thought it was happening.",
+        "The system articulates two structures: a convolutional neural network using mobile vision and a long short-term memory (LSTM) architecture of recurrent neural network (RNN).",
+        "The work is also an experiment around an endless writing that tries to understand a world constituted by limited objects and perceptions, perhaps a reflection of our own cognitive operations.",
+    ],
+    kind="Machine Learning / Experimental Literature / Live Installation", tech="Machine Learning, convolutional neural network, mobile vision, long short-term memory (LSTM), projection, XIX century travel literature corpus, travel videos.",
+    blocks=[],
+    exhibitions=[("(Un)Continuity. Electronic Literature Organization.", "UCF Gallery, Orlando, USA, 2020.", "https://projects.cah.ucf.edu/mediaartsexhibits/uncontinuity/Guzman/guzman.html")],
+    press=[("Neologías Artificiales: arte con inteligencia artificial, Linne Magazine", "", "https://linnemagazine.com/2021/07/13/neologias-artificiales-arte-con-inteligencia-artificial/")],
+    links=[("The piece at the (Un)Continuity exhibition", "https://projects.cah.ucf.edu/mediaartsexhibits/uncontinuity/Guzman/guzman.html"),
+           ("Original web version", "../lstm/index.html")], credits=[],
 )
 
 # Previous / next order on the pager (the Works list of the homepage)
