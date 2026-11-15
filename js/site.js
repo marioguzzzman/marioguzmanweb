@@ -96,6 +96,13 @@
     me.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); run(); } });
   }
 
+  // the small name in the nav appears once the big name has scrolled out of view (homepage only)
+  var small = document.querySelector("header a.me");
+  if (me && small) {
+    if (!("IntersectionObserver" in window)) small.classList.add("show");
+    else new IntersectionObserver(function (en) { small.classList.toggle("show", !en[0].isIntersecting); }).observe(me);
+  }
+
   // 4. overlay player for YouTube, Vimeo and Mux; other outside links open in a new tab
   var box = document.createElement("div");
   box.id = "box";

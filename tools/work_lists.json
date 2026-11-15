@@ -1,0 +1,533 @@
+{
+ "liminal_sanctuary": {
+  "Exhibitions": [
+   {
+    "b": "Biennale Dakar, Sélection de l'Exposition Internationale 2024",
+    "m": "Dakar, Senegal, 2024",
+    "h": "https://biennaledakar.org/2024/03/04/collectif-diodos-argentine-mexique/"
+   }
+  ],
+  "Credits": [
+   {
+    "b": "Concept and Direction",
+    "m": "Mario Guzman and Agustin Ramos Anzorena",
+    "h": ""
+   }
+  ]
+ },
+ "entangled_matter": {
+  "Exhibitions": [
+   {
+    "b": "ZERO1. Festival of Arts and Digital Cultures.",
+    "m": "La Rochelle, France, 2023.",
+    "h": "https://www.festivalzero1.com/projets/entangled-matter"
+   }
+  ],
+  "Press": [
+   {
+    "b": "Cnap",
+    "m": "(Centre national des arts plastiques)",
+    "h": "https://www.cnap.fr/entangled-matter-ai-humans-and-golems"
+   }
+  ],
+  "Full Credits": [
+   {
+    "b": "Concept and implementation",
+    "m": "Mario Guzman",
+    "h": ""
+   },
+   {
+    "b": "Audio Design",
+    "m": "Julia Koffler",
+    "h": ""
+   },
+   {
+    "b": "Unreal Engine Consultant",
+    "m": "Jeremy Couillard",
+    "h": ""
+   }
+  ]
+ },
+ "aerodynamics-seeds": {
+  "Full Credits": [
+   {
+    "b": "Concept and Direction",
+    "m": "AI Seed Collective",
+    "h": ""
+   },
+   {
+    "b": "Mario Guzman",
+    "m": "",
+    "h": ""
+   },
+   {
+    "b": "Gabriela Munguía",
+    "m": "",
+    "h": ""
+   },
+   {
+    "b": "Erika Torres",
+    "m": "",
+    "h": ""
+   },
+   {
+    "b": "Guadalupe Chavez Pardo",
+    "m": "",
+    "h": ""
+   },
+   {
+    "b": "Angel Salazar",
+    "m": "",
+    "h": ""
+   }
+  ]
+ },
+ "conciencia": {
+  "Exhibitions": [
+   {
+    "b": "“Aaaaaah!” The School of Machines 10-year anniversary exhibition",
+    "m": "Berlin, Germany, 2024",
+    "h": "https://www.schoolofma.org/programs/p/10-years-yay"
+   },
+   {
+    "b": "Bienal Latinoamericana de Intelligencia Artificial",
+    "m": "Mexico, 2022",
+    "h": "https://www.bilia.tech/mario-guzman.html"
+   }
+  ],
+  "Press": [
+   {
+    "b": "ACA poner lo de HOLO magazine",
+    "m": "",
+    "h": "https://www.youtube.com/watch?v=WtS6Mab9rRQ"
+   }
+  ],
+  "Full Credits": [
+   {
+    "b": "Hardware and Software Development",
+    "m": "Mario Guzman",
+    "h": ""
+   },
+   {
+    "b": "Ceramic Artist",
+    "m": "Hernan Vargas",
+    "h": ""
+   }
+  ]
+ },
+ "cenotes": {
+  "Exhibitions": [
+   {
+    "b": "ZERO1. Festival of Arts and Digital Cultures.",
+    "m": "Tour de la Chaîne, La Rochelle, France, 2017.",
+    "h": "https://docs.wixstatic.com/ugd/50a51f_44079c76405d46dcbe4f91aac3c83f35.pdf"
+   },
+   {
+    "b": "Electronic November",
+    "m": "Alliance Français, Buenos Aires, Argentina, 2017.",
+    "h": ""
+   },
+   {
+    "b": "105º National Art Hall. Installation and New Media Awards.",
+    "m": "Palais de Glace, Buenos Aires, Argentina, 2016.",
+    "h": ""
+   },
+   {
+    "b": "Poetic Hybrids.",
+    "m": "First Congress of Robotics. Universidad del Salvador, Buenos Aires, Argentina, 2016.",
+    "h": ""
+   }
+  ],
+  "Press": [
+   {
+    "b": "Inlets/Outlets",
+    "m": "Damián Zantleifer",
+    "h": "http://cargocollective.com/inletsoutlets/filter/2016/Quetzalcoatl-bot-de-Mario-Guzman"
+   },
+   {
+    "b": "Malacara Press",
+    "m": "",
+    "h": "https://www.youtube.com/watch?v=WtS6Mab9rRQ"
+   }
+  ]
+ },
+ "learningtowrite": {
+  "Exhibitions": [
+   {
+    "b": "Game on! The art in games.",
+    "m": "San Martín Cultural Center, Buenos Aires, 2019.",
+    "h": ""
+   },
+   {
+    "b": "Mixed feelings.",
+    "m": "Bots and Machine Learning: Chatbots, Artbots and Machine Learning for Web Application. School Of Machines, Making & Make–Believe, Berlin, Germany, 2019.",
+    "h": ""
+   }
+  ],
+  "Press": [
+   {
+    "b": "Latino-American literary mirror: and experiment with Machine Learning.",
+    "m": "",
+    "h": "http://www.gameon2019.com/speaker/s-t-mario-guzman"
+   }
+  ]
+ },
+ "bitcelulle": {
+  "Exhibitions": [
+   {
+    "b": "Festival des arts et cultures numériques ZERO1.",
+    "m": "Maison Henri II, La Rochelle, France, 2018.",
+    "h": ""
+   }
+  ],
+  "Full Credits": [
+   {
+    "b": "Project Lead, Script and Visual Development",
+    "m": "Mario Guzmán, Agustín Ramos Anzorena",
+    "h": ""
+   },
+   {
+    "b": "Sound Design",
+    "m": "Agustín Ramos Anzorena",
+    "h": ""
+   },
+   {
+    "b": "Sound Samples",
+    "m": "Mario Guzman",
+    "h": ""
+   },
+   {
+    "b": "Software Programming",
+    "m": "Agustín Ramos Anzorena",
+    "h": ""
+   },
+   {
+    "b": "Technical Assistance",
+    "m": "Vincent Martin",
+    "h": ""
+   },
+   {
+    "b": "Commissioned by",
+    "m": "Festival Zero 1 Centre Intermondes",
+    "h": ""
+   }
+  ]
+ },
+ "quetzabot": {
+  "Exhibitions": [
+   {
+    "b": "ZERO1. Festival of Arts and Digital Cultures.",
+    "m": "Tour de la Chaîne, La Rochelle, France, 2017.",
+    "h": "https://docs.wixstatic.com/ugd/50a51f_44079c76405d46dcbe4f91aac3c83f35.pdf"
+   },
+   {
+    "b": "Electronic November",
+    "m": "Alliance Français, Buenos Aires, Argentina, 2017.",
+    "h": ""
+   },
+   {
+    "b": "105º National Art Hall. Installation and New Media Awards.",
+    "m": "Palais de Glace, Buenos Aires, Argentina, 2016.",
+    "h": ""
+   },
+   {
+    "b": "Poetic Hybrids.",
+    "m": "First Congress of Robotics. Universidad del Salvador, Buenos Aires, Argentina, 2016.",
+    "h": ""
+   },
+   {
+    "b": "Fase 7. Art, Science and Technology Fair.",
+    "m": "Recoleta Cultural Center, Buenos Aires, Argentina, 2015.",
+    "h": ""
+   }
+  ],
+  "Press": [
+   {
+    "b": "Inlets/Outlets",
+    "m": "Damián Zantleifer",
+    "h": "http://cargocollective.com/inletsoutlets/filter/2016/Quetzalcoatl-bot-de-Mario-Guzman"
+   },
+   {
+    "b": "Malacara Press",
+    "m": "",
+    "h": "https://www.youtube.com/watch?v=WtS6Mab9rRQ"
+   }
+  ]
+ },
+ "temazcalli": {
+  "Exhibitions": [
+   {
+    "b": "Processing Community Day - Art and Technology Encounter.",
+    "m": "Montevideo, Uruguay, 2019.",
+    "h": ""
+   },
+   {
+    "b": "Biennial South. Contemporary Art Biennial of South America.",
+    "m": "Buenos Aires, Argentina, 2018.",
+    "h": ""
+   },
+   {
+    "b": "ZERO1. Festival of Arts and Digital Cultures.",
+    "m": "Tour de la Chaîne, La Rochelle, France, 2017.",
+    "h": "https://docs.wixstatic.com/ugd/50a51f_44079c76405d46dcbe4f91aac3c83f35.pdf"
+   },
+   {
+    "b": "Visual Music Show for FullDome.",
+    "m": "Planetarium of the Barranca Chapultepec, Cuernavaca, México, 2017.",
+    "h": "http://visualmusic.info/selecta/index.html"
+   },
+   {
+    "b": "Topology FullDome.",
+    "m": "LABInter (Interdisciplinary Interactive Laboratory), UFSM Planetarium, Santa Maria, Rio Grande do Sul, Brazil, 2016.",
+    "h": "https://www.facebook.com/labinterartec/posts/493559550814275"
+   },
+   {
+    "b": "“Understanding Visual Music” International Conference 2016.",
+    "m": "Planetario Galileo Galilei, Buenos Aires, Argentina, 2016.",
+    "h": "http://www.ceiarteuntref.edu.ar/taller_fulldome"
+   },
+   {
+    "b": "East Village Planetarium.",
+    "m": "New York, USA, 2016.",
+    "h": ""
+   }
+  ],
+  "Full Credits": [
+   {
+    "b": "Project Lead, Script and Visual Development",
+    "m": "Mario Guzmán, Agustín Ramos Anzorena",
+    "h": ""
+   },
+   {
+    "b": "Custom Software Programming",
+    "m": "Agustín Ramos Anzorena",
+    "h": ""
+   },
+   {
+    "b": "Native Prehispanic Instrumentation",
+    "m": "Mario Guzmán, Agustín Ramos Anzorena",
+    "h": ""
+   },
+   {
+    "b": "Sound Design and Editing",
+    "m": "Joaquín Gomez",
+    "h": ""
+   },
+   {
+    "b": "Mixing and Multi-Channel Surround Mix",
+    "m": "BlackBox Studio",
+    "h": ""
+   },
+   {
+    "b": "Overall Artistic Assistance:",
+    "m": "Paloma Marquez",
+    "h": ""
+   }
+  ]
+ },
+ "ped": {
+  "Exhibitions": [
+   {
+    "b": "Art, and Technology Awards.",
+    "m": "National Arts Fund. Krichner Cultural Center, Buenos Aires, 2019.",
+    "h": ""
+   },
+   {
+    "b": "Fase 8. Art, Science and Technology Fair.",
+    "m": "Bicentennial National House, Buenos Aires, 2016",
+    "h": ""
+   }
+  ]
+ },
+ "oraculo": {
+  "Exhibitions": [
+   {
+    "b": "Poextrónica: Past and Future of Digital Literature.",
+    "m": "Future Zone, 43 Internacional Book Fair, Buenos Aires, Argentina, 2016.",
+    "h": ""
+   },
+   {
+    "b": "Young Art Biennial.",
+    "m": "Konex Cultural Center, Buenos Aires, Argentina, 2015.",
+    "h": ""
+   },
+   {
+    "b": "Young Art Biennial.",
+    "m": "Metropolitan Design Center, Buenos Aires, Argentina, 2015.",
+    "h": ""
+   },
+   {
+    "b": "Expansions. The time of digital literature. E-Poetry Festival",
+    "m": "MUNTREF Contemporary Art Center, Buenos Aires, 2015.",
+    "h": ""
+   },
+   {
+    "b": "Erratics.",
+    "m": "First Experimental Color Center, Santa Fe, Argentina, 2015.",
+    "h": ""
+   },
+   {
+    "b": "Parallel in series.",
+    "m": "Gallery: PANAL 361, Buenos Aires, Argentina, 2014.",
+    "h": ""
+   }
+  ],
+  "Press": [
+   {
+    "b": "Poextronics",
+    "m": "",
+    "h": "https://vimeo.com/164745555"
+   },
+   {
+    "b": "Hipertext Retorics. Diario Perfil",
+    "m": "",
+    "h": ""
+   },
+   {
+    "b": "Digital poetry Technology came to inspiration. Newspaper La Nación",
+    "m": "",
+    "h": "https://www.lanacion.com.ar/opinion/la-tecnologia-llego-a-la-inspiracion-nid1807228"
+   },
+   {
+    "b": "Educ.arSebastián Friedman",
+    "m": "",
+    "h": "https://www.educ.ar/recursos/126495/oraculo"
+   }
+  ]
+ },
+ "lastagreement": {
+  "Full Credits": [
+   {
+    "b": "Performers",
+    "m": "Federico Luna, Jesica Josiowicz",
+    "h": ""
+   },
+   {
+    "b": "Video, Editing and Technology on scene",
+    "m": "Mario Guzman",
+    "h": ""
+   },
+   {
+    "b": "Live Music",
+    "m": "Juan Ignacio Ferreras, Cecilia Quinteros",
+    "h": ""
+   },
+   {
+    "b": "Sound Design",
+    "m": "Fabián Kesler",
+    "h": ""
+   },
+   {
+    "b": "Original Idea",
+    "m": "Federico Luna, Jesica Josiowicz",
+    "h": ""
+   },
+   {
+    "b": "Mentor",
+    "m": "Jorge Zuzulich",
+    "h": ""
+   }
+  ]
+ },
+ "visionoros": {
+  "Full Credits": [
+   {
+    "b": "VHS feedback",
+    "m": "Mario Guzman",
+    "h": ""
+   },
+   {
+    "b": "Homemade projector",
+    "m": "Mariana Lombard",
+    "h": ""
+   },
+   {
+    "b": "Live animations",
+    "m": "Celestial Brizuela",
+    "h": ""
+   },
+   {
+    "b": "Live coding music",
+    "m": "Leandro Yako",
+    "h": ""
+   },
+   {
+    "b": "Soundscapes",
+    "m": "Agustín Ramos Anzorena",
+    "h": ""
+   },
+   {
+    "b": "Live Music",
+    "m": "Santi Lesca",
+    "h": ""
+   },
+   {
+    "b": "Voice",
+    "m": "Rochi Gallardo",
+    "h": ""
+   },
+   {
+    "b": "Custom guitar",
+    "m": "Leonardo Salzano",
+    "h": ""
+   }
+  ],
+  "Exhibitions": [
+   {
+    "b": "Latin American Narrative and Visual Experimentation.",
+    "m": "Floating Projects Gallery, May 4th, Hong Kong, 2019.",
+    "h": ""
+   },
+   {
+    "b": "ZERO1. Quinzaine Digitale.",
+    "m": "Maison Henri II, La Rochelle, France, 2017.",
+    "h": ""
+   },
+   {
+    "b": "Poextrónica: Past and Future of Digital Literature.",
+    "m": "Zona Futuro, 43rd International Book Fair. La Rural, Buenos Aires, Argentina, 2016.",
+    "h": ""
+   },
+   {
+    "b": "Espacio Nixso.",
+    "m": "Buenos Aires, Argentina, 2015.",
+    "h": ""
+   },
+   {
+    "b": "Casa Dasein.",
+    "m": "Buenos Aires, 2015.",
+    "h": ""
+   },
+   {
+    "b": "Eye Reverse. Arkhé Collective.",
+    "m": "Matienzo Cultural Center, Buenos Aires, Argentina, 2015.",
+    "h": ""
+   },
+   {
+    "b": "Cries in the Depths.",
+    "m": "Transterritorial Underground Film Festival. Una Casa, Buenos Aires, Argentina, 2014.",
+    "h": ""
+   },
+   {
+    "b": "Sideral Party.",
+    "m": "Kasa Las Estrellas. Buenos Aires, Argentina, 2014.",
+    "h": ""
+   },
+   {
+    "b": "Visionoros Vol. 1.",
+    "m": "VideoClub Boedo, Buenos Aires, Argentina, 2013.",
+    "h": ""
+   }
+  ]
+ },
+ "hiperstories": {},
+ "prepixel": {
+  "Exhibitions": [
+   {
+    "b": "Contemporary Video Art Exhibition. Museums Night.",
+    "m": "Paco Urondo Cultural Center, Buenos Aires, Argentina, 2016.",
+    "h": ""
+   }
+  ]
+ }
+}

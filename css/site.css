@@ -19,6 +19,8 @@ header .wrap{display:flex;gap:8px 44px;flex-wrap:wrap;justify-content:flex-end;p
 header nav{display:contents}
 header a:hover{text-decoration:underline}
 header a.me{margin-right:auto}
+body.home header a.me{opacity:0;pointer-events:none;transition:opacity .25s}
+body.home header a.me.show{opacity:1;pointer-events:auto}
 #lang a{color:var(--soft);margin-left:6px}
 #lang a.on{color:#000;text-decoration:underline}
 

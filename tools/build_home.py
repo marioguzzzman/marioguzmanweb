@@ -131,7 +131,7 @@ def build(lang):
         cur = ' class="on" aria-current="page"' if l == lang else ""
         lang_links.append(f'<a href="{target}" hreflang="{l}" lang="{l}"{cur}>{l}</a>')
     nav = t["nav"]
-    out.append(f"""<body data-root="{root}">
+    out.append(f"""<body class="home" data-root="{root}">
 <a class="skip" href="#works">{t['skip']}</a>
 <header>
   <div class="wrap">
