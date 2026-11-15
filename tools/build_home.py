@@ -156,7 +156,7 @@ def build(lang):
       <p class="sm"><span id="role">{t['role']}</span><br><span class="soft">Berlin / La Rochelle</span></p>
       <p class="big" id="say">{t['say']}</p>
     </div>
-    <a class="pic" id="rot" href="{root}project/liminal_sanctuary.html"><img id="rotA" alt="" width="1800" height="1012"><img id="rotB" class="off" alt="" width="1800" height="1012"><noscript><img src="{root}{W}liminal/lead.jpg" alt="Liminal Sanctuary, 2024" width="1800" height="1012"></noscript></a>
+    <a class="pic" id="rot" href="{root}project/liminal_sanctuary.html"><img id="rotA" alt="" width="1800" height="1012"><img id="rotB" class="off" alt="" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="1800" height="1012"><noscript><img src="{root}{W}liminal/lead.jpg" alt="Liminal Sanctuary, 2024" width="1800" height="1012"></noscript></a>
     <div class="cap sm"><span id="rotT">Liminal Sanctuary, 2024</span><span class="soft" id="rotV">XV Biennale of Contemporary African Art, Dakar</span></div>
   </div>
 """)

@@ -24,6 +24,7 @@ def head(lang, title, description, og_image, canonical_path, root, extra=""):
 <title>{esc(title)}</title>
 <meta name="description" content="{esc(description)}">
 <meta name="theme-color" content="#ffffff">
+<link rel="icon" href="data:,">
 <link rel="canonical" href="{SITE}{canonical_path}">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Mario Guzman">
