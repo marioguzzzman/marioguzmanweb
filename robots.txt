@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /tools/
+Disallow: /backups/
+Disallow: /ARCHIVO/
+
+Sitemap: https://www.mario-guzman.com/sitemap.xml
