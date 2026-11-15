@@ -226,7 +226,11 @@ page(
             "This piece is part of a larger project on expanded prehispanic science fiction that opens up a dialogue with the knowledge, myths and issues of indigenous communities where ancestral knowledge is reactivated through contemporary generative exploration to envision possible alternative futures. A definition that is inclusive and able to process identities and otherness as an ontological and political creative issue.",
         ]),
     ],
-    drop_exhibitions=True, drop_press=True,
+    exhibitions=[
+        ("AI Robot Roadshow. AI for Good Global Summit 2023, Geneva, Switzerland", "Participating visual artist. Event concept: Jovanka v. Wilsdorf and David Hanson.", "https://jovanka-von-wilsdorf.de/en/project/ai-robot-roadshow"),
+        ("AI Robot Roadshow, video", "", "https://www.youtube.com/watch?v=b4Zz6L9RjVs"),
+    ],
+    drop_press=True,
 )
 
 page(
@@ -466,8 +470,8 @@ page(
     venue=["Festival ZERO1, La Rochelle, 17 to 21 April 2025", "Espace Mendès France, 7 March 2025"], people="by Colectivo Línea 60",
     lead_alt="Legible Journey: a visitor pedals a bicycle on a platform among 3D-printed letters", video="https://vimeo.com/1064248159/bf6588966a",
     intro=[
-        "Legible Journey is a work by Colectivo Línea 60. A bicycle stands on a platform in front of a city of 3D-printed letters, and visitors pedal to trigger a sound composition. The sound is made from recordings of a bike journey between La Rochelle and Athens, and it stops when the pedalling stops.",
-        "The work reinterprets Legible City (1988) by Jeffrey Shaw.",
+        "Visitors pedal a bicycle mounted on a platform among 3D-printed letters, and their pedalling moves through a sound composition recorded on a bicycle journey from La Rochelle to Athens.",
+        "The work reinterprets Jeffrey Shaw's Legible City (1988).",
     ],
     kind="", tech="", blocks=[],
     credits=[("Mario Guzman", "concept and programming"), ("Simon Breil", "programming and electronics"),
@@ -485,17 +489,15 @@ page(
     venue=["Fundación Andreani, BIENALSUR 2021, Videoformes 2022"], people="by Gabriela Golder",
     lead_alt="Mirar al cielo / 52 tonos de azul: four skies with generated words",
     intro=[
-        "Since the beginning of the quarantine, March 2020, I collect skies, my own skies, skies of friends from other cities in the world. We all look at the sky. What does the sky have to tell us? Using a neural network system with a long short-term memory (LSTM) architecture of recurrent neural network (RNN) and a convolutional neural network applied to mobile vision, the system of this work will interpret videos of skies from different parts of the world, generating a dialogue between skies and scientific and poetic texts. The skies say about colour theory, perspective, about the atmosphere, about astronomy, about explorations and travels, about meteorological phenomena, about ornithology, about geography, about looking at the sky, about the sky being looked.",
-        "The video installation version of the project is called 52 shades of blue and was exhibited at Fundación Andreani, Buenos Aires, Argentina, 2021; Jax District, BienalSur 2021, Riyadh, Saudi Arabia and Videoformes, Clermont-Ferrand, France, 2022.",
-        "Versions of the work are available in Spanish, English and French.",
+        "A neural network system reads videos of skies sent from different cities since March 2020 and answers them with fragments of scientific and poetic texts.",
+        "The video installation version is called 52 tonos de azul.",
     ],
-    intro_credit="Text by Gabriela Golder",
     kind="", tech="", blocks=[],
     credits=[("Idea and creation", "Gabriela Golder"), ("Neural network implementation", "Mario Guzmán"), ("Web development", "Lucas Medina"),
              ("General assistance", "Abel Cassanelli"), ("Translation", "Mariana Lombard"),
              ("Thanks for the skies to", "Paz Encina, Luciano Zubillaga, Hrair Sarkissian, Andres Hilarion, Claudia Joskowicz")],
     links=[("Link to the project", "http://gabrielagolder.com/cielos.html")],
-    exhibitions=[], press=[], tech_section=True,
+    exhibitions=[("Fundación Andreani.", "Buenos Aires, Argentina, 2021.", ""), ("Jax District, BienalSur 2021.", "Riyadh, Saudi Arabia.", ""), ("Videoformes.", "Clermont-Ferrand, France, 2022.", "")], press=[], tech_section=True,
 )
 
 page(

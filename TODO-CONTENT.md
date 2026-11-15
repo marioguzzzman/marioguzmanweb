@@ -6,13 +6,13 @@ Nothing here was guessed. Each gap is left visible on the site or left out.
 
 - **Desdemona videos** are Mux streams. They open in the overlay player on the homepage (`player.mux.com`). If that player does not work for you, supply MP4 files or a public page to link to.
 - **Recording or abstract links** for the texts and talks that point nowhere yet: Reconstitution (Routledge, forthcoming) has no link.
-- **Venue lines** still missing: Pre-pixel Symphony in Major Fractal I (no venue in the homepage row; its page lists one exhibition, Paco Urondo Cultural Center, 2016), Cenote Reflections (page has no venue line, see below), Visionoros Collective.
+- **Venue lines** still missing: Pre-pixel Symphony in Major Fractal I (no venue in the homepage row; its page lists one exhibition, Paco Urondo Cultural Center, 2016), Cenote Reflections (the page has no venue line in the meta column), Visionoros Collective.
 - **Language versions:** ES and FR versions of each work page (work pages are English only for now).
 - **Spanish and French text is a draft** for Mario to correct (interface text, section names, role line, opening statement, section leads, About bio). The Sophia and Desdemona blurbs and the row descriptions (venues, credits) are kept in English on purpose.
 
 ## Problems found in the old pages (decide, then I fix)
 
-- `cenotes.html` carried the Exhibitions and Press of Quetzalcóatl-bot (ZERO1 2017, Electronic November, 105º Salón Nacional, Poetic Hybrids, Inlets/Outlets, Malacara Press). They were left out. Please supply the real exhibitions and press for Cenote Reflections.
+- `cenotes.html` carried the Exhibitions and Press of Quetzalcóatl-bot; they were removed. Its only exhibition now is the AI Robot Roadshow. Supply any other exhibitions or press for Cenote Reflections.
 - `lastagreement.html` and `prepixel.html` have only one image each (low resolution, 765 px). Better photos would help.
 - `aerodynamics-seeds.html`: the page uses only the seed image. The Works row links to the project site.
 - `learningtowrite.html`: the exhibitions list uses your wording ("Game On! The Art in Videogames", ACUD MACHT NEU). Old press link kept.
@@ -23,7 +23,8 @@ Nothing here was guessed. Each gap is left visible on the site or left out.
 - `conciencia.html`: the Press line was a placeholder ("ACA poner lo de HOLO magazine") and is left out. Supply real press if there is any.
 - Memory of Everywhere: the page uses the text of the old `lstm/index.html`. The Linne Magazine article you named does not mention the piece or you, so the page links it without saying anything about it. Check it is the right link.
 - Legible Journey and Mirar al cielo have no year yet.
-- AI Robot Roadshow row: the link labels "Video" and "Project page" are English on the ES and FR homepages.
+- `legible-journey.html`: Mario to write a paragraph about his own contribution.
+- `mirar-al-cielo.html`: Mario to write a paragraph about his own contribution.
 - Spanish and French text lives in `tools/build_home.py` (dictionary `L`, keys "es" and "fr"), and in the generated `es/index.html` and `fr/index.html`. Edit `build_home.py` and run `python tools/build_home.py`, or edit the two HTML files directly.
 
 ## Not migrated

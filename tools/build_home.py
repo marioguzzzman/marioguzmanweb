@@ -88,7 +88,7 @@ WORKS = [
     ("2015", "quetzabot/lead", "Quetzalcóatl-bot. Between Code and Codex", "", "Installation and New Media Award, 105º Salón Nacional, Buenos Aires", PROJ + "quetzabot.html", "Quetzalcóatl-bot"),
 ]
 ALSO = [
-    ("2023", "cenote/lead", "Cenote Reflections", "Ceramic, 3D, generative sound", PROJ + "cenotes.html"),
+    ("2023", "cenote/lead", "Cenote Reflections", "AI Robot Roadshow, AI for Good Global Summit 2023, Geneva", PROJ + "cenotes.html"),
     ("2020", "nierika/lead", "Combinatory Nierika", "Taper #5 · POSVERSO 2026", PROJ + "combinatory_nierika.html"),
     ("2020", "memory/lead", "Memory of Everywhere", "ELO (Un)Continuity, Orlando", PROJ + "memory-of-everywhere.html"),
     ("2019", "learning/lead", "Learning to Write", "Game On!, Centro Cultural San Martín · Mixed Feelings, School of Machines", PROJ + "learningtowrite.html"),
@@ -239,9 +239,6 @@ def build(lang):
         <h3>Desdemona</h3>
         <p class="sm">SingularityNET, 2021–2026. Dialogue writing and live operation.<br><span class="soft">Video: {DESD}.</span></p>
       </div>
-    </div>
-    <div class="rows">
-      <div class="row three"><span class="t2">AI Robot Roadshow</span><span class="sm">AI for Good Global Summit 2023, Geneva, Switzerland. Participating visual artist. Concept: Jovanka v. Wilsdorf and David Hanson.</span><span class="sm"><a class="link" href="https://www.youtube.com/watch?v=b4Zz6L9RjVs">Video</a> · <a class="link" href="https://jovanka-von-wilsdorf.de/en/project/ai-robot-roadshow">Project page</a></span></div>
     </div>
   </section>
 """)

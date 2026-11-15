@@ -86,8 +86,6 @@ a.row:hover .t{color:var(--link)}
 .row.three{grid-template-columns:110px minmax(0,2fr) minmax(0,1fr);align-items:start}
 #tech .row.four{grid-template-columns:minmax(0,1.3fr) minmax(0,1.3fr) minmax(0,.8fr)}
 #open .row.three{grid-template-columns:minmax(0,2fr) minmax(0,1fr)}
-#robots .rows{margin-top:20px}
-#robots .row.three{grid-template-columns:minmax(0,1fr) minmax(0,2fr) minmax(0,.8fr)}
 .row .t2{font-size:22px;line-height:1.15;letter-spacing:-.01em}
 .kanape-icon{display:inline-block;width:1.5em;height:1.5em;vertical-align:-.35em;margin-right:.25em}
 
@@ -150,7 +148,7 @@ footer .contact{margin-top:0}
   .over .r{grid-template-columns:1fr 1fr 1fr;gap:10px}
   .over .w{grid-column:1/-1}
   .row.work,.rows.small .row.work{grid-template-columns:1fr;gap:8px;align-items:start}
-  .row.four,.row.three,#tech .row.four,#open .row.three,#robots .row.three{grid-template-columns:1fr;gap:6px}
+  .row.four,.row.three,#tech .row.four,#open .row.three{grid-template-columns:1fr;gap:6px}
   .bots,.contact{grid-template-columns:1fr 1fr}
   .kit{grid-template-columns:1fr 1fr}
   .bots > div:first-child{grid-column:1/-1}
