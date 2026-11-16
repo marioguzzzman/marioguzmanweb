@@ -112,7 +112,7 @@ def nav(root):
   <div class="wrap">
     <nav aria-label="Main">
     <a class="me" href="{root}index.html">mario guzman</a>
-    <a href="{root}index.html#works">works</a>
+    <a href="{root}index.html#works">artworks</a>
     <a href="{root}index.html#robots">robots</a>
     <a href="{root}index.html#tech">creative technologist</a>
     <a href="{root}index.html#workshops">workshops</a>
@@ -204,10 +204,10 @@ def build(p):
     if slug in TECH:
         back = ("../index.html#tech", "Back to creative technologist")
     else:
-        back = ("../index.html#works", "Back to works")
+        back = ("../index.html#works", "Back to artworks")
     out.append(f'  <nav class="pager" aria-label="Back"><a href="{back[0]}">{back[1]}</a></nav>')
     out.append("  </article>\n</main>\n<footer>\n  <div class=\"wrap\">\n    " + contact_row() + "\n  </div>\n</footer>")
-    out.append(f'<script src="{root}js/site.js"></script>\n</body>\n</html>\n')
+    out.append(f'<script src="{asset(root, "js/site.js")}"></script>\n</body>\n</html>\n')
     return "\n".join(out)
 
 
@@ -262,14 +262,14 @@ def verify():
 # Old pages replaced by homepage sections: short pages that point to the matching section.
 STUBS = {
     "bio": ("About", "index.html#about", "The biography is now the About section of the homepage."),
-    "exhibits": ("Works", "index.html#works", "Exhibitions are now listed with each work on the homepage."),
+    "exhibits": ("Artworks", "index.html#works", "Exhibitions are now listed with each work on the homepage."),
     "texts": ("Texts", "index.html#texts", "Texts and talks are now a section of the homepage."),
     "writing": ("Texts", "index.html#texts", "Texts and talks are now a section of the homepage."),
     "workshops": ("About", "index.html#about", "This page has moved to the homepage."),
     "classes": ("About", "index.html#about", "This page has moved to the homepage."),
-    "experimental": ("Works", "index.html#works", "This page has moved to the homepage."),
+    "experimental": ("Artworks", "index.html#works", "This page has moved to the homepage."),
     "ai-seeds": ("AI Seeds / Aerodynamics of Seeds", "project/aerodynamics-seeds.html", "This page has moved."),
-    "ocean": ("Works", "index.html#works", "This page has moved to the homepage."),
+    "ocean": ("Artworks", "index.html#works", "This page has moved to the homepage."),
 }
 
 
@@ -283,7 +283,7 @@ def stub(slug):
         '<body data-root="../">', nav("../"), '<main class="wrap">',
         f'  <div class="work-head"><h1>{esc(label)}</h1></div>',
         f'  <p class="lead">{esc(msg)} <a class="link" href="{href}">Go to {esc(label)}</a></p>',
-        '</main>', '<script src="../js/site.js"></script>', '</body>', '</html>', ''])
+        '</main>', f'<script src="{asset("../", "js/site.js")}"></script>', '</body>', '</html>', ''])
     return top + body
 
 

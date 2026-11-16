@@ -157,6 +157,8 @@ MANIFEST = {
     ],
     "workshops": [
         ("melly", "external/workshops/melly.png"),
+        # the poster has text; this crop keeps the title and subtitle whole and leaves out the date block below
+        ("melly-cell", "external/workshops/melly.png", {"crop": (0, 253, 1125, 1097)}),
         ("hackathon", "external/workshops/hackathon-maxresdefault.jpg"),
         ("som", "external/workshops/som.png"),
     ],

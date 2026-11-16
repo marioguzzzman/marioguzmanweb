@@ -1,9 +1,21 @@
 """Shared bits for the page generators (build_home.py, build_work.py).
 The generators write plain, finished HTML files. They are authoring helpers only;
 the site itself needs no build step."""
+import hashlib
 import html
+import os
 
 SITE = "https://www.mario-guzman.com/"
+SITE_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+
+def asset(root, path):
+    """URL of a site file with a short content hash, e.g. css/site.css?v=3f9a1c2b. The hash changes
+    whenever the file changes, so browsers never show a page with an old stylesheet or script.
+    Run the generators after changing css, js or the favicons."""
+    with open(os.path.join(SITE_ROOT, path), "rb") as f:
+        v = hashlib.sha1(f.read()).hexdigest()[:8]
+    return f"{root}{path}?v={v}"
 EMAIL = "mailto:marioguzzzman@gmail.com"
 INSTAGRAM = "https://instagram.com/marioguzzzman/"
 GITHUB = "https://github.com/marioguzzzman"
@@ -24,9 +36,9 @@ def head(lang, title, description, og_image, canonical_path, root, extra=""):
 <title>{esc(title)}</title>
 <meta name="description" content="{esc(description)}">
 <meta name="theme-color" content="#ffffff">
-<link rel="icon" href="{root}favicon.svg" type="image/svg+xml">
-<link rel="icon" href="{root}favicon.ico" sizes="32x32">
-<link rel="apple-touch-icon" href="{root}apple-touch-icon.png">
+<link rel="icon" href="{asset(root, 'favicon.svg')}" type="image/svg+xml">
+<link rel="icon" href="{asset(root, 'favicon.ico')}" sizes="32x32">
+<link rel="apple-touch-icon" href="{asset(root, 'apple-touch-icon.png')}">
 <link rel="canonical" href="{SITE}{canonical_path}">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Mario Guzman">
@@ -35,7 +47,7 @@ def head(lang, title, description, og_image, canonical_path, root, extra=""):
 <meta property="og:description" content="{esc(description)}">
 <meta property="og:image" content="{SITE}{og_image}">
 <meta name="twitter:card" content="summary_large_image">
-{extra}<link rel="stylesheet" href="{root}css/site.css">
+{extra}<link rel="stylesheet" href="{asset(root, 'css/site.css')}">
 </head>
 """
 
