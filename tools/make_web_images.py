@@ -13,7 +13,6 @@ Run from anywhere:  python tools/make_web_images.py
 Needs Pillow.
 """
 import os
-import shutil
 import sys
 from PIL import Image, ImageOps
 
@@ -156,6 +155,11 @@ MANIFEST = {
         ("complete", "external/she-tells/20-complete-with-power.jpg"),
         ("pcb-front", "external/she-tells/PCB_front_image_shellphone.png"),
     ],
+    "workshops": [
+        ("melly", "external/workshops/melly.png"),
+        ("hackathon", "external/workshops/hackathon-maxresdefault.jpg"),
+        ("som", "external/workshops/som.png"),
+    ],
     "robots": [
         ("desdemona-robot", "external/robots/desdemona-robot.jpg"),
         ("desdemona-phone", "external/robots/desdemona.jpg"),
@@ -223,9 +227,6 @@ def main():
             b = save(im, os.path.join(d, name + "-thumb.jpg"), THUMB_W)
             done += 1
             print("%-12s %-22s %4d KB  thumb %3d KB" % (project, name, a // 1024, b // 1024))
-    # the Kanape chair is an SVG: copied as it is
-    g = os.path.join(OUT, "global")
-    shutil.copyfile(os.path.join(EXT, "global", "kanape-chair.svg"), os.path.join(g, "kanape-chair.svg"))
     print("done:", done, "images")
 
 

@@ -49,16 +49,21 @@
     }
   }
 
-  // 2. the question is spoken by a different installed voice on each click
+  // 2. the question is spoken differently on each click: a different installed voice where several exist,
+  //    otherwise (Android usually lists one voice per language) a different pitch and rate each time
   var say = document.getElementById("say");
   if (say && "speechSynthesis" in window) {
     var n = 0;
+    var PITCH = [1.0, 0.6, 1.5, 0.8, 1.3], RATE = [1.0, 0.85, 1.1, 0.95, 1.05];
     var speak = function (el) {
       var lang = document.documentElement.lang || "en";
+      // read the voice list now: on Android it is often empty until the voiceschanged event
       var voices = speechSynthesis.getVoices().filter(function (x) { return x.lang.slice(0, 2) === lang; });
       var u = new SpeechSynthesisUtterance(el.textContent);
       u.lang = lang;
-      if (voices.length) { u.voice = voices[n % voices.length]; n++; }
+      if (voices.length) u.voice = voices[n % voices.length];
+      if (voices.length < 2) { u.pitch = PITCH[n % PITCH.length]; u.rate = RATE[n % RATE.length]; }
+      n++;
       u.onstart = function () { el.classList.add("on"); };
       u.onend = u.onerror = function () { el.classList.remove("on"); };
       speechSynthesis.cancel();
@@ -88,8 +93,16 @@
   document.body.appendChild(box);
   var frame = box.querySelector("iframe");
   var embed = function (url) {
-    var m = url.match(/youtube(?:-nocookie)?\.com\/(?:watch\?v=|embed\/)([\w-]+)/);
-    if (m) return "https://www.youtube-nocookie.com/embed/" + m[1] + "?autoplay=1";
+    var m = url.match(/youtube(?:-nocookie)?\.com\/(?:watch\?(?:[^#]*&)?v=|embed\/)([\w-]+)/);
+    if (m) {
+      // carry a start time (t=1354, t=1354s or t=22m34s) over as start=seconds
+      var t = url.match(/[?&](?:t|start)=([\dhms]+)/), sec = 0;
+      if (t) {
+        var p = t[1].match(/^(?:(\d+)h)?(?:(\d+)m)?(?:(\d+)s?)?$/);
+        if (p) sec = (+p[1] || 0) * 3600 + (+p[2] || 0) * 60 + (+p[3] || 0);
+      }
+      return "https://www.youtube-nocookie.com/embed/" + m[1] + "?autoplay=1" + (sec ? "&start=" + sec : "");
+    }
     m = url.match(/stream\.mux\.com\/(\w+)/);
     if (m) return "https://player.mux.com/" + m[1] + "?autoplay=true";
     m = url.match(/vimeo\.com\/(?:video\/)?(\d+)(?:\/(\w+))?/);
