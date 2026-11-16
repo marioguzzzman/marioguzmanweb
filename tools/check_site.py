@@ -89,7 +89,7 @@ async def check(cdp, url, width):
     bad_hosts = [h for h in hosts if not any(h == a or h.endswith("." + a) or h.startswith(a) for a in ALLOWED)]
     js = """(async()=>{[...document.images].forEach(i=>{i.loading='eager'});await new Promise(r=>setTimeout(r,1500));
       let mr=0,who='';document.querySelectorAll('body *').forEach(e=>{const r=e.getBoundingClientRect();if(r.width&&r.right>mr&&getComputedStyle(e).position!=='fixed'&&!e.closest('#box')){mr=r.right;who=e.tagName+'.'+(e.className||e.id||'')+' '+(e.textContent||'').trim().slice(0,20)}});
-      return JSON.stringify({sw:Math.max(document.documentElement.scrollWidth,Math.ceil(mr)),iw:__W__,who:who,rowsok:[...document.querySelectorAll('.over .r')].every(r=>{const t=[...r.querySelectorAll('.c')].map(c=>Math.round(c.getBoundingClientRect().top));return t.every(x=>x===t[0])}),imgsok:[...document.querySelectorAll('.over .r')].every(r=>{const t=[...r.querySelectorAll('.c img')].map(i=>{const b=i.getBoundingClientRect();return [Math.round(b.width),Math.round(b.height),Math.round(b.top)].join()});return t.every(x=>x===t[0])}),stills:[...document.querySelectorAll('.bots .vid')].map(v=>Math.round(v.getBoundingClientRect().width)).join('/'),nohover:matchMedia('(hover:none)').matches,
+      return JSON.stringify({sw:Math.max(document.documentElement.scrollWidth,Math.ceil(mr)),iw:__W__,who:who,rowsok:[...document.querySelectorAll('.over .r')].every(r=>{const t=[...r.querySelectorAll('.c')].map(c=>Math.round(c.getBoundingClientRect().top));return t.every(x=>x===t[0])}),imgdetail:[...document.querySelectorAll('.over .r')].map(r=>[...r.querySelectorAll('.c img')].map(i=>{const b=i.getBoundingClientRect();return Math.round(b.width)+'x'+Math.round(b.height)+'@'+Math.round(b.top)}).join(' ')).join(' | '),imgsok:[...document.querySelectorAll('.over .r')].every(r=>{const t=[...r.querySelectorAll('.c img')].map(i=>{const b=i.getBoundingClientRect();return [b.width,b.height,b.top]});return t.every(x=>x.every((v,k)=>Math.abs(v-t[0][k])<=1.5))}),stills:[...document.querySelectorAll('.bots .vid')].map(v=>Math.round(v.getBoundingClientRect().width)).join('/'),nohover:matchMedia('(hover:none)').matches,
       bad:[...document.images].filter(i=>!(i.complete&&i.naturalWidth>0)).map(i=>i.src),
       h1:document.querySelectorAll('h1').length,noalt:[...document.images].filter(i=>!i.hasAttribute('alt')).length})})()"""
     r = await cdp.call("Runtime.evaluate", expression=js.replace("__W__", str(width)), awaitPromise=True, returnByValue=True)
@@ -133,7 +133,7 @@ async def main():
                     if w < 600 and not r["nohover"]:
                         flags.append("hover:none emulation not active")
                     if r.get("imgsok") is False:
-                        flags.append("overview images in a row differ in width, height or top")
+                        flags.append("overview images in a row differ in width, height or top: " + r["imgdetail"])
                     if "rowsok" in r and r["rowsok"] is False and w < 600:
                         flags.append("overview cells not top-aligned")
                     st = r.get("stills", "").split("/")
